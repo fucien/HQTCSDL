@@ -177,5 +177,20 @@ namespace HQTCSDL_Group01.Components.CustomerControl
                     yield return id;
             }
         }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void partnerNameTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void branchAddressTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

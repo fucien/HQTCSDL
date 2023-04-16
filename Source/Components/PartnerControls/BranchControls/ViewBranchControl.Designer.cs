@@ -29,63 +29,69 @@ namespace HQTCSDL_Group01.Components
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
-            this.viewButton = new System.Windows.Forms.Button();
-            this.branchGridView = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.branchGridView)).BeginInit();
-            this.SuspendLayout();
+            tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            viewButton = new System.Windows.Forms.Button();
+            branchGridView = new System.Windows.Forms.DataGridView();
+            tableLayoutPanel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)branchGridView).BeginInit();
+            SuspendLayout();
             // 
             // tableLayoutPanel16
             // 
-            this.tableLayoutPanel16.ColumnCount = 1;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Controls.Add(this.viewButton, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.branchGridView, 0, 1);
-            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 2;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(491, 425);
-            this.tableLayoutPanel16.TabIndex = 1;
+            tableLayoutPanel16.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            tableLayoutPanel16.ColumnCount = 1;
+            tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel16.Controls.Add(viewButton, 0, 0);
+            tableLayoutPanel16.Controls.Add(branchGridView, 0, 1);
+            tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel16.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel16.Name = "tableLayoutPanel16";
+            tableLayoutPanel16.RowCount = 2;
+            tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            tableLayoutPanel16.Size = new System.Drawing.Size(430, 319);
+            tableLayoutPanel16.TabIndex = 1;
             // 
             // viewButton
             // 
-            this.viewButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.viewButton.Location = new System.Drawing.Point(3, 3);
-            this.viewButton.Name = "viewButton";
-            this.viewButton.Size = new System.Drawing.Size(485, 36);
-            this.viewButton.TabIndex = 0;
-            this.viewButton.Text = "Xem danh sách các chi nhánh";
-            this.viewButton.UseVisualStyleBackColor = true;
+            viewButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            viewButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            viewButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            viewButton.ForeColor = System.Drawing.Color.White;
+            viewButton.Location = new System.Drawing.Point(3, 2);
+            viewButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            viewButton.Name = "viewButton";
+            viewButton.Size = new System.Drawing.Size(424, 27);
+            viewButton.TabIndex = 0;
+            viewButton.Text = "Xem danh sách các chi nhánh";
+            viewButton.UseVisualStyleBackColor = false;
             // 
             // branchGridView
             // 
-            this.branchGridView.AllowUserToAddRows = false;
-            this.branchGridView.AllowUserToDeleteRows = false;
-            this.branchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.branchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.branchGridView.Location = new System.Drawing.Point(3, 45);
-            this.branchGridView.Name = "branchGridView";
-            this.branchGridView.RowHeadersWidth = 51;
-            this.branchGridView.RowTemplate.Height = 29;
-            this.branchGridView.Size = new System.Drawing.Size(485, 377);
-            this.branchGridView.TabIndex = 1;
+            branchGridView.AllowUserToAddRows = false;
+            branchGridView.AllowUserToDeleteRows = false;
+            branchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            branchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            branchGridView.Location = new System.Drawing.Point(3, 33);
+            branchGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            branchGridView.Name = "branchGridView";
+            branchGridView.RowHeadersWidth = 51;
+            branchGridView.RowTemplate.Height = 29;
+            branchGridView.Size = new System.Drawing.Size(424, 284);
+            branchGridView.TabIndex = 1;
             // 
             // ViewBranchControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel16);
-            this.Name = "ViewBranchControl";
-            this.Size = new System.Drawing.Size(491, 425);
-            this.tableLayoutPanel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.branchGridView)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(tableLayoutPanel16);
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Name = "ViewBranchControl";
+            Size = new System.Drawing.Size(430, 319);
+            tableLayoutPanel16.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)branchGridView).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

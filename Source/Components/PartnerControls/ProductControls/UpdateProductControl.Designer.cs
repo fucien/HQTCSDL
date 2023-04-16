@@ -37,16 +37,16 @@ namespace HQTCSDL_Group01.Components.PartnerControls
             System.Windows.Forms.Label label38;
             System.Windows.Forms.Label label39;
             System.Windows.Forms.Label label1;
-            this.oldNameTb = new System.Windows.Forms.TextBox();
-            this.updateNameTb = new System.Windows.Forms.TextBox();
-            this.oldDescriptionTb = new System.Windows.Forms.TextBox();
-            this.updateDescriptionTb = new System.Windows.Forms.TextBox();
-            this.oldPriceTb = new System.Windows.Forms.TextBox();
-            this.updatePriceNumeric = new System.Windows.Forms.NumericUpDown();
-            this.tableLayoutPanel43 = new System.Windows.Forms.TableLayoutPanel();
-            this.confirmButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel47 = new System.Windows.Forms.TableLayoutPanel();
-            this.idCbb = new System.Windows.Forms.ComboBox();
+            oldNameTb = new System.Windows.Forms.TextBox();
+            updateNameTb = new System.Windows.Forms.TextBox();
+            oldDescriptionTb = new System.Windows.Forms.TextBox();
+            updateDescriptionTb = new System.Windows.Forms.TextBox();
+            oldPriceTb = new System.Windows.Forms.TextBox();
+            updatePriceNumeric = new System.Windows.Forms.NumericUpDown();
+            tableLayoutPanel43 = new System.Windows.Forms.TableLayoutPanel();
+            confirmButton = new System.Windows.Forms.Button();
+            tableLayoutPanel47 = new System.Windows.Forms.TableLayoutPanel();
+            idCbb = new System.Windows.Forms.ComboBox();
             tableLayoutPanel44 = new System.Windows.Forms.TableLayoutPanel();
             label36 = new System.Windows.Forms.Label();
             tableLayoutPanel45 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,26 +58,28 @@ namespace HQTCSDL_Group01.Components.PartnerControls
             tableLayoutPanel44.SuspendLayout();
             tableLayoutPanel45.SuspendLayout();
             tableLayoutPanel46.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updatePriceNumeric)).BeginInit();
-            this.tableLayoutPanel43.SuspendLayout();
-            this.tableLayoutPanel47.SuspendLayout();
-            this.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)updatePriceNumeric).BeginInit();
+            tableLayoutPanel43.SuspendLayout();
+            tableLayoutPanel47.SuspendLayout();
+            SuspendLayout();
             // 
             // tableLayoutPanel44
             // 
+            tableLayoutPanel44.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             tableLayoutPanel44.ColumnCount = 3;
             tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel44.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel44.Controls.Add(label36, 0, 0);
-            tableLayoutPanel44.Controls.Add(this.oldNameTb, 1, 0);
-            tableLayoutPanel44.Controls.Add(this.updateNameTb, 2, 0);
+            tableLayoutPanel44.Controls.Add(oldNameTb, 1, 0);
+            tableLayoutPanel44.Controls.Add(updateNameTb, 2, 0);
             tableLayoutPanel44.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel44.Location = new System.Drawing.Point(3, 86);
+            tableLayoutPanel44.Location = new System.Drawing.Point(3, 64);
+            tableLayoutPanel44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel44.Name = "tableLayoutPanel44";
             tableLayoutPanel44.RowCount = 1;
             tableLayoutPanel44.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel44.Size = new System.Drawing.Size(652, 77);
+            tableLayoutPanel44.Size = new System.Drawing.Size(570, 58);
             tableLayoutPanel44.TabIndex = 4;
             // 
             // label36
@@ -86,28 +88,30 @@ namespace HQTCSDL_Group01.Components.PartnerControls
             label36.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label36.Location = new System.Drawing.Point(3, 0);
             label36.Name = "label36";
-            label36.Size = new System.Drawing.Size(116, 23);
+            label36.Size = new System.Drawing.Size(94, 19);
             label36.TabIndex = 0;
             label36.Text = "Tên sản phẩm";
             // 
             // oldNameTb
             // 
-            this.oldNameTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.oldNameTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.oldNameTb.Location = new System.Drawing.Point(133, 3);
-            this.oldNameTb.Name = "oldNameTb";
-            this.oldNameTb.ReadOnly = true;
-            this.oldNameTb.Size = new System.Drawing.Size(254, 30);
-            this.oldNameTb.TabIndex = 1;
+            oldNameTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            oldNameTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            oldNameTb.Location = new System.Drawing.Point(117, 2);
+            oldNameTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            oldNameTb.Name = "oldNameTb";
+            oldNameTb.ReadOnly = true;
+            oldNameTb.Size = new System.Drawing.Size(222, 25);
+            oldNameTb.TabIndex = 1;
             // 
             // updateNameTb
             // 
-            this.updateNameTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateNameTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.updateNameTb.Location = new System.Drawing.Point(393, 3);
-            this.updateNameTb.Name = "updateNameTb";
-            this.updateNameTb.Size = new System.Drawing.Size(256, 30);
-            this.updateNameTb.TabIndex = 2;
+            updateNameTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            updateNameTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            updateNameTb.Location = new System.Drawing.Point(345, 2);
+            updateNameTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            updateNameTb.Name = "updateNameTb";
+            updateNameTb.Size = new System.Drawing.Size(222, 25);
+            updateNameTb.TabIndex = 2;
             // 
             // tableLayoutPanel45
             // 
@@ -116,60 +120,66 @@ namespace HQTCSDL_Group01.Components.PartnerControls
             tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel45.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel45.Controls.Add(label37, 0, 0);
-            tableLayoutPanel45.Controls.Add(this.oldDescriptionTb, 1, 0);
-            tableLayoutPanel45.Controls.Add(this.updateDescriptionTb, 2, 0);
+            tableLayoutPanel45.Controls.Add(oldDescriptionTb, 1, 0);
+            tableLayoutPanel45.Controls.Add(updateDescriptionTb, 2, 0);
             tableLayoutPanel45.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel45.Location = new System.Drawing.Point(3, 252);
+            tableLayoutPanel45.Location = new System.Drawing.Point(3, 188);
+            tableLayoutPanel45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel45.Name = "tableLayoutPanel45";
             tableLayoutPanel45.RowCount = 1;
             tableLayoutPanel45.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel45.Size = new System.Drawing.Size(652, 77);
+            tableLayoutPanel45.Size = new System.Drawing.Size(570, 58);
             tableLayoutPanel45.TabIndex = 5;
             // 
             // label37
             // 
             label37.AutoSize = true;
+            label37.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             label37.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label37.Location = new System.Drawing.Point(3, 0);
             label37.Name = "label37";
-            label37.Size = new System.Drawing.Size(91, 46);
+            label37.Size = new System.Drawing.Size(75, 38);
             label37.TabIndex = 0;
             label37.Text = "Mô tả sản phẩm";
             // 
             // oldDescriptionTb
             // 
-            this.oldDescriptionTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.oldDescriptionTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.oldDescriptionTb.Location = new System.Drawing.Point(133, 3);
-            this.oldDescriptionTb.Name = "oldDescriptionTb";
-            this.oldDescriptionTb.ReadOnly = true;
-            this.oldDescriptionTb.Size = new System.Drawing.Size(254, 30);
-            this.oldDescriptionTb.TabIndex = 1;
+            oldDescriptionTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            oldDescriptionTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            oldDescriptionTb.Location = new System.Drawing.Point(117, 2);
+            oldDescriptionTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            oldDescriptionTb.Name = "oldDescriptionTb";
+            oldDescriptionTb.ReadOnly = true;
+            oldDescriptionTb.Size = new System.Drawing.Size(222, 25);
+            oldDescriptionTb.TabIndex = 1;
             // 
             // updateDescriptionTb
             // 
-            this.updateDescriptionTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateDescriptionTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.updateDescriptionTb.Location = new System.Drawing.Point(393, 3);
-            this.updateDescriptionTb.Name = "updateDescriptionTb";
-            this.updateDescriptionTb.Size = new System.Drawing.Size(256, 30);
-            this.updateDescriptionTb.TabIndex = 2;
+            updateDescriptionTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            updateDescriptionTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            updateDescriptionTb.Location = new System.Drawing.Point(345, 2);
+            updateDescriptionTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            updateDescriptionTb.Name = "updateDescriptionTb";
+            updateDescriptionTb.Size = new System.Drawing.Size(222, 25);
+            updateDescriptionTb.TabIndex = 2;
             // 
             // tableLayoutPanel46
             // 
+            tableLayoutPanel46.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             tableLayoutPanel46.ColumnCount = 3;
             tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel46.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel46.Controls.Add(label38, 0, 0);
-            tableLayoutPanel46.Controls.Add(this.oldPriceTb, 1, 0);
-            tableLayoutPanel46.Controls.Add(this.updatePriceNumeric, 2, 0);
+            tableLayoutPanel46.Controls.Add(oldPriceTb, 1, 0);
+            tableLayoutPanel46.Controls.Add(updatePriceNumeric, 2, 0);
             tableLayoutPanel46.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel46.Location = new System.Drawing.Point(3, 169);
+            tableLayoutPanel46.Location = new System.Drawing.Point(3, 126);
+            tableLayoutPanel46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel46.Name = "tableLayoutPanel46";
             tableLayoutPanel46.RowCount = 1;
             tableLayoutPanel46.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel46.Size = new System.Drawing.Size(652, 77);
+            tableLayoutPanel46.Size = new System.Drawing.Size(570, 58);
             tableLayoutPanel46.TabIndex = 6;
             // 
             // label38
@@ -178,152 +188,145 @@ namespace HQTCSDL_Group01.Components.PartnerControls
             label38.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label38.Location = new System.Drawing.Point(3, 0);
             label38.Name = "label38";
-            label38.Size = new System.Drawing.Size(115, 23);
+            label38.Size = new System.Drawing.Size(93, 19);
             label38.TabIndex = 0;
             label38.Text = "Giá sản phẩm";
             // 
             // oldPriceTb
             // 
-            this.oldPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.oldPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.oldPriceTb.Location = new System.Drawing.Point(133, 3);
-            this.oldPriceTb.Name = "oldPriceTb";
-            this.oldPriceTb.ReadOnly = true;
-            this.oldPriceTb.Size = new System.Drawing.Size(254, 30);
-            this.oldPriceTb.TabIndex = 1;
+            oldPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            oldPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            oldPriceTb.Location = new System.Drawing.Point(117, 2);
+            oldPriceTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            oldPriceTb.Name = "oldPriceTb";
+            oldPriceTb.ReadOnly = true;
+            oldPriceTb.Size = new System.Drawing.Size(222, 25);
+            oldPriceTb.TabIndex = 1;
             // 
             // updatePriceNumeric
             // 
-            this.updatePriceNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updatePriceNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.updatePriceNumeric.Increment = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.updatePriceNumeric.Location = new System.Drawing.Point(393, 3);
-            this.updatePriceNumeric.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.updatePriceNumeric.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
-            this.updatePriceNumeric.Name = "updatePriceNumeric";
-            this.updatePriceNumeric.Size = new System.Drawing.Size(256, 30);
-            this.updatePriceNumeric.TabIndex = 2;
-            this.updatePriceNumeric.ThousandsSeparator = true;
-            this.updatePriceNumeric.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            -2147483648});
+            updatePriceNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
+            updatePriceNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            updatePriceNumeric.Increment = new decimal(new int[] { 10000, 0, 0, 0 });
+            updatePriceNumeric.Location = new System.Drawing.Point(345, 2);
+            updatePriceNumeric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            updatePriceNumeric.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            updatePriceNumeric.Minimum = new decimal(new int[] { 1, 0, 0, int.MinValue });
+            updatePriceNumeric.Name = "updatePriceNumeric";
+            updatePriceNumeric.Size = new System.Drawing.Size(222, 25);
+            updatePriceNumeric.TabIndex = 2;
+            updatePriceNumeric.ThousandsSeparator = true;
+            updatePriceNumeric.Value = new decimal(new int[] { 1, 0, 0, int.MinValue });
             // 
             // label39
             // 
             label39.AutoSize = true;
             label39.Location = new System.Drawing.Point(3, 0);
             label39.Name = "label39";
-            label39.Size = new System.Drawing.Size(98, 20);
+            label39.Size = new System.Drawing.Size(79, 15);
             label39.TabIndex = 0;
             label39.Text = "Mã sản phẩm";
             // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(3, 372);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(569, 44);
+            label1.TabIndex = 9;
+            label1.Text = "Chú ý: những trường để trống (hoặc giá là -1) nghĩa là không muốn cập nhật dữ liệu cho nó";
+            // 
             // tableLayoutPanel43
             // 
-            this.tableLayoutPanel43.ColumnCount = 1;
-            this.tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel43.Controls.Add(tableLayoutPanel44, 0, 1);
-            this.tableLayoutPanel43.Controls.Add(tableLayoutPanel45, 0, 2);
-            this.tableLayoutPanel43.Controls.Add(tableLayoutPanel46, 0, 2);
-            this.tableLayoutPanel43.Controls.Add(this.confirmButton, 0, 4);
-            this.tableLayoutPanel43.Controls.Add(this.tableLayoutPanel47, 0, 0);
-            this.tableLayoutPanel43.Controls.Add(label1, 0, 5);
-            this.tableLayoutPanel43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel43.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel43.Name = "tableLayoutPanel43";
-            this.tableLayoutPanel43.RowCount = 6;
-            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel43.Size = new System.Drawing.Size(658, 555);
-            this.tableLayoutPanel43.TabIndex = 5;
+            tableLayoutPanel43.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            tableLayoutPanel43.ColumnCount = 1;
+            tableLayoutPanel43.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel43.Controls.Add(tableLayoutPanel44, 0, 1);
+            tableLayoutPanel43.Controls.Add(tableLayoutPanel45, 0, 2);
+            tableLayoutPanel43.Controls.Add(tableLayoutPanel46, 0, 2);
+            tableLayoutPanel43.Controls.Add(confirmButton, 0, 4);
+            tableLayoutPanel43.Controls.Add(tableLayoutPanel47, 0, 0);
+            tableLayoutPanel43.Controls.Add(label1, 0, 5);
+            tableLayoutPanel43.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel43.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel43.Name = "tableLayoutPanel43";
+            tableLayoutPanel43.RowCount = 6;
+            tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            tableLayoutPanel43.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel43.Size = new System.Drawing.Size(576, 416);
+            tableLayoutPanel43.TabIndex = 5;
             // 
             // confirmButton
             // 
-            this.confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.confirmButton.AutoSize = true;
-            this.confirmButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.confirmButton.Location = new System.Drawing.Point(282, 335);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(94, 33);
-            this.confirmButton.TabIndex = 7;
-            this.confirmButton.Text = "Xác nhận";
-            this.confirmButton.UseVisualStyleBackColor = true;
-            this.confirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
+            confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            confirmButton.AutoSize = true;
+            confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            confirmButton.ForeColor = System.Drawing.Color.White;
+            confirmButton.Location = new System.Drawing.Point(247, 250);
+            confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            confirmButton.Name = "confirmButton";
+            confirmButton.Size = new System.Drawing.Size(82, 29);
+            confirmButton.TabIndex = 7;
+            confirmButton.Text = "Xác nhận";
+            confirmButton.UseVisualStyleBackColor = false;
+            confirmButton.Click += ConfirmButton_Click;
             // 
             // tableLayoutPanel47
             // 
-            this.tableLayoutPanel47.ColumnCount = 2;
-            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel47.Controls.Add(label39, 0, 0);
-            this.tableLayoutPanel47.Controls.Add(this.idCbb, 1, 0);
-            this.tableLayoutPanel47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel47.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel47.Name = "tableLayoutPanel47";
-            this.tableLayoutPanel47.RowCount = 1;
-            this.tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel47.Size = new System.Drawing.Size(652, 77);
-            this.tableLayoutPanel47.TabIndex = 8;
+            tableLayoutPanel47.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            tableLayoutPanel47.ColumnCount = 2;
+            tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel47.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            tableLayoutPanel47.Controls.Add(label39, 0, 0);
+            tableLayoutPanel47.Controls.Add(idCbb, 1, 0);
+            tableLayoutPanel47.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel47.Location = new System.Drawing.Point(3, 2);
+            tableLayoutPanel47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel47.Name = "tableLayoutPanel47";
+            tableLayoutPanel47.RowCount = 1;
+            tableLayoutPanel47.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel47.Size = new System.Drawing.Size(570, 58);
+            tableLayoutPanel47.TabIndex = 8;
             // 
             // idCbb
             // 
-            this.idCbb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.idCbb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.idCbb.FormattingEnabled = true;
-            this.idCbb.Location = new System.Drawing.Point(133, 3);
-            this.idCbb.Name = "idCbb";
-            this.idCbb.Size = new System.Drawing.Size(516, 31);
-            this.idCbb.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(12, 498);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(634, 57);
-            label1.TabIndex = 9;
-            label1.Text = "Chú ý: những trường để trống (hoặc giá là -1) nghĩa là không muốn cập nhật dữ liệ" +
-    "u cho nó";
+            idCbb.Dock = System.Windows.Forms.DockStyle.Fill;
+            idCbb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            idCbb.FormattingEnabled = true;
+            idCbb.Location = new System.Drawing.Point(117, 2);
+            idCbb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            idCbb.Name = "idCbb";
+            idCbb.Size = new System.Drawing.Size(450, 25);
+            idCbb.TabIndex = 1;
             // 
             // UpdateProductControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel43);
-            this.Name = "UpdateProductControl";
-            this.Size = new System.Drawing.Size(658, 555);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(tableLayoutPanel43);
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Name = "UpdateProductControl";
+            Size = new System.Drawing.Size(576, 416);
             tableLayoutPanel44.ResumeLayout(false);
             tableLayoutPanel44.PerformLayout();
             tableLayoutPanel45.ResumeLayout(false);
             tableLayoutPanel45.PerformLayout();
             tableLayoutPanel46.ResumeLayout(false);
             tableLayoutPanel46.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updatePriceNumeric)).EndInit();
-            this.tableLayoutPanel43.ResumeLayout(false);
-            this.tableLayoutPanel43.PerformLayout();
-            this.tableLayoutPanel47.ResumeLayout(false);
-            this.tableLayoutPanel47.PerformLayout();
-            this.ResumeLayout(false);
-
+            ((System.ComponentModel.ISupportInitialize)updatePriceNumeric).EndInit();
+            tableLayoutPanel43.ResumeLayout(false);
+            tableLayoutPanel43.PerformLayout();
+            tableLayoutPanel47.ResumeLayout(false);
+            tableLayoutPanel47.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

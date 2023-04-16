@@ -53,5 +53,10 @@ namespace HQTCSDL_Group01.Components.CustomerControl
 
             }
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

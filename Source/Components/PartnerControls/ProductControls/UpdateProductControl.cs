@@ -11,7 +11,7 @@ namespace HQTCSDL_Group01.Components.PartnerControls
     public partial class UpdateProductControl : UserControl
     {
         public int CurrentID { get; internal set; }
-      
+
 
         public UpdateProductControl()
         {

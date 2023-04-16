@@ -30,62 +30,69 @@ namespace HQTCSDL_Group01
         private void InitializeComponent()
         {
             System.Windows.Forms.TableLayoutPanel versionsPanel;
-            this.errorVersionButton = new System.Windows.Forms.Button();
-            this.fixVersionButton = new System.Windows.Forms.Button();
+            errorVersionButton = new System.Windows.Forms.Button();
+            fixVersionButton = new System.Windows.Forms.Button();
             versionsPanel = new System.Windows.Forms.TableLayoutPanel();
             versionsPanel.SuspendLayout();
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // versionsPanel
             // 
             versionsPanel.ColumnCount = 1;
             versionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            versionsPanel.Controls.Add(this.errorVersionButton, 0, 0);
-            versionsPanel.Controls.Add(this.fixVersionButton, 0, 1);
+            versionsPanel.Controls.Add(errorVersionButton, 0, 0);
+            versionsPanel.Controls.Add(fixVersionButton, 0, 1);
             versionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             versionsPanel.Location = new System.Drawing.Point(0, 0);
+            versionsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             versionsPanel.Name = "versionsPanel";
             versionsPanel.RowCount = 2;
             versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            versionsPanel.Size = new System.Drawing.Size(800, 450);
+            versionsPanel.Size = new System.Drawing.Size(700, 338);
             versionsPanel.TabIndex = 0;
             // 
             // errorVersionButton
             // 
-            this.errorVersionButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.errorVersionButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.errorVersionButton.Location = new System.Drawing.Point(3, 3);
-            this.errorVersionButton.Name = "errorVersionButton";
-            this.errorVersionButton.Size = new System.Drawing.Size(794, 219);
-            this.errorVersionButton.TabIndex = 0;
-            this.errorVersionButton.Text = "Phiên bản lỗi";
-            this.errorVersionButton.UseVisualStyleBackColor = true;
-            this.errorVersionButton.Click += new System.EventHandler(this.errorVersionButton_Click);
+            errorVersionButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            errorVersionButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            errorVersionButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            errorVersionButton.ForeColor = System.Drawing.Color.White;
+            errorVersionButton.Location = new System.Drawing.Point(3, 2);
+            errorVersionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            errorVersionButton.Name = "errorVersionButton";
+            errorVersionButton.Size = new System.Drawing.Size(694, 165);
+            errorVersionButton.TabIndex = 0;
+            errorVersionButton.Text = "Phiên bản lỗi";
+            errorVersionButton.UseVisualStyleBackColor = false;
+            errorVersionButton.Click += errorVersionButton_Click;
             // 
             // fixVersionButton
             // 
-            this.fixVersionButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fixVersionButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.fixVersionButton.Location = new System.Drawing.Point(3, 228);
-            this.fixVersionButton.Name = "fixVersionButton";
-            this.fixVersionButton.Size = new System.Drawing.Size(794, 219);
-            this.fixVersionButton.TabIndex = 1;
-            this.fixVersionButton.Text = "Phiên bản sửa lỗi";
-            this.fixVersionButton.UseVisualStyleBackColor = true;
-            this.fixVersionButton.Click += new System.EventHandler(this.fixVersionButton_Click);
+            fixVersionButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            fixVersionButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            fixVersionButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            fixVersionButton.ForeColor = System.Drawing.Color.White;
+            fixVersionButton.Location = new System.Drawing.Point(3, 171);
+            fixVersionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            fixVersionButton.Name = "fixVersionButton";
+            fixVersionButton.Size = new System.Drawing.Size(694, 165);
+            fixVersionButton.TabIndex = 1;
+            fixVersionButton.Text = "Phiên bản sửa lỗi";
+            fixVersionButton.UseVisualStyleBackColor = false;
+            fixVersionButton.Click += fixVersionButton_Click;
             // 
             // SelectVersionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(versionsPanel);
-            this.Name = "SelectVersionForm";
-            this.Text = "Chọn phiên bản";
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(700, 338);
+            Controls.Add(versionsPanel);
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Name = "SelectVersionForm";
+            Text = "Chọn phiên bản";
             versionsPanel.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            ResumeLayout(false);
         }
 
         #endregion

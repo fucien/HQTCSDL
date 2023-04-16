@@ -43,5 +43,10 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             else
                 MessageBox.Show("Không có dữ liệu về khách hàng!");
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

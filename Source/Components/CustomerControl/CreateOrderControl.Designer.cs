@@ -80,6 +80,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             // tableLayoutPanel53
             // 
+            tableLayoutPanel53.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             tableLayoutPanel53.ColumnCount = 1;
             tableLayoutPanel53.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             tableLayoutPanel53.Controls.Add(tableLayoutPanel56, 0, 3);
@@ -124,8 +125,9 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // label48
             // 
             label48.AutoSize = true;
+            label48.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             label48.Dock = System.Windows.Forms.DockStyle.Fill;
-            label48.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label48.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label48.Location = new System.Drawing.Point(3, 0);
             label48.Name = "label48";
             label48.Size = new System.Drawing.Size(112, 38);
@@ -162,8 +164,9 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // label47
             // 
             label47.AutoSize = true;
+            label47.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             label47.Dock = System.Windows.Forms.DockStyle.Fill;
-            label47.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label47.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label47.Location = new System.Drawing.Point(3, 0);
             label47.Name = "label47";
             label47.Size = new System.Drawing.Size(112, 38);
@@ -203,8 +206,9 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // label46
             // 
             label46.AutoSize = true;
+            label46.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            label46.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label46.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label46.Location = new System.Drawing.Point(3, 0);
             label46.Name = "label46";
             label46.Size = new System.Drawing.Size(112, 38);
@@ -232,6 +236,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             branchAddressTb.ReadOnly = true;
             branchAddressTb.Size = new System.Drawing.Size(233, 25);
             branchAddressTb.TabIndex = 2;
+            branchAddressTb.TextChanged += branchAddressTb_TextChanged;
             // 
             // tableLayoutPanel57
             // 
@@ -253,14 +258,15 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             // label45
             // 
-            label45.AutoSize = true;
+            label45.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            label45.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label45.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label45.Location = new System.Drawing.Point(3, 0);
             label45.Name = "label45";
             label45.Size = new System.Drawing.Size(112, 38);
             label45.TabIndex = 0;
             label45.Text = "Đối tác";
+            label45.Click += label45_Click;
             // 
             // partnerIDCbb
             // 
@@ -283,18 +289,21 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             partnerNameTb.ReadOnly = true;
             partnerNameTb.Size = new System.Drawing.Size(233, 25);
             partnerNameTb.TabIndex = 2;
+            partnerNameTb.TextChanged += partnerNameTb_TextChanged;
             // 
             // confirmButton
             // 
             confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            confirmButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            confirmButton.ForeColor = System.Drawing.Color.White;
             confirmButton.Location = new System.Drawing.Point(259, 380);
             confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             confirmButton.Name = "confirmButton";
-            confirmButton.Size = new System.Drawing.Size(82, 22);
+            confirmButton.Size = new System.Drawing.Size(82, 27);
             confirmButton.TabIndex = 4;
             confirmButton.Text = "Tạo";
-            confirmButton.UseVisualStyleBackColor = true;
+            confirmButton.UseVisualStyleBackColor = false;
             confirmButton.Click += ConfirmButton_Click;
             // 
             // tableLayoutPanel58
@@ -339,7 +348,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             label1.AutoSize = true;
             label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(120, 0);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(111, 28);
@@ -350,7 +359,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             label49.AutoSize = true;
             label49.Dock = System.Windows.Forms.DockStyle.Fill;
-            label49.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label49.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label49.Location = new System.Drawing.Point(3, 0);
             label49.Name = "label49";
             label49.Size = new System.Drawing.Size(111, 28);
@@ -361,7 +370,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             label50.AutoSize = true;
             label50.Dock = System.Windows.Forms.DockStyle.Fill;
-            label50.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label50.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label50.Location = new System.Drawing.Point(237, 0);
             label50.Name = "label50";
             label50.Size = new System.Drawing.Size(111, 28);
@@ -372,7 +381,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             label51.AutoSize = true;
             label51.Dock = System.Windows.Forms.DockStyle.Fill;
-            label51.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label51.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label51.Location = new System.Drawing.Point(354, 0);
             label51.Name = "label51";
             label51.Size = new System.Drawing.Size(111, 28);
@@ -383,7 +392,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             label52.AutoSize = true;
             label52.Dock = System.Windows.Forms.DockStyle.Fill;
-            label52.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label52.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label52.Location = new System.Drawing.Point(471, 0);
             label52.Name = "label52";
             label52.Size = new System.Drawing.Size(114, 28);
@@ -393,6 +402,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // productAmountPanel
             // 
             productAmountPanel.AutoScroll = true;
+            productAmountPanel.BackColor = System.Drawing.Color.White;
             productAmountPanel.ColumnCount = 1;
             productAmountPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             productAmountPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -407,15 +417,16 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // addProductButton
             // 
             addProductButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
-            addProductButton.AutoSize = true;
-            addProductButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            addProductButton.Location = new System.Drawing.Point(237, 170);
+            addProductButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            addProductButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            addProductButton.ForeColor = System.Drawing.Color.White;
+            addProductButton.Location = new System.Drawing.Point(226, 170);
             addProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             addProductButton.Name = "addProductButton";
-            addProductButton.Size = new System.Drawing.Size(126, 38);
+            addProductButton.Size = new System.Drawing.Size(148, 38);
             addProductButton.TabIndex = 6;
             addProductButton.Text = "Thêm sản phẩm";
-            addProductButton.UseVisualStyleBackColor = true;
+            addProductButton.UseVisualStyleBackColor = false;
             addProductButton.Click += AddProductButton_Click;
             // 
             // CreateOrderControl
@@ -427,7 +438,6 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             Name = "CreateOrderControl";
             Size = new System.Drawing.Size(600, 420);
             tableLayoutPanel53.ResumeLayout(false);
-            tableLayoutPanel53.PerformLayout();
             tableLayoutPanel56.ResumeLayout(false);
             tableLayoutPanel56.PerformLayout();
             tableLayoutPanel55.ResumeLayout(false);

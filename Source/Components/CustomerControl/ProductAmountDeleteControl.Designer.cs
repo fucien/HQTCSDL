@@ -43,6 +43,7 @@ namespace HQTCSDL_Group01.Components
             // 
             tableLayoutPanel1.AutoSize = true;
             tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(243, 200, 28);
             tableLayoutPanel1.ColumnCount = 5;
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -110,15 +111,17 @@ namespace HQTCSDL_Group01.Components
             // deleteButton
             // 
             deleteButton.AutoSize = true;
+            deleteButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             deleteButton.Dock = System.Windows.Forms.DockStyle.Top;
-            deleteButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            deleteButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            deleteButton.ForeColor = System.Drawing.Color.White;
             deleteButton.Location = new System.Drawing.Point(559, 2);
             deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             deleteButton.Name = "deleteButton";
             deleteButton.Size = new System.Drawing.Size(133, 29);
             deleteButton.TabIndex = 4;
             deleteButton.Text = "Xóa sản phẩm";
-            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.UseVisualStyleBackColor = false;
             // 
             // ProductAmountDeleteControl
             // 

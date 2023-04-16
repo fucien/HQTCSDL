@@ -39,23 +39,23 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label6;
             System.Windows.Forms.Label label7;
-            this.taxNumberTb = new System.Windows.Forms.TextBox();
-            this.repTb = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.daysNumeric = new System.Windows.Forms.NumericUpDown();
-            this.addBranchButton = new System.Windows.Forms.Button();
-            this.confirmButton = new System.Windows.Forms.Button();
-            this.branchGridView = new System.Windows.Forms.DataGridView();
-            this.BranchID = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.BranchName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BranchAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.yearsNumeric = new System.Windows.Forms.NumericUpDown();
-            this.monthsNumeric = new System.Windows.Forms.NumericUpDown();
+            taxNumberTb = new System.Windows.Forms.TextBox();
+            repTb = new System.Windows.Forms.TextBox();
+            tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            daysNumeric = new System.Windows.Forms.NumericUpDown();
+            addBranchButton = new System.Windows.Forms.Button();
+            confirmButton = new System.Windows.Forms.Button();
+            branchGridView = new System.Windows.Forms.DataGridView();
+            BranchID = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            BranchName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            BranchAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            textBox4 = new System.Windows.Forms.TextBox();
+            tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            yearsNumeric = new System.Windows.Forms.NumericUpDown();
+            monthsNumeric = new System.Windows.Forms.NumericUpDown();
             tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             label2 = new System.Windows.Forms.Label();
             tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,16 +69,16 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daysNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.branchGridView)).BeginInit();
-            this.tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.yearsNumeric)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monthsNumeric)).BeginInit();
-            this.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)daysNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)branchGridView).BeginInit();
+            tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)yearsNumeric).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)monthsNumeric).BeginInit();
+            SuspendLayout();
             // 
             // tableLayoutPanel3
             // 
@@ -86,13 +86,14 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             tableLayoutPanel3.Controls.Add(label2, 0, 0);
-            tableLayoutPanel3.Controls.Add(this.taxNumberTb, 1, 0);
+            tableLayoutPanel3.Controls.Add(taxNumberTb, 1, 0);
             tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel3.Location = new System.Drawing.Point(3, 55);
+            tableLayoutPanel3.Location = new System.Drawing.Point(3, 41);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new System.Drawing.Size(734, 46);
+            tableLayoutPanel3.Size = new System.Drawing.Size(642, 35);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // label2
@@ -101,18 +102,19 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(74, 23);
+            label2.Size = new System.Drawing.Size(61, 19);
             label2.TabIndex = 0;
             label2.Text = "Mã thuế";
             // 
             // taxNumberTb
             // 
-            this.taxNumberTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.taxNumberTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.taxNumberTb.Location = new System.Drawing.Point(223, 3);
-            this.taxNumberTb.Name = "taxNumberTb";
-            this.taxNumberTb.Size = new System.Drawing.Size(508, 30);
-            this.taxNumberTb.TabIndex = 1;
+            taxNumberTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            taxNumberTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            taxNumberTb.Location = new System.Drawing.Point(195, 2);
+            taxNumberTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            taxNumberTb.Name = "taxNumberTb";
+            taxNumberTb.Size = new System.Drawing.Size(444, 25);
+            taxNumberTb.TabIndex = 1;
             // 
             // tableLayoutPanel4
             // 
@@ -120,13 +122,14 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             tableLayoutPanel4.Controls.Add(label3, 0, 0);
-            tableLayoutPanel4.Controls.Add(this.repTb, 1, 0);
+            tableLayoutPanel4.Controls.Add(repTb, 1, 0);
             tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel4.Location = new System.Drawing.Point(3, 107);
+            tableLayoutPanel4.Location = new System.Drawing.Point(3, 80);
+            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new System.Drawing.Size(734, 46);
+            tableLayoutPanel4.Size = new System.Drawing.Size(642, 35);
             tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
@@ -135,18 +138,19 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.Location = new System.Drawing.Point(3, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(123, 23);
+            label3.Size = new System.Drawing.Size(98, 19);
             label3.TabIndex = 0;
             label3.Text = "Người đại diện";
             // 
             // repTb
             // 
-            this.repTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.repTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.repTb.Location = new System.Drawing.Point(223, 3);
-            this.repTb.Name = "repTb";
-            this.repTb.Size = new System.Drawing.Size(508, 30);
-            this.repTb.TabIndex = 1;
+            repTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            repTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            repTb.Location = new System.Drawing.Point(195, 2);
+            repTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            repTb.Name = "repTb";
+            repTb.Size = new System.Drawing.Size(444, 25);
+            repTb.TabIndex = 1;
             // 
             // tableLayoutPanel5
             // 
@@ -168,18 +172,18 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(3, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(52, 92);
+            label4.Size = new System.Drawing.Size(47, 57);
             label4.TabIndex = 0;
             label4.Text = "Thời gian (ngày)";
             // 
             // label5
             // 
-            label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(93, 0);
+            label5.Location = new System.Drawing.Point(84, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(50, 23);
+            label5.Size = new System.Drawing.Size(41, 19);
             label5.TabIndex = 1;
             label5.Text = "Ngày";
             // 
@@ -189,267 +193,257 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
             label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(48, 46);
+            label1.Size = new System.Drawing.Size(39, 35);
             label1.TabIndex = 0;
             label1.Text = "Thời hạn";
+            label1.Click += label1_Click;
             // 
             // label6
             // 
-            label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label6.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(304, 0);
+            label6.Location = new System.Drawing.Point(270, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(58, 23);
+            label6.Size = new System.Drawing.Size(47, 19);
             label6.TabIndex = 2;
             label6.Text = "Tháng";
             // 
             // label7
             // 
-            label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            label7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(534, 0);
+            label7.Location = new System.Drawing.Point(471, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(47, 23);
+            label7.Size = new System.Drawing.Size(38, 19);
             label7.TabIndex = 3;
             label7.Text = "Năm";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.addBranchButton, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.confirmButton, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.branchGridView, 0, 4);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(740, 529);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel4, 0, 2);
+            tableLayoutPanel1.Controls.Add(tableLayoutPanel3, 0, 1);
+            tableLayoutPanel1.Controls.Add(addBranchButton, 0, 3);
+            tableLayoutPanel1.Controls.Add(confirmButton, 0, 5);
+            tableLayoutPanel1.Controls.Add(branchGridView, 0, 4);
+            tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 6;
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(648, 397);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.numericUpDown1, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.numericUpDown2, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.daysNumeric, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(label5, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(label6, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(label7, 5, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(734, 46);
-            this.tableLayoutPanel2.TabIndex = 6;
+            tableLayoutPanel2.ColumnCount = 7;
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel2.Controls.Add(numericUpDown1, 6, 0);
+            tableLayoutPanel2.Controls.Add(numericUpDown2, 4, 0);
+            tableLayoutPanel2.Controls.Add(daysNumeric, 2, 0);
+            tableLayoutPanel2.Controls.Add(label6, 3, 0);
+            tableLayoutPanel2.Controls.Add(label7, 5, 0);
+            tableLayoutPanel2.Controls.Add(label5, 1, 0);
+            tableLayoutPanel2.Controls.Add(label1, 0, 0);
+            tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel2.Location = new System.Drawing.Point(3, 2);
+            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 1;
+            tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel2.Size = new System.Drawing.Size(642, 35);
+            tableLayoutPanel2.TabIndex = 6;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown1.Location = new System.Drawing.Point(587, 3);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(144, 30);
-            this.numericUpDown1.TabIndex = 5;
+            numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
+            numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            numericUpDown1.Location = new System.Drawing.Point(515, 2);
+            numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            numericUpDown1.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new System.Drawing.Size(124, 25);
+            numericUpDown1.TabIndex = 5;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numericUpDown2.Location = new System.Drawing.Point(368, 3);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            11,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(140, 30);
-            this.numericUpDown2.TabIndex = 4;
+            numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
+            numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            numericUpDown2.Location = new System.Drawing.Point(323, 2);
+            numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            numericUpDown2.Maximum = new decimal(new int[] { 11, 0, 0, 0 });
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new System.Drawing.Size(122, 25);
+            numericUpDown2.TabIndex = 4;
             // 
             // daysNumeric
             // 
-            this.daysNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.daysNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.daysNumeric.Location = new System.Drawing.Point(149, 3);
-            this.daysNumeric.Maximum = new decimal(new int[] {
-            29,
-            0,
-            0,
-            0});
-            this.daysNumeric.Name = "daysNumeric";
-            this.daysNumeric.Size = new System.Drawing.Size(140, 30);
-            this.daysNumeric.TabIndex = 1;
+            daysNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
+            daysNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            daysNumeric.Location = new System.Drawing.Point(131, 2);
+            daysNumeric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            daysNumeric.Maximum = new decimal(new int[] { 29, 0, 0, 0 });
+            daysNumeric.Name = "daysNumeric";
+            daysNumeric.Size = new System.Drawing.Size(122, 25);
+            daysNumeric.TabIndex = 1;
             // 
             // addBranchButton
             // 
-            this.addBranchButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.addBranchButton.AutoSize = true;
-            this.addBranchButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addBranchButton.Location = new System.Drawing.Point(298, 172);
-            this.addBranchButton.Name = "addBranchButton";
-            this.addBranchButton.Size = new System.Drawing.Size(144, 33);
-            this.addBranchButton.TabIndex = 3;
-            this.addBranchButton.Text = "Thêm chi nhánh";
-            this.addBranchButton.UseVisualStyleBackColor = true;
-            this.addBranchButton.Click += new System.EventHandler(this.AddBranchButton_Click);
+            addBranchButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            addBranchButton.AutoSize = true;
+            addBranchButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            addBranchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            addBranchButton.ForeColor = System.Drawing.Color.White;
+            addBranchButton.Location = new System.Drawing.Point(261, 125);
+            addBranchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            addBranchButton.Name = "addBranchButton";
+            addBranchButton.Size = new System.Drawing.Size(126, 29);
+            addBranchButton.TabIndex = 3;
+            addBranchButton.Text = "Thêm chi nhánh";
+            addBranchButton.UseVisualStyleBackColor = false;
+            addBranchButton.Click += AddBranchButton_Click;
             // 
             // confirmButton
             // 
-            this.confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.confirmButton.Location = new System.Drawing.Point(323, 475);
-            this.confirmButton.Name = "confirmButton";
-            this.confirmButton.Size = new System.Drawing.Size(94, 29);
-            this.confirmButton.TabIndex = 5;
-            this.confirmButton.Text = "Xác nhận";
-            this.confirmButton.UseVisualStyleBackColor = true;
+            confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            confirmButton.ForeColor = System.Drawing.Color.White;
+            confirmButton.Location = new System.Drawing.Point(283, 356);
+            confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            confirmButton.Name = "confirmButton";
+            confirmButton.Size = new System.Drawing.Size(82, 22);
+            confirmButton.TabIndex = 5;
+            confirmButton.Text = "Xác nhận";
+            confirmButton.UseVisualStyleBackColor = false;
             // 
             // branchGridView
             // 
-            this.branchGridView.AllowUserToAddRows = false;
-            this.branchGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.branchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.branchGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BranchID,
-            this.BranchName,
-            this.BranchAddress});
-            this.branchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.branchGridView.Location = new System.Drawing.Point(3, 211);
-            this.branchGridView.Name = "branchGridView";
-            this.branchGridView.ReadOnly = true;
-            this.branchGridView.RowHeadersWidth = 51;
-            this.branchGridView.RowTemplate.Height = 29;
-            this.branchGridView.Size = new System.Drawing.Size(734, 258);
-            this.branchGridView.TabIndex = 7;
+            branchGridView.AllowUserToAddRows = false;
+            branchGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            branchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            branchGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { BranchID, BranchName, BranchAddress });
+            branchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            branchGridView.Location = new System.Drawing.Point(3, 158);
+            branchGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            branchGridView.Name = "branchGridView";
+            branchGridView.ReadOnly = true;
+            branchGridView.RowHeadersWidth = 51;
+            branchGridView.RowTemplate.Height = 29;
+            branchGridView.Size = new System.Drawing.Size(642, 194);
+            branchGridView.TabIndex = 7;
             // 
             // BranchID
             // 
-            this.BranchID.HeaderText = "Mã chi nhánh";
-            this.BranchID.Items.AddRange(new object[] {
-            "Something",
-            "Change"});
-            this.BranchID.MinimumWidth = 6;
-            this.BranchID.Name = "BranchID";
-            this.BranchID.ReadOnly = true;
+            BranchID.HeaderText = "Mã chi nhánh";
+            BranchID.Items.AddRange(new object[] { "Something", "Change" });
+            BranchID.MinimumWidth = 6;
+            BranchID.Name = "BranchID";
+            BranchID.ReadOnly = true;
             // 
             // BranchName
             // 
-            this.BranchName.HeaderText = "Tên chi nhánh";
-            this.BranchName.MinimumWidth = 6;
-            this.BranchName.Name = "BranchName";
-            this.BranchName.ReadOnly = true;
+            BranchName.HeaderText = "Tên chi nhánh";
+            BranchName.MinimumWidth = 6;
+            BranchName.Name = "BranchName";
+            BranchName.ReadOnly = true;
             // 
             // BranchAddress
             // 
-            this.BranchAddress.HeaderText = "Địa chỉ chi nhánh";
-            this.BranchAddress.MinimumWidth = 6;
-            this.BranchAddress.Name = "BranchAddress";
-            this.BranchAddress.ReadOnly = true;
+            BranchAddress.HeaderText = "Địa chỉ chi nhánh";
+            BranchAddress.MinimumWidth = 6;
+            BranchAddress.Name = "BranchAddress";
+            BranchAddress.ReadOnly = true;
             // 
             // textBox4
             // 
-            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(63, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(134, 30);
-            this.textBox4.TabIndex = 1;
+            textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            textBox4.Location = new System.Drawing.Point(63, 3);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new System.Drawing.Size(134, 25);
+            textBox4.TabIndex = 1;
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.ColumnCount = 7;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.Controls.Add(this.yearsNumeric, 6, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel6.TabIndex = 0;
+            tableLayoutPanel6.ColumnCount = 7;
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            tableLayoutPanel6.Controls.Add(yearsNumeric, 6, 0);
+            tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel6.Name = "tableLayoutPanel6";
+            tableLayoutPanel6.RowCount = 1;
+            tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel6.Size = new System.Drawing.Size(200, 100);
+            tableLayoutPanel6.TabIndex = 0;
             // 
             // yearsNumeric
             // 
-            this.yearsNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.yearsNumeric.Location = new System.Drawing.Point(163, 3);
-            this.yearsNumeric.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.yearsNumeric.Name = "yearsNumeric";
-            this.yearsNumeric.Size = new System.Drawing.Size(34, 30);
-            this.yearsNumeric.TabIndex = 5;
+            yearsNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            yearsNumeric.Location = new System.Drawing.Point(163, 3);
+            yearsNumeric.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            yearsNumeric.Name = "yearsNumeric";
+            yearsNumeric.Size = new System.Drawing.Size(34, 25);
+            yearsNumeric.TabIndex = 5;
             // 
             // monthsNumeric
             // 
-            this.monthsNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.monthsNumeric.Location = new System.Drawing.Point(103, 3);
-            this.monthsNumeric.Maximum = new decimal(new int[] {
-            11,
-            0,
-            0,
-            0});
-            this.monthsNumeric.Name = "monthsNumeric";
-            this.monthsNumeric.Size = new System.Drawing.Size(34, 30);
-            this.monthsNumeric.TabIndex = 4;
+            monthsNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            monthsNumeric.Location = new System.Drawing.Point(103, 3);
+            monthsNumeric.Maximum = new decimal(new int[] { 11, 0, 0, 0 });
+            monthsNumeric.Name = "monthsNumeric";
+            monthsNumeric.Size = new System.Drawing.Size(34, 25);
+            monthsNumeric.TabIndex = 4;
             // 
             // CreateContractControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "CreateContractControl";
-            this.Size = new System.Drawing.Size(740, 529);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(tableLayoutPanel1);
+            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Name = "CreateContractControl";
+            Size = new System.Drawing.Size(648, 397);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
             tableLayoutPanel4.ResumeLayout(false);
             tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
             tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.daysNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.branchGridView)).EndInit();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.yearsNumeric)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.monthsNumeric)).EndInit();
-            this.ResumeLayout(false);
-
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)daysNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)branchGridView).EndInit();
+            tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)yearsNumeric).EndInit();
+            ((System.ComponentModel.ISupportInitialize)monthsNumeric).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

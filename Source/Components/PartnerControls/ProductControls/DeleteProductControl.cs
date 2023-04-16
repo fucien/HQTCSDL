@@ -25,7 +25,7 @@ namespace HQTCSDL_Group01.Components.PartnerControls
                 {
 
                 }
-                
+
             };
 
             idCbb.SelectionChangeCommitted += (sender, e) =>

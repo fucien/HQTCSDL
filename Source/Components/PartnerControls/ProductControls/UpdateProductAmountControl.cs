@@ -61,7 +61,7 @@ namespace HQTCSDL_Group01.Components.PartnerControls
                 if (productIdCbb.SelectedItem == null || branchIDCbb.SelectedItem == null)
                     return;
                 currentAmountTb.Text = DatabaseManager.DBManager.Init.Partner.GetProductAmount((int)productIdCbb.SelectedItem, (int)branchIDCbb.SelectedItem).ToString();
-            } 
+            }
             catch (Exception exception)
             {
 

@@ -34,11 +34,11 @@ namespace HQTCSDL_Group01.Components
             System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label2;
-            confirmButton = new System.Windows.Forms.Button();
             tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             passwordTb = new System.Windows.Forms.TextBox();
             tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             accountTb = new System.Windows.Forms.TextBox();
+            confirmButton = new System.Windows.Forms.Button();
             loginPanel = new System.Windows.Forms.TableLayoutPanel();
             label1 = new System.Windows.Forms.Label();
             tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,6 +53,7 @@ namespace HQTCSDL_Group01.Components
             // loginPanel
             // 
             loginPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            loginPanel.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             loginPanel.ColumnCount = 1;
             loginPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             loginPanel.Controls.Add(label1, 0, 0);
@@ -80,13 +81,14 @@ namespace HQTCSDL_Group01.Components
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            tableLayoutPanel1.Controls.Add(confirmButton, 1, 2);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 1, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel6, 1, 0);
+            tableLayoutPanel1.Controls.Add(confirmButton, 1, 2);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel1.Location = new System.Drawing.Point(3, 36);
             tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -97,20 +99,6 @@ namespace HQTCSDL_Group01.Components
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new System.Drawing.Size(421, 308);
             tableLayoutPanel1.TabIndex = 1;
-            // 
-            // confirmButton
-            // 
-            confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            confirmButton.AutoSize = true;
-            confirmButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            confirmButton.Location = new System.Drawing.Point(164, 156);
-            confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            confirmButton.Name = "confirmButton";
-            confirmButton.Size = new System.Drawing.Size(92, 29);
-            confirmButton.TabIndex = 0;
-            confirmButton.Text = "Đăng nhập";
-            confirmButton.UseVisualStyleBackColor = true;
-            confirmButton.Click += confirmButton_Click;
             // 
             // tableLayoutPanel5
             // 
@@ -183,6 +171,22 @@ namespace HQTCSDL_Group01.Components
             accountTb.Name = "accountTb";
             accountTb.Size = new System.Drawing.Size(156, 23);
             accountTb.TabIndex = 1;
+            // 
+            // confirmButton
+            // 
+            confirmButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            confirmButton.AutoSize = true;
+            confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            confirmButton.ForeColor = System.Drawing.Color.White;
+            confirmButton.Location = new System.Drawing.Point(166, 156);
+            confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            confirmButton.Name = "confirmButton";
+            confirmButton.Size = new System.Drawing.Size(87, 29);
+            confirmButton.TabIndex = 0;
+            confirmButton.Text = "Đăng nhập";
+            confirmButton.UseVisualStyleBackColor = false;
+            confirmButton.Click += confirmButton_Click;
             // 
             // LoginControl
             // 

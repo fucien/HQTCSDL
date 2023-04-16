@@ -47,6 +47,6 @@ namespace HQTCSDL_Group01.Components.PartnerControls.OrderControls
             }
         }
 
-       
+
     }
 }

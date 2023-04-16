@@ -52,5 +52,10 @@ namespace HQTCSDL_Group01
                     delay.SetDelay(TimeSpan.FromSeconds((double)delayTimeNumeric.Value));
             };
         }
+
+        private void loginControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

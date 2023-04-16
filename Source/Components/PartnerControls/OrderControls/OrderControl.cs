@@ -29,7 +29,7 @@ namespace HQTCSDL_Group01.Components.PartnerControls.OrderControls
             this.shippingPriceTb.Text = order.ShippingPrice.ToString();
         }
 
-        public OrderControl(Order order, string text, string after, string condition) : this (order)
+        public OrderControl(Order order, string text, string after, string condition) : this(order)
         {
             try
             {

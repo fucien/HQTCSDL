@@ -30,5 +30,20 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             createOrderControl.CurrentDelay = delay;
             customerOrderStatisticsControl.CurrentDelay = delay;
         }
+
+        private void createOrderControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customerOrderStatisticsControl_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

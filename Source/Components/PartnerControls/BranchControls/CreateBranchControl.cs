@@ -14,5 +14,10 @@ namespace HQTCSDL_Group01.Components.PartnerControls.BranchControls
         {
             InitializeComponent();
         }
+
+        private void addBranchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

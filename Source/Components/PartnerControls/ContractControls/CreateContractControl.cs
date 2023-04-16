@@ -41,7 +41,12 @@ namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
         {
 
             branchGridView.Rows.Add();
-            
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
