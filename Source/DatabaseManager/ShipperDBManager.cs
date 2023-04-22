@@ -142,7 +142,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "UPDATE DON_HANG SET TINH_TRANG_DH = N'Thành công' WHERE MA_DH = @order_id"
+                    CommandText = "UPDATE DonHang SET Status = N'Thành công' WHERE MaDH = @order_id"
                 };
                 command.Parameters.AddWithValue("@order_id", orderID);
                 return command.ExecuteNonQuery() > 0;
@@ -163,7 +163,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dh.MA_DH, dh.MA_CN, dh.MA_KH, dh.MA_TX, dh.HINH_THUC_TT, dh.DIA_CHI_GH, dh.TINH_TRANG_DH, dh.PHI_SP, dh.PHI_VC FROM DON_HANG dh WHERE dh.MA_TX IS NULL AND dh.TINH_TRANG_DH = N'Đang xử lý'"
+                    CommandText = "SELECT dh.MaDH, dh.MaCN, dh.MaKH, dh.MaTX, dh.CachThanhToan, dh.DiaChi, dh.Status, dh.Gia, dh.PhiVanChuyen FROM DonHang dh WHERE dh.MaTX IS NULL AND dh.Status = N'Đang xử lý'"
                 };
                 using var reader = command.ExecuteReader();
                 while (reader.Read())
@@ -182,7 +182,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dh.MA_DH, dh.MA_CN, dh.MA_KH, dh.MA_TX, dh.HINH_THUC_TT, dh.DIA_CHI_GH, dh.TINH_TRANG_DH, dh.PHI_SP, dh.PHI_VC FROM DON_HANG dh WHERE dh.MA_TX = @shipper_id AND dh.TINH_TRANG_DH = N'Đang giao'"
+                    CommandText = "SELECT dh.MaDH, dh.MaCN, dh.MaKH, dh.MaTX, dh.CachThanhToan, dh.DiaChi, dh.Status, dh.Gia, dh.PhiVanChuyen FROM DonHang dh WHERE dh.MaTX = @shipper_id AND dh.Status = N'Đang giao'"
                 };
                 command.Parameters.AddWithValue("@shipper_id", shipperID);
                 using var reader = command.ExecuteReader();

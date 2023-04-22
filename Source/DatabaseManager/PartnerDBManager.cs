@@ -23,7 +23,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dt.MA_DT FROM DOI_TAC dt"
+                    CommandText = "SELECT dt.MaDT FROM DoiTac dt"
                 };
                 using var reader = command.ExecuteReader();
                 while (reader.Read())
@@ -42,7 +42,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dt.TEN_DT FROM DOI_TAC dt WHERE dt.MA_DT = @partner_id"
+                    CommandText = "SELECT dt.TenDT FROM DoiTac dt WHERE dt.MaDT = @partner_id"
                 };
 
                 command.Parameters.AddWithValue("@partner_id", partnerID);
@@ -88,7 +88,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT cn.DIA_CHI_CN FROM CHI_NHANH cn WHERE cn.MA_CN = @branch_id"
+                    CommandText = "SELECT cn.DiaChi FROM ChiNhanh cn WHERE cn.MaCN = @branch_id"
                 };
 
                 command.Parameters.AddWithValue("@branch_id", branchID);
@@ -163,7 +163,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT hd.MA_HD FROM HOP_DONG hd WHERE hd.MA_DT = @partner_id"
+                    CommandText = "SELECT hd.MaHD FROM HopDong hd WHERE hd.MaDT = @partner_id"
                 };
                 command.Parameters.AddWithValue("@partner_id", partnerID);
                 using var reader = command.ExecuteReader();
@@ -183,7 +183,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT hd.MA_HD, hd.MA_THUE_DT, hd.NGUOI_DAI_DIEN_HD, hd.NGAY_BD_HD, hd.NGAY_KT_HD FROM HOP_DONG hd WHERE hd.MA_DT = @partner_id"
+                    CommandText = "SELECT hd.MaHD, hd.MaSoThue, hd.NguoiDaiDien, hd.NgayBatDau, hd.NgayKetThuc FROM HopDong hd WHERE hd.MaDT = @partner_id"
                 };
                 command.Parameters.AddWithValue("@partner_id", partnerID);
                 using var reader = command.ExecuteReader();
@@ -203,7 +203,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT cn.MA_CN, cn.TEN_CN, cn.DIA_CHI_CN FROM CHI_NHANH cn WHERE cn.MA_HD = @contract_id"
+                    CommandText = "SELECT cn.MaCN, cn.Ten, cn.DiaChi FROM ChiNhanh cn WHERE cn.MaHD = @contract_id"
                 };
                 command.Parameters.AddWithValue("@contract_id", contractID);
                 using var reader = command.ExecuteReader();
@@ -223,7 +223,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT DATEDIFF(DAY, hd.NGAY_BD_HD, hd.NGAY_KT_HD) FROM HOP_DONG hd WHERE hd.MA_HD = @ma_hd"
+                    CommandText = "SELECT DATEDIFF(DAY, hd.NgayBatDau, hd.NgayKetThuc) FROM HopDong hd WHERE hd.MaHD = @ma_hd"
                 };
                 command.Parameters.AddWithValue("@ma_hd", contractID);
                 return (command.ExecuteScalar() as int?).GetValueOrDefault(-1);
@@ -245,7 +245,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "INSERT INTO SAN_PHAM(MA_DT, TEN_SP, MO_TA_SP, GIA_SP) VALUES (@ma_dt, @ten_sp, @mo_ta, @gia)"
+                    CommandText = "INSERT INTO SanPham(MaDT, Ten, Description, GIA_SP) VALUES (@ma_dt, @ten_sp, @mo_ta, @gia)"
                 };
                 command.Parameters.AddWithValue("@ma_dt", partnerID);
                 command.Parameters.AddWithValue("@ten_sp", product.Name);
@@ -269,8 +269,8 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    //CommandText = "SELECT sp.MA_SP, sp.TEN_SP, sp.MO_TA_SP, sp.GIA_SP FROM SAN_PHAM sp WHERE sp.MA_DT = @partner_id"
-                    CommandText = "SELECT sp.MA_SP FROM SAN_PHAM sp WHERE sp.MA_DT = @partner_id"
+                    //CommandText = "SELECT sp.MaSP, sp.Ten, sp.Description, sp.GIA_SP FROM SanPham sp WHERE sp.MaDT = @partner_id"
+                    CommandText = "SELECT sp.MaSP FROM SanPham sp WHERE sp.MaDT = @partner_id"
                 };
                 command.Parameters.AddWithValue("@partner_id", partnerID);
 
@@ -291,7 +291,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT TOP 1 sp.MA_SP, sp.TEN_SP, sp.MO_TA_SP, sp.GIA_SP FROM SAN_PHAM sp WHERE sp.MA_SP = @ma_sp"
+                    CommandText = "SELECT TOP 1 sp.MaSP, sp.Ten, sp.Description, sp.GIA_SP FROM SanPham sp WHERE sp.MaSP = @ma_sp"
                 };
                 command.Parameters.AddWithValue("@ma_sp", productID);
 
@@ -316,7 +316,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "DELETE FROM SAN_PHAM WHERE MA_SP = @ma_sp"
+                    CommandText = "DELETE FROM SanPham WHERE MaSP = @ma_sp"
                 };
                 command.Parameters.AddWithValue("@ma_sp", productID);
                 return command.ExecuteNonQuery() > 0;
@@ -362,7 +362,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT cnsp.SO_LUONG_CNSP FROM CHI_NHANH_SP cnsp WHERE cnsp.MA_SP = @ma_sp AND cnsp.MA_CN = @ma_cn"
+                    CommandText = "SELECT cnsp.SoLuong_CS FROM ChiNhanh_SanPham cnsp WHERE cnsp.MaSP = @ma_sp AND cnsp.MaCN = @ma_cn"
                 };
                 command.Parameters.AddWithValue("@ma_sp", productID);
                 command.Parameters.AddWithValue("@ma_cn", branchID);
@@ -436,7 +436,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dh.MA_DH, dh.MA_CN, dh.MA_KH, dh.MA_TX, dh.HINH_THUC_TT, dh.DIA_CHI_GH, dh.TINH_TRANG_DH, dh.PHI_SP, dh.PHI_VC FROM DON_HANG dh JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN WHERE cn.MA_DT = @partner_id"
+                    CommandText = "SELECT dh.MaDH, dh.MaCN, dh.MaKH, dh.MaTX, dh.CachThanhToan, dh.DiaChi, dh.Status, dh.Gia, dh.PhiVanChuyen FROM DonHang dh JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN WHERE cn.MaDT = @partner_id"
                 };
                 command.Parameters.AddWithValue("@partner_id", partnerID);
                 using var reader = command.ExecuteReader();
@@ -457,7 +457,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT sp.MA_SP, sp.TEN_SP, dhsp.SO_LUONG_SP_DH, dhsp.GIA_SP_DH FROM DON_HANG_SP dhsp JOIN SAN_PHAM sp ON dhsp.MA_SP = sp.MA_SP WHERE dhsp.MA_DH = @order_id"
+                    CommandText = "SELECT sp.MaSP, sp.Ten, dhsp.SoLuong_SD, dhsp.Gia_SD FROM DonHang_SanPham dhsp JOIN SanPham sp ON dhsp.MaSP = sp.MaSP WHERE dhsp.MaDH = @order_id"
                 };
                 command.Parameters.AddWithValue("@order_id", orderID);
                 using var reader = command.ExecuteReader();

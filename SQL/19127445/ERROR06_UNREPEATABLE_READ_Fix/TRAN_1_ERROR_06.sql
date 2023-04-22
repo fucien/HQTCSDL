@@ -7,5 +7,5 @@ VALUES (3, 100);
 --Tạo đơn hàng với 100 sản phẩm 3 (delay 10s)
 EXEC tao_don_dat_hang 2, 1, N'Vận chuyển nhanh', 'TPHCM', 30000, '00:00:10', @spsl
 
-SELECT * FROM DON_HANG WHERE MA_DH = 16;
-SELECT SUM(SO_LUONG_SP_DH * GIA_SP_DH) FROM DON_HANG_SP WHERE MA_DH = 16;
+SELECT * FROM DonHang WHERE MaDH = 16;
+SELECT SUM(SoLuong_SD * Gia_SD) FROM DonHang_SanPham WHERE MaDH = 16;

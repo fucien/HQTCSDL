@@ -21,7 +21,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dh.MA_DH, dh.MA_CN, dh.MA_KH, dh.MA_TX, dh.HINH_THUC_TT, dh.DIA_CHI_GH, dh.TINH_TRANG_DH, dh.PHI_SP, dh.PHI_VC FROM DON_HANG dh WHERE dh.MA_KH = @customer_id"
+                    CommandText = "SELECT dh.MaDH, dh.MaCN, dh.MaKH, dh.MaTX, dh.CachThanhToan, dh.DiaChi, dh.Status, dh.Gia, dh.PhiVanChuyen FROM DonHang dh WHERE dh.MaKH = @customer_id"
                 };
                 command.Parameters.AddWithValue("@customer_id", customerID);
                 using var reader = command.ExecuteReader();
@@ -122,7 +122,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT sp.MA_SP FROM SAN_PHAM sp JOIN CHI_NHANH_SP cnsp ON sp.MA_SP = cnsp.MA_SP WHERE cnsp.MA_CN = @branch_id"
+                    CommandText = "SELECT sp.MaSP FROM SanPham sp JOIN ChiNhanh_SanPham cnsp ON sp.MaSP = cnsp.MaSP WHERE cnsp.MaCN = @branch_id"
                 };
                 command.Parameters.AddWithValue("@branch_id", branchID);
                 using var reader = command.ExecuteReader();
@@ -153,7 +153,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 command.Parameters.AddWithValue("@delay", delay);
 
                 DataTable dt = new DataTable();
-                dt.Columns.Add("MA_SP", typeof(int));
+                dt.Columns.Add("MaSP", typeof(int));
                 dt.Columns.Add("SO_LUONG", typeof(int));
                 foreach (var product in products)
                     dt.Rows.Add(product.Product.ID, product.Amount);
@@ -191,7 +191,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                 command.Parameters.AddWithValue("@delay", delay);
 
                 DataTable dt = new DataTable();
-                dt.Columns.Add("MA_SP", typeof(int));
+                dt.Columns.Add("MaSP", typeof(int));
                 dt.Columns.Add("SO_LUONG", typeof(int));
                 foreach (var product in products)
                     dt.Rows.Add(product.Product.ID, product.Amount);

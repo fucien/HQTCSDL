@@ -8,27 +8,27 @@ BEGIN TRANSACTION
 	DECLARE @loai_tk CHAR(2);
 	SET @loai_tk = NULL;
 	--Lấy ra loại tài khoản
-	SET @loai_tk = (SELECT TOP 1 tk.LOAI_TK
-					FROM TAI_KHOAN tk
-					WHERE tk.TEN_TK = @tai_khoan AND tk.MAT_KHAU = @mat_khau AND tk.TRANG_THAI_KHOA = 0)
+	SET @loai_tk = (SELECT TOP 1 tk.Loai
+					FROM TaiKhoan tk
+					WHERE tk.TaiKhoan = @tai_khoan AND tk.Pass = @mat_khau AND tk.Lock = 0)
 	IF @loai_tk IS NOT NULL
 		BEGIN
 			--Trả về mã (đối tác/khách hàng/tài xế) tương ứng với loại tài khoản đó
 			IF @loai_tk = 'DT'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', dt.MA_DT AS 'ma' FROM DOI_TAC dt WHERE dt.TEN_TK = @tai_khoan;
+					SELECT @loai_tk AS 'loai_tk', dt.MaDT AS 'ma' FROM DoiTac dt WHERE dt.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
 					RETURN;
 				END
 			ELSE IF @loai_tk = 'KH'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', kh.MA_KH AS 'ma' FROM KHACH_HANG kh WHERE kh.TEN_TK = @tai_khoan;
+					SELECT @loai_tk AS 'loai_tk', kh.MaKH AS 'ma' FROM KhachHang kh WHERE kh.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
 					RETURN;
 				END
 			ELSE IF @loai_tk = 'TX'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', tx.MA_TX AS 'ma' FROM TAI_XE tx WHERE tx.TEN_TK = @tai_khoan;
+					SELECT @loai_tk AS 'loai_tk', tx.MaTX AS 'ma' FROM TaiXe tx WHERE tx.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
 					RETURN
 				END
@@ -42,7 +42,7 @@ AS
 BEGIN TRANSACTION
 	DECLARE @ngay_hien_tai DATE;
 	--Chọn ngày cuối hợp đồng
-	SET @ngay_hien_tai = (SELECT TOP 1 NGAY_KT_HD FROM HOP_DONG WHERE MA_HD = @ma_hd);
+	SET @ngay_hien_tai = (SELECT TOP 1 NgayKetThuc FROM HopDong WHERE MaHD = @ma_hd);
 	IF @ngay_hien_tai IS NOT NULL
 	BEGIN
 			
@@ -51,9 +51,9 @@ BEGIN TRANSACTION
 		--Tăng ngày cuối hợp đồng
 		SET @ngay_hien_tai = (SELECT DATEADD(DAY, @so_ngay_them, @ngay_hien_tai));
 		--Update lại ngày cuối của hợp đồng
-		UPDATE HOP_DONG
-		SET NGAY_KT_HD = @ngay_hien_tai
-		WHERE MA_HD = @ma_hd;
+		UPDATE HopDong
+		SET NgayKetThuc = @ngay_hien_tai
+		WHERE MaHD = @ma_hd;
 	END
 	COMMIT TRANSACTION;
 GO
@@ -65,9 +65,9 @@ AS
 BEGIN TRANSACTION
 	DECLARE @ngay_hien_tai DATE;
 	--Chọn ngày cuối hợp đồng
-	SET @ngay_hien_tai = (SELECT TOP 1 NGAY_KT_HD 
-							FROM HOP_DONG WITH (UPDLOCK) 
-							WHERE MA_HD = @ma_hd);
+	SET @ngay_hien_tai = (SELECT TOP 1 NgayKetThuc 
+							FROM HopDong WITH (UPDLOCK) 
+							WHERE MaHD = @ma_hd);
 	IF @ngay_hien_tai IS NOT NULL
 	BEGIN
 			
@@ -76,9 +76,9 @@ BEGIN TRANSACTION
 		--Tăng ngày cuối hợp đồng
 		SET @ngay_hien_tai = (SELECT DATEADD(DAY, @so_ngay_them, @ngay_hien_tai));
 		--Update lại ngày cuối của hợp đồng
-		UPDATE HOP_DONG
-		SET NGAY_KT_HD = @ngay_hien_tai
-		WHERE MA_HD = @ma_hd;
+		UPDATE HopDong
+		SET NgayKetThuc = @ngay_hien_tai
+		WHERE MaHD = @ma_hd;
 	END
 	COMMIT TRANSACTION;
 GO
@@ -91,21 +91,21 @@ BEGIN TRANSACTION
 	--Nếu không thì giữ những giá trị cũ lại
 	IF (@ten_sp = '')
 		BEGIN
-			SET @ten_sp = (SELECT TEN_SP FROM SAN_PHAM WHERE MA_SP = @ma_sp);
+			SET @ten_sp = (SELECT Ten FROM SanPham WHERE MaSP = @ma_sp);
 		END
 	IF (@mo_ta = '')
 		BEGIN
-			SET @mo_ta = (SELECT MO_TA_SP FROM SAN_PHAM WHERE MA_SP = @ma_sp);
+			SET @mo_ta = (SELECT Description FROM SanPham WHERE MaSP = @ma_sp);
 		END
 	IF (@gia < 0)
 		BEGIN
-			SET @gia = (SELECT GIA_SP FROM SAN_PHAM WHERE MA_SP = @ma_sp);
+			SET @gia = (SELECT GIA_SP FROM SanPham WHERE MaSP = @ma_sp);
 		END
-	UPDATE SAN_PHAM
-	SET TEN_SP = @ten_sp,
-		MO_TA_SP = @mo_ta,
+	UPDATE SanPham
+	SET Ten = @ten_sp,
+		Description = @mo_ta,
 		GIA_SP = @gia
-	WHERE MA_SP = @ma_sp
+	WHERE MaSP = @ma_sp
 COMMIT TRANSACTION
 GO
 
@@ -116,9 +116,9 @@ AS
 BEGIN TRANSACTION
 	--Nếu đơn hàng đã có tài xế khác tiếp nhận
 	IF NOT EXISTS (SELECT * 
-				FROM DON_HANG
-				WHERE MA_DH = @ma_dh AND MA_TX IS NULL 
-						AND TINH_TRANG_DH = N'Đang xử lý')
+				FROM DonHang
+				WHERE MaDH = @ma_dh AND MaTX IS NULL 
+						AND Status = N'Đang xử lý')
 	BEGIN	
 		PRINT N'Nhận đơn hàng thất bại'
 		ROLLBACK TRANSACTION;
@@ -128,9 +128,9 @@ BEGIN TRANSACTION
 	--Delay để gây ra lỗi
 	WAITFOR DELAY @delay;
 
-	UPDATE DON_HANG
-	SET MA_TX = @ma_tx, TINH_TRANG_DH = N'Đang giao'
-	WHERE MA_DH = @ma_dh;
+	UPDATE DonHang
+	SET MaTX = @ma_tx, Status = N'Đang giao'
+	WHERE MaDH = @ma_dh;
 
 	PRINT N'Nhận đơn hàng thành công'
 COMMIT TRANSACTION
@@ -143,9 +143,9 @@ AS
 BEGIN TRANSACTION
 	--Nếu đơn hàng đã có tài xế khác tiếp nhận
 	IF NOT EXISTS (SELECT *
-				FROM DON_HANG WITH (UPDLOCK)
-				WHERE MA_DH = @ma_dh AND MA_TX IS NULL 
-						AND TINH_TRANG_DH = N'Đang xử lý')
+				FROM DonHang WITH (UPDLOCK)
+				WHERE MaDH = @ma_dh AND MaTX IS NULL 
+						AND Status = N'Đang xử lý')
 	BEGIN	
 		PRINT N'Nhận đơn hàng thất bại'
 		ROLLBACK TRANSACTION;
@@ -155,9 +155,9 @@ BEGIN TRANSACTION
 	--Delay để gây ra lỗi
 	WAITFOR DELAY @delay;
 
-	UPDATE DON_HANG
-	SET MA_TX = @ma_tx, TINH_TRANG_DH = N'Đang giao'
-	WHERE MA_DH = @ma_dh;
+	UPDATE DonHang
+	SET MaTX = @ma_tx, Status = N'Đang giao'
+	WHERE MaDH = @ma_dh;
 
 	PRINT N'Nhận đơn hàng thành công'
 COMMIT TRANSACTION
@@ -172,16 +172,16 @@ BEGIN TRANSACTION
 	BEGIN TRY
 		--Lấy số lượng sản phảm hiện tại
 		DECLARE @so_luong_hien_tai INT;
-		SET @so_luong_hien_tai = (SELECT TOP 1 SO_LUONG_CNSP 
-								FROM CHI_NHANH_SP 
-								WHERE MA_SP = @ma_sp AND MA_CN = @ma_cn);
+		SET @so_luong_hien_tai = (SELECT TOP 1 SoLuong_CS 
+								FROM ChiNhanh_SanPham 
+								WHERE MaSP = @ma_sp AND MaCN = @ma_cn);
 
 		WAITFOR DELAY @delay;
 
 		--Thêm vào bảng chi nhánh sản phẩm nếu chưa tồn tại
 		IF @so_luong_hien_tai IS NULL
 			BEGIN
-				INSERT INTO CHI_NHANH_SP(MA_CN, MA_SP, SO_LUONG_CNSP)
+				INSERT INTO ChiNhanh_SanPham(MaCN, MaSP, SoLuong_CS)
 				VALUES (@ma_sp, @ma_cn, @chenh_lech);
 			END
 
@@ -191,9 +191,9 @@ BEGIN TRANSACTION
 				--Tính số lượng mới
 				SET @so_luong_hien_tai = @so_luong_hien_tai + @chenh_lech;
 				--Cập nhật lại số lượng
-				UPDATE CHI_NHANH_SP
-				SET SO_LUONG_CNSP = @so_luong_hien_tai
-				WHERE MA_CN = @ma_cn AND MA_SP = @ma_sp;
+				UPDATE ChiNhanh_SanPham
+				SET SoLuong_CS = @so_luong_hien_tai
+				WHERE MaCN = @ma_cn AND MaSP = @ma_sp;
 			END
 	END TRY
 	BEGIN CATCH
@@ -212,16 +212,16 @@ BEGIN TRANSACTION
 	BEGIN TRY
 		--Lấy số lượng sản phảm hiện tại
 		DECLARE @so_luong_hien_tai INT;
-		SET @so_luong_hien_tai = (SELECT TOP 1 SO_LUONG_CNSP 
-								FROM CHI_NHANH_SP WITH (UPDLOCK)
-								WHERE MA_SP = @ma_sp AND MA_CN = @ma_cn);
+		SET @so_luong_hien_tai = (SELECT TOP 1 SoLuong_CS 
+								FROM ChiNhanh_SanPham WITH (UPDLOCK)
+								WHERE MaSP = @ma_sp AND MaCN = @ma_cn);
 
 		WAITFOR DELAY @delay;
 
 		--Thêm vào bảng chi nhánh sản phẩm nếu chưa tồn tại
 		IF @so_luong_hien_tai IS NULL
 			BEGIN
-				INSERT INTO CHI_NHANH_SP(MA_CN, MA_SP, SO_LUONG_CNSP)
+				INSERT INTO ChiNhanh_SanPham(MaCN, MaSP, SoLuong_CS)
 				VALUES (@ma_sp, @ma_cn, @chenh_lech);
 			END
 
@@ -231,9 +231,9 @@ BEGIN TRANSACTION
 				--Tính số lượng mới
 				SET @so_luong_hien_tai = @so_luong_hien_tai + @chenh_lech;
 				--Cập nhật lại số lượng
-				UPDATE CHI_NHANH_SP
-				SET SO_LUONG_CNSP = @so_luong_hien_tai
-				WHERE MA_CN = @ma_cn AND MA_SP = @ma_sp;
+				UPDATE ChiNhanh_SanPham
+				SET SoLuong_CS = @so_luong_hien_tai
+				WHERE MaCN = @ma_cn AND MaSP = @ma_sp;
 			END
 	END TRY
 	BEGIN CATCH
@@ -245,7 +245,7 @@ GO
 
 CREATE TYPE SAN_PHAM_SO_LUONG AS TABLE
 (
-	MA_SP CHAR(8),
+	MaSP CHAR(8),
 	SO_LUONG INT
 );
 GO
@@ -262,32 +262,32 @@ BEGIN TRANSACTION
 		DECLARE @phi_sp INT, @ma_dh INT;
 		--Tính tổng giá sản phẩm của đơn hàng
 		SET @phi_sp = (SELECT SUM(spsl.SO_LUONG * sp.GIA_SP)
-						FROM SAN_PHAM sp JOIN @san_pham_so_luong spsl
-								ON sp.MA_SP = spsl.MA_SP)
+						FROM SanPham sp JOIN @san_pham_so_luong spsl
+								ON sp.MaSP = spsl.MaSP)
 
 		--Tạo đơn hàng
-		INSERT INTO DON_HANG(MA_CN, MA_TX, MA_KH, HINH_THUC_TT, DIA_CHI_GH, PHI_SP, PHI_VC)
+		INSERT INTO DonHang(MaCN, MaTX, MaKH, CachThanhToan, DiaChi, Gia, PhiVanChuyen)
 		VALUES (@ma_cn, NULL, @ma_kh, @hinh_thuc_tt, @dia_chi_gh, @phi_sp, @phi_vc);
 
 		WAITFOR DELAY @delay;
 
 		--Lấy mã đơn hàng vừa tạo
-		SET @ma_dh = (SELECT TOP 1 MA_DH FROM DON_HANG ORDER BY MA_DH DESC);
+		SET @ma_dh = (SELECT TOP 1 MaDH FROM DonHang ORDER BY MaDH DESC);
 
 
 		--Tạo chi tiết đơn hàng
-		INSERT INTO DON_HANG_SP(MA_DH, MA_SP, SO_LUONG_SP_DH, GIA_SP_DH)
-		SELECT @ma_dh, spsl.MA_SP, spsl.SO_LUONG, SP.GIA_SP
-		FROM @san_pham_so_luong spsl JOIN SAN_PHAM SP
-			ON SP.MA_SP = spsl.MA_SP;
+		INSERT INTO DonHang_SanPham(MaDH, MaSP, SoLuong_SD, Gia_SD)
+		SELECT @ma_dh, spsl.MaSP, spsl.SO_LUONG, SP.GIA_SP
+		FROM @san_pham_so_luong spsl JOIN SanPham SP
+			ON SP.MaSP = spsl.MaSP;
 
 
 		--Trừ sản phẩm trong chi nhánh sản phẩm
-		UPDATE CHI_NHANH_SP
-		SET SO_LUONG_CNSP = SO_LUONG_CNSP - (SELECT TOP 1 spsl.SO_LUONG 
+		UPDATE ChiNhanh_SanPham
+		SET SoLuong_CS = SoLuong_CS - (SELECT TOP 1 spsl.SO_LUONG 
 												FROM @san_pham_so_luong spsl 
-												WHERE spsl.MA_SP = MA_SP)
-		WHERE MA_CN = @ma_cn AND MA_SP IN (SELECT MA_SP FROM @san_pham_so_luong)
+												WHERE spsl.MaSP = MaSP)
+		WHERE MaCN = @ma_cn AND MaSP IN (SELECT MaSP FROM @san_pham_so_luong)
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION;
@@ -310,35 +310,35 @@ BEGIN TRANSACTION
 		DECLARE @phi_sp INT, @ma_dh INT;
 		--Tính tổng giá sản phẩm của đơn hàng
 		SET @phi_sp = (SELECT SUM(spsl.SO_LUONG * sp.GIA_SP)
-						FROM SAN_PHAM sp JOIN @san_pham_so_luong spsl
-								ON sp.MA_SP = spsl.MA_SP)
+						FROM SanPham sp JOIN @san_pham_so_luong spsl
+								ON sp.MaSP = spsl.MaSP)
 
 		--Đọc để đặt khóa shared lock
-		SELECT * FROM DON_HANG;
+		SELECT * FROM DonHang;
 
 		--Tạo đơn hàng
-		INSERT INTO DON_HANG(MA_CN, MA_TX, MA_KH, HINH_THUC_TT, DIA_CHI_GH, PHI_SP, PHI_VC)
+		INSERT INTO DonHang(MaCN, MaTX, MaKH, CachThanhToan, DiaChi, Gia, PhiVanChuyen)
 		VALUES (@ma_cn, NULL, @ma_kh, @hinh_thuc_tt, @dia_chi_gh, @phi_sp, @phi_vc);
 
 		WAITFOR DELAY @delay;
 
 		--Lấy mã đơn hàng vừa tạo
-		SET @ma_dh = (SELECT TOP 1 MA_DH FROM DON_HANG ORDER BY MA_DH DESC);
+		SET @ma_dh = (SELECT TOP 1 MaDH FROM DonHang ORDER BY MaDH DESC);
 
 
 		--Tạo chi tiết đơn hàng
-		INSERT INTO DON_HANG_SP(MA_DH, MA_SP, SO_LUONG_SP_DH, GIA_SP_DH)
-		SELECT @ma_dh, spsl.MA_SP, spsl.SO_LUONG, SP.GIA_SP
-		FROM @san_pham_so_luong spsl JOIN SAN_PHAM SP
-			ON SP.MA_SP = spsl.MA_SP;
+		INSERT INTO DonHang_SanPham(MaDH, MaSP, SoLuong_SD, Gia_SD)
+		SELECT @ma_dh, spsl.MaSP, spsl.SO_LUONG, SP.GIA_SP
+		FROM @san_pham_so_luong spsl JOIN SanPham SP
+			ON SP.MaSP = spsl.MaSP;
 
 
 		--Trừ sản phẩm trong chi nhánh sản phẩm
-		UPDATE CHI_NHANH_SP
-		SET SO_LUONG_CNSP = SO_LUONG_CNSP - (SELECT TOP 1 spsl.SO_LUONG 
+		UPDATE ChiNhanh_SanPham
+		SET SoLuong_CS = SoLuong_CS - (SELECT TOP 1 spsl.SO_LUONG 
 												FROM @san_pham_so_luong spsl 
-												WHERE spsl.MA_SP = MA_SP)
-		WHERE MA_CN = @ma_cn AND MA_SP IN (SELECT MA_SP FROM @san_pham_so_luong)
+												WHERE spsl.MaSP = MaSP)
+		WHERE MaCN = @ma_cn AND MaSP IN (SELECT MaSP FROM @san_pham_so_luong)
 	END TRY
 	BEGIN CATCH
 		ROLLBACK TRANSACTION;
@@ -354,28 +354,28 @@ BEGIN TRANSACTION
 	BEGIN TRY
 	--Chỉ có thể hủy khi đơn hàng đang trong trạng thái Đang xử lý
 	IF EXISTS (SELECT * 
-				FROM DON_HANG
-				WHERE MA_DH = @ma_dh AND TINH_TRANG_DH = N'Đang xử lý')
+				FROM DonHang
+				WHERE MaDH = @ma_dh AND Status = N'Đang xử lý')
 		BEGIN
 
 			WAITFOR DELAY @delay;
 
-			UPDATE DON_HANG
-			SET TINH_TRANG_DH = N'Đã hủy'
-			WHERE MA_DH = @ma_dh;
+			UPDATE DonHang
+			SET Status = N'Đã hủy'
+			WHERE MaDH = @ma_dh;
 
 			--Cộng lại sản phẩm trong chi nhánh sản phẩm
-			UPDATE CHI_NHANH_SP
-			SET SO_LUONG_CNSP = SO_LUONG_CNSP + (SELECT TOP 1 dhsp.SO_LUONG_SP_DH
-												FROM DON_HANG_SP dhsp
-												WHERE dhsp.MA_SP = MA_SP 
-													AND dhsp.MA_DH = MA_DH)
-			WHERE MA_CN = (SELECT TOP 1 dh.MA_CN 
-							FROM DON_HANG dh
-							WHERE dh.MA_DH = @ma_dh)
-				AND MA_SP IN (SELECT dhsp.MA_SP 
-								FROM DON_HANG_SP dhsp
-								WHERE dhsp.MA_DH = @ma_dh);
+			UPDATE ChiNhanh_SanPham
+			SET SoLuong_CS = SoLuong_CS + (SELECT TOP 1 dhsp.SoLuong_SD
+												FROM DonHang_SanPham dhsp
+												WHERE dhsp.MaSP = MaSP 
+													AND dhsp.MaDH = MaDH)
+			WHERE MaCN = (SELECT TOP 1 dh.MaCN 
+							FROM DonHang dh
+							WHERE dh.MaDH = @ma_dh)
+				AND MaSP IN (SELECT dhsp.MaSP 
+								FROM DonHang_SanPham dhsp
+								WHERE dhsp.MaDH = @ma_dh);
 
 			PRINT N'Hủy đơn hàng thành công';
 			COMMIT TRANSACTION;
@@ -399,28 +399,28 @@ BEGIN TRANSACTION
 	BEGIN TRY
 	--Chỉ có thể hủy khi đơn hàng đang trong trạng thái Đang xử lý
 	IF EXISTS (SELECT * 
-				FROM DON_HANG WITH (UPDLOCK)
-				WHERE MA_DH = @ma_dh AND TINH_TRANG_DH = N'Đang xử lý')
+				FROM DonHang WITH (UPDLOCK)
+				WHERE MaDH = @ma_dh AND Status = N'Đang xử lý')
 		BEGIN
 
 			WAITFOR DELAY @delay;
 
-			UPDATE DON_HANG
-			SET TINH_TRANG_DH = N'Đã hủy'
-			WHERE MA_DH = @ma_dh;
+			UPDATE DonHang
+			SET Status = N'Đã hủy'
+			WHERE MaDH = @ma_dh;
 
 			--Cộng lại sản phẩm trong chi nhánh sản phẩm
-			UPDATE CHI_NHANH_SP
-			SET SO_LUONG_CNSP = SO_LUONG_CNSP + (SELECT TOP 1 dhsp.SO_LUONG_SP_DH
-												FROM DON_HANG_SP dhsp
-												WHERE dhsp.MA_SP = MA_SP 
-													AND dhsp.MA_DH = MA_DH)
-			WHERE MA_CN = (SELECT TOP 1 dh.MA_CN 
-							FROM DON_HANG dh
-							WHERE dh.MA_DH = @ma_dh)
-				AND MA_SP IN (SELECT dhsp.MA_SP 
-								FROM DON_HANG_SP dhsp
-								WHERE dhsp.MA_DH = @ma_dh);
+			UPDATE ChiNhanh_SanPham
+			SET SoLuong_CS = SoLuong_CS + (SELECT TOP 1 dhsp.SoLuong_SD
+												FROM DonHang_SanPham dhsp
+												WHERE dhsp.MaSP = MaSP 
+													AND dhsp.MaDH = MaDH)
+			WHERE MaCN = (SELECT TOP 1 dh.MaCN 
+							FROM DonHang dh
+							WHERE dh.MaDH = @ma_dh)
+				AND MaSP IN (SELECT dhsp.MaSP 
+								FROM DonHang_SanPham dhsp
+								WHERE dhsp.MaDH = @ma_dh);
 
 			PRINT N'Hủy đơn hàng thành công';
 			COMMIT TRANSACTION;
@@ -445,45 +445,45 @@ BEGIN TRANSACTION
 
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
-	SELECT 'total', COUNT(dh.MA_DH) AS N'Tổng hóa đơn', 
-					SUM(dh.PHI_SP) AS N'Tổng giá sản phẩm hóa đơn', 
-					SUM(dh.PHI_VC) AS N'Tổng phí vận chuyển'
-	FROM DON_HANG dh
-		JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN
-	WHERE cn.MA_DT = @ma_dt;
+	SELECT 'total', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
+					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
+					SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
+	FROM DonHang dh
+		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
+	WHERE cn.MaDT = @ma_dt;
 
-	SELECT 'shipping', COUNT(dh.MA_DH) AS N'Tổng hóa đơn', 
-						SUM(dh.PHI_SP) AS N'Tổng giá sản phẩm hóa đơn', 
-						SUM(dh.PHI_VC) AS N'Tổng phí vận chuyển'
-	FROM DON_HANG dh
-		JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN
-	WHERE cn.MA_DT = @ma_dt AND dh.TINH_TRANG_DH = N'Đang giao';
+	SELECT 'shipping', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
+						SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
+						SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
+	FROM DonHang dh
+		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
+	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Đang giao';
 
 	WAITFOR DELAY @delay;
 
-	SELECT 'done', COUNT(dh.MA_DH) AS N'Tổng hóa đơn', 
-					SUM(dh.PHI_SP) AS N'Tổng giá sản phẩm hóa đơn', 
-					SUM(dh.PHI_VC) AS N'Tổng phí vận chuyển'
-	FROM DON_HANG dh
-		JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN
-	WHERE cn.MA_DT = @ma_dt AND dh.TINH_TRANG_DH = N'Thành công';
+	SELECT 'done', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
+					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
+					SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
+	FROM DonHang dh
+		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
+	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Thành công';
 
-	SELECT 'product', sp.MA_SP, sp.TEN_SP, 
-			SUM(dhsp.SO_LUONG_SP_DH) AS N'Số lượng đã bán'
-	FROM DON_HANG_SP dhsp
-		JOIN SAN_PHAM sp ON dhsp.MA_SP = sp.MA_SP
-		JOIN DON_HANG dh ON dhsp.MA_DH = dh.MA_DH
-		JOIN CHI_NHANH_SP cnsp ON cnsp.MA_CN = dh.MA_CN
-		JOIN CHI_NHANH cn ON cn.MA_CN = cnsp.MA_CN
-	WHERE cn.MA_DT = @ma_dt
-	GROUP BY sp.MA_SP, sp.TEN_SP
-	HAVING SUM(dhsp.SO_LUONG_SP_DH) >= ALL (SELECT SUM(dhsp.SO_LUONG_SP_DH)
-											FROM DON_HANG_SP dhsp
-												JOIN DON_HANG dh ON dhsp.MA_DH = dh.MA_DH
-												JOIN CHI_NHANH_SP cnsp ON cnsp.MA_CN = dh.MA_CN
-												JOIN CHI_NHANH cn ON cn.MA_CN = cnsp.MA_CN
-											WHERE cn.MA_DT = @ma_dt
-											GROUP BY dhsp.MA_SP);
+	SELECT 'product', sp.MaSP, sp.Ten, 
+			SUM(dhsp.SoLuong_SD) AS N'Số lượng đã bán'
+	FROM DonHang_SanPham dhsp
+		JOIN SanPham sp ON dhsp.MaSP = sp.MaSP
+		JOIN DonHang dh ON dhsp.MaDH = dh.MaDH
+		JOIN ChiNhanh_SanPham cnsp ON cnsp.MaCN = dh.MaCN
+		JOIN ChiNhanh cn ON cn.MaCN = cnsp.MaCN
+	WHERE cn.MaDT = @ma_dt
+	GROUP BY sp.MaSP, sp.Ten
+	HAVING SUM(dhsp.SoLuong_SD) >= ALL (SELECT SUM(dhsp.SoLuong_SD)
+											FROM DonHang_SanPham dhsp
+												JOIN DonHang dh ON dhsp.MaDH = dh.MaDH
+												JOIN ChiNhanh_SanPham cnsp ON cnsp.MaCN = dh.MaCN
+												JOIN ChiNhanh cn ON cn.MaCN = cnsp.MaCN
+											WHERE cn.MaDT = @ma_dt
+											GROUP BY dhsp.MaSP);
 COMMIT TRANSACTION;
 GO
 
@@ -495,45 +495,45 @@ BEGIN TRANSACTION
 	
 	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
 
-	SELECT 'total', COUNT(dh.MA_DH) AS N'Tổng hóa đơn', 
-					SUM(dh.PHI_SP) AS N'Tổng giá sản phẩm hóa đơn', 
-					SUM(dh.PHI_VC) AS N'Tổng phí vận chuyển'
-	FROM DON_HANG dh
-		JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN
-	WHERE cn.MA_DT = @ma_dt;
+	SELECT 'total', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
+					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
+					SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
+	FROM DonHang dh
+		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
+	WHERE cn.MaDT = @ma_dt;
 
-	SELECT 'shipping', COUNT(dh.MA_DH) AS N'Tổng hóa đơn', 
-						SUM(dh.PHI_SP) AS N'Tổng giá sản phẩm hóa đơn', 
-						SUM(dh.PHI_VC) AS N'Tổng phí vận chuyển'
-	FROM DON_HANG dh
-		JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN
-	WHERE cn.MA_DT = @ma_dt AND dh.TINH_TRANG_DH = N'Đang giao';
+	SELECT 'shipping', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
+						SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
+						SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
+	FROM DonHang dh
+		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
+	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Đang giao';
 
 	WAITFOR DELAY @delay;
 
-	SELECT 'done', COUNT(dh.MA_DH) AS N'Tổng hóa đơn', 
-					SUM(dh.PHI_SP) AS N'Tổng giá sản phẩm hóa đơn', 
-					SUM(dh.PHI_VC) AS N'Tổng phí vận chuyển'
-	FROM DON_HANG dh
-		JOIN CHI_NHANH cn ON dh.MA_CN = cn.MA_CN
-	WHERE cn.MA_DT = @ma_dt AND dh.TINH_TRANG_DH = N'Thành công';
+	SELECT 'done', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
+					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
+					SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
+	FROM DonHang dh
+		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
+	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Thành công';
 
-	SELECT 'product', sp.MA_SP, sp.TEN_SP, 
-			SUM(dhsp.SO_LUONG_SP_DH) AS N'Số lượng đã bán'
-	FROM DON_HANG_SP dhsp
-		JOIN SAN_PHAM sp ON dhsp.MA_SP = sp.MA_SP
-		JOIN DON_HANG dh ON dhsp.MA_DH = dh.MA_DH
-		JOIN CHI_NHANH_SP cnsp ON cnsp.MA_CN = dh.MA_CN
-		JOIN CHI_NHANH cn ON cn.MA_CN = cnsp.MA_CN
-	WHERE cn.MA_DT = @ma_dt
-	GROUP BY sp.MA_SP, sp.TEN_SP
-	HAVING SUM(dhsp.SO_LUONG_SP_DH) >= ALL (SELECT SUM(dhsp.SO_LUONG_SP_DH)
-											FROM DON_HANG_SP dhsp
-												JOIN DON_HANG dh ON dhsp.MA_DH = dh.MA_DH
-												JOIN CHI_NHANH_SP cnsp ON cnsp.MA_CN = dh.MA_CN
-												JOIN CHI_NHANH cn ON cn.MA_CN = cnsp.MA_CN
-											WHERE cn.MA_DT = @ma_dt
-											GROUP BY dhsp.MA_SP);
+	SELECT 'product', sp.MaSP, sp.Ten, 
+			SUM(dhsp.SoLuong_SD) AS N'Số lượng đã bán'
+	FROM DonHang_SanPham dhsp
+		JOIN SanPham sp ON dhsp.MaSP = sp.MaSP
+		JOIN DonHang dh ON dhsp.MaDH = dh.MaDH
+		JOIN ChiNhanh_SanPham cnsp ON cnsp.MaCN = dh.MaCN
+		JOIN ChiNhanh cn ON cn.MaCN = cnsp.MaCN
+	WHERE cn.MaDT = @ma_dt
+	GROUP BY sp.MaSP, sp.Ten
+	HAVING SUM(dhsp.SoLuong_SD) >= ALL (SELECT SUM(dhsp.SoLuong_SD)
+											FROM DonHang_SanPham dhsp
+												JOIN DonHang dh ON dhsp.MaDH = dh.MaDH
+												JOIN ChiNhanh_SanPham cnsp ON cnsp.MaCN = dh.MaCN
+												JOIN ChiNhanh cn ON cn.MaCN = cnsp.MaCN
+											WHERE cn.MaDT = @ma_dt
+											GROUP BY dhsp.MaSP);
 COMMIT TRANSACTION;
 GO
 
@@ -544,19 +544,19 @@ AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
-	SELECT 'total', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_KH = @ma_kh;
+	SELECT 'total', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaKH = @ma_kh;
 
-	SELECT 'shipping', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_KH = @ma_kh AND dh.TINH_TRANG_DH = N'Đang giao';
+	SELECT 'shipping', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaKH = @ma_kh AND dh.Status = N'Đang giao';
 
 	WAITFOR DELAY @delay;
 
-	SELECT 'done', COUNT(dh.MA_DH) , SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_KH = @ma_kh AND dh.TINH_TRANG_DH = N'Thành công';
+	SELECT 'done', COUNT(dh.MaDH) , SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaKH = @ma_kh AND dh.Status = N'Thành công';
 COMMIT TRANSACTION;
 GO
 
@@ -567,19 +567,19 @@ AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
 
-	SELECT 'total', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_KH = @ma_kh;
+	SELECT 'total', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaKH = @ma_kh;
 
-	SELECT 'shipping', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_KH = @ma_kh AND dh.TINH_TRANG_DH = N'Đang giao';
+	SELECT 'shipping', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaKH = @ma_kh AND dh.Status = N'Đang giao';
 
 	WAITFOR DELAY @delay;
 
-	SELECT 'done', COUNT(dh.MA_DH) , SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_KH = @ma_kh AND dh.TINH_TRANG_DH = N'Thành công';
+	SELECT 'done', COUNT(dh.MaDH) , SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaKH = @ma_kh AND dh.Status = N'Thành công';
 COMMIT TRANSACTION;
 GO
 
@@ -589,19 +589,19 @@ AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
-	SELECT 'total', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_TX = @ma_tx;
+	SELECT 'total', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaTX = @ma_tx;
 
-	SELECT 'shipping', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_TX = @ma_tx AND dh.TINH_TRANG_DH = N'Đang giao';
+	SELECT 'shipping', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaTX = @ma_tx AND dh.Status = N'Đang giao';
 
 	WAITFOR DELAY @delay;
 
-	SELECT 'done', COUNT(dh.MA_DH) , SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_TX = @ma_tx AND dh.TINH_TRANG_DH = N'Thành công';
+	SELECT 'done', COUNT(dh.MaDH) , SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaTX = @ma_tx AND dh.Status = N'Thành công';
 COMMIT TRANSACTION;
 GO
 
@@ -611,18 +611,18 @@ AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
 
-	SELECT 'total', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_TX = @ma_tx;
+	SELECT 'total', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaTX = @ma_tx;
 
-	SELECT 'shipping', COUNT(dh.MA_DH), SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_TX = @ma_tx AND dh.TINH_TRANG_DH = N'Đang giao';
+	SELECT 'shipping', COUNT(dh.MaDH), SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaTX = @ma_tx AND dh.Status = N'Đang giao';
 
 	WAITFOR DELAY @delay;
 
-	SELECT 'done', COUNT(dh.MA_DH) , SUM(dh.PHI_SP), SUM(dh.PHI_VC)
-	FROM DON_HANG dh
-	WHERE dh.MA_TX = @ma_tx AND dh.TINH_TRANG_DH = N'Thành công';
+	SELECT 'done', COUNT(dh.MaDH) , SUM(dh.Gia), SUM(dh.PhiVanChuyen)
+	FROM DonHang dh
+	WHERE dh.MaTX = @ma_tx AND dh.Status = N'Thành công';
 COMMIT TRANSACTION;
 GO

@@ -61,6 +61,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             // 
             // tabPage8
             // 
+            tabPage8.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             tabPage8.Controls.Add(createOrderControl);
             tabPage8.Location = new System.Drawing.Point(4, 24);
             tabPage8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -69,7 +70,6 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             tabPage8.Size = new System.Drawing.Size(430, 387);
             tabPage8.TabIndex = 0;
             tabPage8.Text = "Tạo đơn hàng";
-            tabPage8.UseVisualStyleBackColor = true;
             tabPage8.Click += tabPage8_Click;
             // 
             // createOrderControl
@@ -91,7 +91,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             tabPage9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage9.Name = "tabPage9";
             tabPage9.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage9.Size = new System.Drawing.Size(430, 387);
+            tabPage9.Size = new System.Drawing.Size(192, 72);
             tabPage9.TabIndex = 1;
             tabPage9.Text = "Xem đơn hàng hiện tại";
             tabPage9.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             customerViewOrderControl.Location = new System.Drawing.Point(3, 2);
             customerViewOrderControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             customerViewOrderControl.Name = "customerViewOrderControl";
-            customerViewOrderControl.Size = new System.Drawing.Size(424, 383);
+            customerViewOrderControl.Size = new System.Drawing.Size(186, 68);
             customerViewOrderControl.TabIndex = 0;
             // 
             // tabPage10
@@ -113,7 +113,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             tabPage10.Location = new System.Drawing.Point(4, 24);
             tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage10.Name = "tabPage10";
-            tabPage10.Size = new System.Drawing.Size(430, 387);
+            tabPage10.Size = new System.Drawing.Size(192, 72);
             tabPage10.TabIndex = 2;
             tabPage10.Text = "Thống kê các đơn hàng";
             tabPage10.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             customerOrderStatisticsControl.Location = new System.Drawing.Point(0, 0);
             customerOrderStatisticsControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             customerOrderStatisticsControl.Name = "customerOrderStatisticsControl";
-            customerOrderStatisticsControl.Size = new System.Drawing.Size(430, 387);
+            customerOrderStatisticsControl.Size = new System.Drawing.Size(192, 72);
             customerOrderStatisticsControl.TabIndex = 0;
             customerOrderStatisticsControl.Load += customerOrderStatisticsControl_Load;
             // 

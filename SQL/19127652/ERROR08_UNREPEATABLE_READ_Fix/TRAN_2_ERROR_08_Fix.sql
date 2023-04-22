@@ -1,5 +1,5 @@
 ﻿USE CHUYEN_HANG_ONLINE;
 
-UPDATE DON_HANG
-SET TINH_TRANG_DH = N'Thành công'
-WHERE MA_DH = 28
+UPDATE DonHang
+SET Status = N'Thành công'
+WHERE MaDH = 28
