@@ -6,6 +6,7 @@ using HQTCSDL_Group01.DatabaseManager.DTOs;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq.Expressions;
 
 namespace HQTCSDL_Group01.DatabaseManager
 {
@@ -67,9 +68,11 @@ namespace HQTCSDL_Group01.DatabaseManager
                 using var command = new SqlCommand()
                 {
                     Connection = connection,
-                    CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "chi_nhanh_chua_ki_hd"
+                    CommandType = System.Data.CommandType.Text,
+                    //CommandText = "chi_nhanh_chua_ki_hd"
+                    CommandText = "SELECT cn.MaCN FROM ChiNhanh cn WHERE cn.MaDT = @ma_dt"
                 };
+                
                 command.Parameters.AddWithValue("@ma_dt", partnerID);
                 using var reader = command.ExecuteReader();
                 while (reader.Read())

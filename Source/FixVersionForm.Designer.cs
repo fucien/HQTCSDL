@@ -77,6 +77,7 @@ namespace HQTCSDL_Group01
             logoutButton.TabIndex = 3;
             logoutButton.Text = "Đăng xuất";
             logoutButton.UseVisualStyleBackColor = true;
+            logoutButton.Click += LogoutButton_Click;
             // 
             // flowLayoutPanel2
             // 

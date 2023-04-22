@@ -23,21 +23,22 @@ namespace HQTCSDL_Group01
 
             loginControl.OnLogin += (loginInfor) =>
             {
+                var Name = loginInfor.Name;
                 var currentID = loginInfor.ID;
                 if (loginInfor.Type == "DT")
                 {
                     currentControl = new PartnerControl(currentID, false);
-                    currentFunctionLabel.Text = "Đối tác: " + currentID;
+                    currentFunctionLabel.Text = "Đối tác: " + Name;
                 }
                 else if (loginInfor.Type == "KH")
                 {
                     currentControl = new CustomerControl(currentID, false);
-                    currentFunctionLabel.Text = "Khách hàng: " + currentID;
+                    currentFunctionLabel.Text = "Khách hàng: " + Name;
                 }
                 else if (loginInfor.Type == "TX")
                 {
                     currentControl = new ShipperControl(currentID, false);
-                    currentFunctionLabel.Text = "Tài xế: " + currentID;
+                    currentFunctionLabel.Text = "Tài xế: " + Name;
                 }
                 currentFunctionPanel.Controls.Add(currentControl);
                 currentControl.Dock = DockStyle.Fill;
@@ -52,7 +53,26 @@ namespace HQTCSDL_Group01
                     delay.SetDelay(TimeSpan.FromSeconds((double)delayTimeNumeric.Value));
             };
         }
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (currentControl != null)
+                {
+                    currentFunctionPanel.Controls.Remove(currentControl);
+                    currentControl.Dispose();
+                    currentControl = null;
+                }
 
+                functionsPanel.Visible = false;
+                loginControl.Visible = true;
+                loginControl.BringToFront();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+        }
         private void loginControl_Load(object sender, EventArgs e)
         {
 

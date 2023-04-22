@@ -49,7 +49,7 @@ namespace HQTCSDL_Group01.DatabaseManager
                         if (reader.Read())
                         {
                             MessageBox.Show(reader.GetString(0));
-                            return new AccountTypeWithID(reader.GetString(0), reader.GetInt32(1));
+                            return new AccountTypeWithID(reader.GetString(0), reader.GetInt32(1),reader.GetString(2));
                         }
                         return null;
                     }
@@ -74,13 +74,15 @@ namespace HQTCSDL_Group01.DatabaseManager
 
     public class AccountTypeWithID
     {
-        public AccountTypeWithID(string type, int id)
+        public AccountTypeWithID(string type, int id, string name)
         {
             Type = type;
             ID = id;
+            Name = name;
         }
         public string Type { get; }
         public int ID { get; }
+        public string Name { get; }
     }
 
 }

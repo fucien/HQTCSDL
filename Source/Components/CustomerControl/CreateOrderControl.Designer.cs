@@ -178,7 +178,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             methodCbb.Dock = System.Windows.Forms.DockStyle.Fill;
             methodCbb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             methodCbb.FormattingEnabled = true;
-            methodCbb.Items.AddRange(new object[] { "Vận chuyển nhanh", "Vận chuyển bình thường" });
+            methodCbb.Items.AddRange(new object[] { "Thanh Toán trực tiếp bằng tiền mặt", "Thanh Toán qua thẻ", "Thanh toán qua ví điện tử" });
             methodCbb.Location = new System.Drawing.Point(121, 2);
             methodCbb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             methodCbb.Name = "methodCbb";

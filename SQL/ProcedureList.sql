@@ -16,19 +16,19 @@ BEGIN TRANSACTION
 			--Trả về mã (đối tác/khách hàng/tài xế) tương ứng với loại tài khoản đó
 			IF @loai_tk = 'DT'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', dt.MaDT AS 'ma' FROM DoiTac dt WHERE dt.TaiKhoan = @tai_khoan;
+					SELECT @loai_tk AS 'loai_tk', dt.MaDT AS 'ma', dt.TenDT as 'name' FROM DoiTac dt WHERE dt.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
 					RETURN;
 				END
 			ELSE IF @loai_tk = 'KH'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', kh.MaKH AS 'ma' FROM KhachHang kh WHERE kh.TaiKhoan = @tai_khoan;
+					SELECT @loai_tk AS 'loai_tk', kh.MaKH AS 'ma', kh.HoTen as 'name' FROM KhachHang kh WHERE kh.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
 					RETURN;
 				END
 			ELSE IF @loai_tk = 'TX'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', tx.MaTX AS 'ma' FROM TaiXe tx WHERE tx.TaiKhoan = @tai_khoan;
+					SELECT @loai_tk AS 'loai_tk', tx.MaTX AS 'ma', tx.HoTen as 'name' FROM TaiXe tx WHERE tx.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
 					RETURN
 				END

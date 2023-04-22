@@ -2,6 +2,7 @@
 using HQTCSDL_Group01.DatabaseManager.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace HQTCSDL_Group01.Components.CustomerControl
@@ -60,8 +61,9 @@ namespace HQTCSDL_Group01.Components.CustomerControl
                     foreach (var branchID in DatabaseManager.DBManager.Init.Partner.GetBranchIDs((int)partnerID))
                         branchIDCbb.Items.Add(branchID);
                 }
-                catch (Exception exception)
+                catch (Exception e)
                 {
+                    MessageBox.Show(e.Message);
 
                 }
             };
@@ -119,7 +121,7 @@ namespace HQTCSDL_Group01.Components.CustomerControl
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show($"Error: {exception.Message}");
             }
 
         }

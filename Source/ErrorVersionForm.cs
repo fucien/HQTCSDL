@@ -18,21 +18,22 @@ namespace HQTCSDL_Group01
             InitializeComponent();
             loginControl.OnLogin += (loginInfor) =>
             {
+                var Name = loginInfor.Name;
                 var currentID = loginInfor.ID;
                 if (loginInfor.Type == "DT")
                 {
                     currentControl = new PartnerControl(currentID, true);
-                    currentFunctionLabel.Text = "Đối tác: " + currentID;
+                    currentFunctionLabel.Text = "Đối tác: " + Name;
                 }
                 else if (loginInfor.Type == "KH")
                 {
                     currentControl = new CustomerControl(currentID, true);
-                    currentFunctionLabel.Text = "Khách hàng: " + currentID;
+                    currentFunctionLabel.Text = "Khách hàng: " + Name;
                 }
                 else if (loginInfor.Type == "TX")
                 {
                     currentControl = new ShipperControl(currentID, true);
-                    currentFunctionLabel.Text = "Tài xế: " + currentID;
+                    currentFunctionLabel.Text = "Tài xế: " + Name;
                 }
                 currentFunctionPanel.Controls.Add(currentControl);
                 currentControl.Dock = DockStyle.Fill;
@@ -52,14 +53,20 @@ namespace HQTCSDL_Group01
         {
             try
             {
-                currentFunctionPanel.Controls.Remove(currentControl);
-                currentControl.Dispose();
+                if (currentControl != null)
+                {
+                    currentFunctionPanel.Controls.Remove(currentControl);
+                    currentControl.Dispose();
+                    currentControl = null;
+                }
+
                 functionsPanel.Visible = false;
                 loginControl.Visible = true;
                 loginControl.BringToFront();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
+                MessageBox.Show(exception.Message);
             }
         }
     }

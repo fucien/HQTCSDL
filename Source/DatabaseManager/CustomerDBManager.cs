@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using System.Windows.Forms;
 
 namespace HQTCSDL_Group01.DatabaseManager
 {
@@ -165,8 +166,9 @@ namespace HQTCSDL_Group01.DatabaseManager
                 command.Parameters.Add(param);
                 return command.ExecuteNonQuery() > 0;
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
+                MessageBox.Show($"Error: {exception.Message}");
                 return false;
             }
         }
@@ -203,8 +205,9 @@ namespace HQTCSDL_Group01.DatabaseManager
                 command.Parameters.Add(param);
                 return command.ExecuteNonQuery() > 0;
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
+                MessageBox.Show($"Error: {exception.Message}");
                 return false;
             }
         }
