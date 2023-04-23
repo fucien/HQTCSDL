@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.CustomerControl
+namespace HQTCSDL_G6.Components.CustomerControl
 {
     public partial class CustomerOrderStatisticsControl : UserControl
     {

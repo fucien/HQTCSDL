@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components.PartnerControls
+namespace HQTCSDL_G6.Components.PartnerControls
 {
     partial class UpdateProductAmountControl
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HQTCSDL_Group01.DatabaseManager.DTOs
+namespace HQTCSDL_G6.DatabaseManager.DTOs
 {
     public class PartnerStatistics : Statistics
     {

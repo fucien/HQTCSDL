@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components
+namespace HQTCSDL_G6.Components
 {
     public partial class ViewBranchControl : UserControl
     {

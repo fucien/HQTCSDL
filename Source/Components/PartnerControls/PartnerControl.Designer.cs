@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components.PartnerControls
+namespace HQTCSDL_G6.Components.PartnerControls
 {
     partial class PartnerControl
     {
@@ -38,20 +38,20 @@ namespace HQTCSDL_Group01.Components.PartnerControls
             System.Windows.Forms.TabPage tabPage15;
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.extendContractControl = new HQTCSDL_Group01.Components.PartnerControls.ExtendContractControl();
+            this.extendContractControl = new HQTCSDL_G6.Components.PartnerControls.ExtendContractControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.viewContractControl = new HQTCSDL_Group01.Components.PartnerControls.ViewContractControl();
+            this.viewContractControl = new HQTCSDL_G6.Components.PartnerControls.ViewContractControl();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.addProductControl = new HQTCSDL_Group01.Components.PartnerControls.AddProductControl();
+            this.addProductControl = new HQTCSDL_G6.Components.PartnerControls.AddProductControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.deleteProductControl = new HQTCSDL_Group01.Components.PartnerControls.DeleteProductControl();
+            this.deleteProductControl = new HQTCSDL_G6.Components.PartnerControls.DeleteProductControl();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.updateProductControl = new HQTCSDL_Group01.Components.PartnerControls.UpdateProductControl();
+            this.updateProductControl = new HQTCSDL_G6.Components.PartnerControls.UpdateProductControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.updateProductAmountControl = new HQTCSDL_Group01.Components.PartnerControls.UpdateProductAmountControl();
-            this.partnerViewOrderControl = new HQTCSDL_Group01.Components.PartnerControls.OrderControls.PartnerViewOrderControl();
-            this.partnerStatisticsControl = new HQTCSDL_Group01.Components.PartnerControls.PartnerStatisticsControl();
+            this.updateProductAmountControl = new HQTCSDL_G6.Components.PartnerControls.UpdateProductAmountControl();
+            this.partnerViewOrderControl = new HQTCSDL_G6.Components.PartnerControls.OrderControls.PartnerViewOrderControl();
+            this.partnerStatisticsControl = new HQTCSDL_G6.Components.PartnerControls.PartnerStatisticsControl();
             tabControl1 = new System.Windows.Forms.TabControl();
             contractTab = new System.Windows.Forms.TabPage();
             productTab = new System.Windows.Forms.TabPage();

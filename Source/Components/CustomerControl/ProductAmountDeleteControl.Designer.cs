@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components
+namespace HQTCSDL_G6.Components
 {
     partial class ProductAmountDeleteControl
     {

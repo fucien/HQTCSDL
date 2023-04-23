@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components.PartnerControls.OrderControls
+namespace HQTCSDL_G6.Components.PartnerControls.OrderControls
 {
     partial class PartnerViewOrderControl
     {

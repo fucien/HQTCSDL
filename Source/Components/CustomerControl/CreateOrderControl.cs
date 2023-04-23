@@ -1,11 +1,11 @@
-﻿using HQTCSDL_Group01.DatabaseManager;
-using HQTCSDL_Group01.DatabaseManager.DTOs;
+﻿using HQTCSDL_G6.DatabaseManager;
+using HQTCSDL_G6.DatabaseManager.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.CustomerControl
+namespace HQTCSDL_G6.Components.CustomerControl
 {
     public partial class CreateOrderControl : UserControl
     {

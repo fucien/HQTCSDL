@@ -1,43 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using HQTCSDL_G6.DatabaseManager;
+using HQTCSDL_G6.DatabaseManager.DTOs;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace HQTCSDL_Group01.Components.AdminControl
+namespace HQTCSDL_G6.Components.AdminControl
 {
-    public partial class AdminControl : UserControl
+
+
+    public partial class AdminControl : UserControl, IDelay
     {
+        public int CurrentID { get; internal set; }
+
+        public bool Error { get; set; } = false;
         SqlConnection connection;
         SqlCommand command;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
-        string query = "đường dẫn"; // bỏ vào đây đường dẫn đến database
+        //string query = "Data Source=LAPTOP-KSF5NDFT\SQLEXPRESS01;Initial Catalog=CHUYEN_HANG_ONLINE;User ID=QTV1; Password=QTV1;Connect Timeout=30; Encrypt=False;TrustServerCertificate=False;MultiSubnetFailover=False";
+        public TimeSpan CurrentDelay { get; set; }
 
-        void load()
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from /////"; // bỏ vào đây tên bảng trong database
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
-            dataGridView2.DataSource = table;
-        }
-        public AdminControl()
+        public AdminControl(int id, bool error)
         {
             InitializeComponent();
+
+            CurrentID = id;
+            Error = error;
+
+            //customerViewOrderControl.CurrentID = id;
+            //customerViewOrderControl.Error = error;
+
+            //customerOrderStatisticsControl.CurrentID = id;
+            //customerOrderStatisticsControl.Error = error;
+        }
+        void load()
+        {
+
+            dataGridView1.DataSource = DatabaseManager.DBManager.Init.Admin.GetAccount();
+            dataGridView2.DataSource = DatabaseManager.DBManager.Init.Admin.GetAccount();
         }
 
         private void AdminControl_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(query);
-            connection.Open();
+
             load();
         }
 
@@ -55,37 +61,27 @@ namespace HQTCSDL_Group01.Components.AdminControl
         {
             string acc = AccTbx.Text;
             string pass = PassTbx.Text;
-            int IsActive = 1;
-            command = connection.CreateCommand();
-            command.CommandText = "insert into ///// values ('" + acc + "', '" + pass + "', '" + IsActive + "')"; // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
-
-            command = new SqlCommand("update ///// set stt = stt + 1", connection); // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
-
+            int isLocked = 0;
+            
+            //DatabaseManager.AdminDBManager.AddAccount(pass, acc, role, isLocked);
             MessageBox.Show("Thêm thành công");
             load();
         }
 
         private void DelBtn_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "delete from ///// where stt = '" + SttTbx.Text + "'"; // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
-
-            command = new SqlCommand("update ///// set stt = stt - 1 where stt > '" + SttTbx.Text + "'", connection); // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
-
+            string acc = AccTbx.Text;
+            DatabaseManager.DBManager.Init.Admin.DeleteAccount(acc);
             MessageBox.Show("Xóa thành công");
             load();
         }
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "update ///// set acc = '" + AccTbx.Text + "', pass = '" + PassTbx.Text + "' where stt = '" + SttTbx.Text + "'";
-            // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
+            string acc = AccTbx.Text;
+            string pass = PassTbx.Text;
+            int isLocked = 0;
+            //DatabaseManager.DBManager.Init.Admin.UpdateAccount(pass, acc, role, isLocked);
 
             MessageBox.Show("Sửa thành công");
             load();
@@ -100,20 +96,21 @@ namespace HQTCSDL_Group01.Components.AdminControl
 
         private void DeBtn_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "update ///// set IsActive = 0 where stt = '" + SttDATbx.Text + "'"; // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
-
+            string username = AccTbx.Text;
+            DatabaseManager.DBManager.Init.Admin.LockAccount(username);
             MessageBox.Show("Khóa thành công");
         }
 
         private void AcBtn_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "update ///// set IsActive = 1 where stt = '" + SttDATbx.Text + "'"; // bỏ vào đây tên bảng trong database
-            command.ExecuteNonQuery();
-
+            string username = AccTbx.Text;
+            DatabaseManager.DBManager.Init.Admin.UnlockAccount(username);
             MessageBox.Show("Mở khóa thành công");
+        }
+
+        public void SetDelay(TimeSpan delay)
+        {
+            CurrentDelay = delay;
         }
     }
 }

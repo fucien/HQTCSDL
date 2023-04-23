@@ -1,4 +1,4 @@
-﻿using HQTCSDL_Group01.DatabaseManager;
+﻿using HQTCSDL_G6.DatabaseManager;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components
+namespace HQTCSDL_G6.Components
 {
     public partial class LoginControl : UserControl
     {

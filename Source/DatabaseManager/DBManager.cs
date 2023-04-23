@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.DatabaseManager
+namespace HQTCSDL_G6.DatabaseManager
 {
     class DBManager
     {
@@ -13,11 +13,15 @@ namespace HQTCSDL_Group01.DatabaseManager
 
         public static DBManager Init => lazySingleton.Value;
 
+        public AdminDBManager Admin { get; } = new AdminDBManager();
+
         public PartnerDBManager Partner { get; } = new PartnerDBManager();
 
         public CustomerDBManager Customer { get; } = new CustomerDBManager();
 
         public ShipperDBManager Shipper { get; } = new ShipperDBManager();
+
+
 
         public AccountTypeWithID Login(string account, string password)
         {
@@ -39,12 +43,12 @@ namespace HQTCSDL_Group01.DatabaseManager
                     command.Parameters.AddWithValue("@tai_khoan", account);
                     command.Parameters.AddWithValue("@mat_khau", password);
                     connection.Open();
-                    MessageBox.Show("Connection Open  !");
+                    
                     
                     try
                     {
-                        var reader = command.ExecuteReader();
 
+                        var reader = command.ExecuteReader();
 
                         if (reader.Read())
                         {

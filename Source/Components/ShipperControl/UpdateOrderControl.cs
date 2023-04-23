@@ -1,4 +1,4 @@
-﻿using HQTCSDL_Group01.Components.PartnerControls.OrderControls;
+﻿using HQTCSDL_G6.Components.PartnerControls.OrderControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.ShipperControl
+namespace HQTCSDL_G6.Components.ShipperControl
 {
     public partial class UpdateOrderControl : UserControl
     {

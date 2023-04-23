@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HQTCSDL_Group01.Components
+namespace HQTCSDL_G6.Components
 {
     public interface IDelay
     {

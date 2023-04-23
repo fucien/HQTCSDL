@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
+namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
 {
     public partial class ContractReadOnlyControl : UserControl
     {

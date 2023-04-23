@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using HQTCSDL_Group01.DatabaseManager.DTOs;
+using HQTCSDL_G6.DatabaseManager.DTOs;
 
-namespace HQTCSDL_Group01.Components.PartnerControls.OrderControls
+namespace HQTCSDL_G6.Components.PartnerControls.OrderControls
 {
     public partial class OrderControl : UserControl
     {

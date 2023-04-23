@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components.ShipperControl
+namespace HQTCSDL_G6.Components.ShipperControl
 {
     partial class ShipperControl
     {

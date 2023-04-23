@@ -1,10 +1,10 @@
-﻿using HQTCSDL_Group01.DatabaseManager.DTOs;
+﻿using HQTCSDL_G6.DatabaseManager.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace HQTCSDL_Group01.DatabaseManager
+namespace HQTCSDL_G6.DatabaseManager
 {
     public class ShipperDBManager
     {

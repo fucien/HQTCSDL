@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using HQTCSDL_Group01.DatabaseManager.DTOs;
+using HQTCSDL_G6.DatabaseManager.DTOs;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 
-namespace HQTCSDL_Group01.DatabaseManager
+namespace HQTCSDL_G6.DatabaseManager
 {
     class PartnerDBManager
     {

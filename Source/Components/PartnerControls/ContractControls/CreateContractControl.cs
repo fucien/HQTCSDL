@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.PartnerControls.ContractControls
+namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
 {
     public partial class CreateContractControl : UserControl
     {

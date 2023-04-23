@@ -1,4 +1,5 @@
-﻿INSERT INTO TaiKhoan (TaiKhoan, Pass, Loai)
+﻿
+INSERT INTO TaiKhoan (TaiKhoan, Pass, Loai)
 VALUES ('admin', 'admin', 'AD'),
 ('nhanvien1', 'nhanvien', 'NV'),
 ('nhanvien2', 'nhanvien', 'NV'),
@@ -8,6 +9,9 @@ VALUES ('admin', 'admin', 'AD'),
 ('taixe2','taixe','TX'),
 ('khachhang1','khachhang','KH'),
 ('khachhang2','khachhang','KH');
+
+INSERT INTO Admin (TaiKhoan,Ten)
+VALUES ('admin','Uyên');
 
 INSERT INTO DoiTac (TaiKhoan, TenDT, DaiDien, ThanhPho, Quan, DiaChi, SoChiNhanh, LoaiAmThuc, Sdt, Email)
 VALUES ('doitac1', N'Bistro du Philips', N'Trương Trần Phúc Tín', N'TP HCM', N'5', N'227 NVC', 3, N'French Cuisine', '0987654321', 'philipstruong194@gmail.com'),

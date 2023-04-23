@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <StartupObject>HQTCSDL_Group01.Program</StartupObject>
+    <StartupObject>HQTCSDL_G6.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

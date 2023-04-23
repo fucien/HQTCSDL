@@ -1,7 +1,8 @@
-﻿using HQTCSDL_Group01.Components;
-using HQTCSDL_Group01.Components.CustomerControl;
-using HQTCSDL_Group01.Components.PartnerControls;
-using HQTCSDL_Group01.Components.ShipperControl;
+﻿using HQTCSDL_G6.Components;
+using HQTCSDL_G6.Components.AdminControl;
+using HQTCSDL_G6.Components.CustomerControl;
+using HQTCSDL_G6.Components.PartnerControls;
+using HQTCSDL_G6.Components.ShipperControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +11,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01
+namespace HQTCSDL_G6
 {
     public partial class FixVersionForm : Form
     {
@@ -39,6 +40,11 @@ namespace HQTCSDL_Group01
                 {
                     currentControl = new ShipperControl(currentID, false);
                     currentFunctionLabel.Text = "Tài xế: " + Name;
+                }
+                else if (loginInfor.Type == "AD")
+                {
+                    currentControl = new AdminControl(currentID, false);
+                    currentFunctionLabel.Text = "Quản lý: " + Name;
                 }
                 currentFunctionPanel.Controls.Add(currentControl);
                 currentControl.Dock = DockStyle.Fill;

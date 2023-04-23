@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components.CustomerControl
+namespace HQTCSDL_G6.Components.CustomerControl
 {
     partial class CustomerOrderStatisticsControl
     {

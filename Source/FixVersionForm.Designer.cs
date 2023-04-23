@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01
+namespace HQTCSDL_G6
 {
     partial class FixVersionForm
     {

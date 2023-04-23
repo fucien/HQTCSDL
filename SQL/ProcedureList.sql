@@ -30,7 +30,13 @@ BEGIN TRANSACTION
 				BEGIN
 					SELECT @loai_tk AS 'loai_tk', tx.MaTX AS 'ma', tx.HoTen as 'name' FROM TaiXe tx WHERE tx.TaiKhoan = @tai_khoan;
 					COMMIT TRAN;
-					RETURN
+					RETURN;
+				END
+			ELSE IF @loai_tk = 'AD'
+				BEGIN
+					SELECT @loai_tk AS 'loai_tk', ad.MaAD   AS 'ma',ad.Ten as 'name' FROM Admin ad WHERE ad.TaiKhoan = @tai_khoan;
+					COMMIT TRAN;
+					RETURN;
 				END
 		END
 COMMIT TRANSACTION

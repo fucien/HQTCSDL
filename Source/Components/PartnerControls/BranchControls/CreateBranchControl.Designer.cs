@@ -1,5 +1,5 @@
 ﻿
-namespace HQTCSDL_Group01.Components.PartnerControls.BranchControls
+namespace HQTCSDL_G6.Components.PartnerControls.BranchControls
 {
     partial class CreateBranchControl
     {

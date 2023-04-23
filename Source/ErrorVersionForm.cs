@@ -1,12 +1,13 @@
 ﻿using System;
-using HQTCSDL_Group01.DatabaseManager;
+using HQTCSDL_G6.DatabaseManager;
 using System.Windows.Forms;
-using HQTCSDL_Group01.Components.PartnerControls;
-using HQTCSDL_Group01.Components.CustomerControl;
-using HQTCSDL_Group01.Components.ShipperControl;
-using HQTCSDL_Group01.Components;
+using HQTCSDL_G6.Components.PartnerControls;
+using HQTCSDL_G6.Components.CustomerControl;
+using HQTCSDL_G6.Components.ShipperControl;
+using HQTCSDL_G6.Components.AdminControl;
+using HQTCSDL_G6.Components;
 
-namespace HQTCSDL_Group01
+namespace HQTCSDL_G6
 {
     public partial class ErrorVersionForm : Form
     {
@@ -34,6 +35,11 @@ namespace HQTCSDL_Group01
                 {
                     currentControl = new ShipperControl(currentID, true);
                     currentFunctionLabel.Text = "Tài xế: " + Name;
+                }
+                else if (loginInfor.Type == "AD")
+                {
+                    currentControl = new AdminControl(currentID, true);
+                    currentFunctionLabel.Text = "Quản lý: " + Name;
                 }
                 currentFunctionPanel.Controls.Add(currentControl);
                 currentControl.Dock = DockStyle.Fill;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.PartnerControls
+namespace HQTCSDL_G6.Components.PartnerControls
 {
     public partial class ExtendContractControl : UserControl
     {

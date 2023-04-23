@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Threading;
 
-namespace HQTCSDL_Group01
+namespace HQTCSDL_G6
 {
     public partial class SelectVersionForm : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace HQTCSDL_Group01.Components.AdminControl
+﻿namespace HQTCSDL_G6.Components.AdminControl
 {
     partial class AdminControl
     {
