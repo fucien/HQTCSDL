@@ -83,9 +83,9 @@
             label2.AutoSize = true;
             label2.Location = new System.Drawing.Point(393, 8);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(76, 15);
+            label2.Size = new System.Drawing.Size(79, 15);
             label2.TabIndex = 6;
-            label2.Text = "Hợp đồng số";
+            label2.Text = "Mã hợp đồng";
             // 
             // GuiBtn
             // 
@@ -134,9 +134,9 @@
             label1.AutoSize = true;
             label1.Location = new System.Drawing.Point(393, 12);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(76, 15);
+            label1.Size = new System.Drawing.Size(79, 15);
             label1.TabIndex = 4;
-            label1.Text = "Hợp đồng số";
+            label1.Text = "Mã hợp đồng";
             // 
             // AccBtn
             // 
