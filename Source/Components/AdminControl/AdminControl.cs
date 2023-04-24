@@ -36,34 +36,31 @@ namespace HQTCSDL_G6.Components.AdminControl
         }
         void load()
         {
-
             dataGridView1.DataSource = DatabaseManager.DBManager.Init.Admin.GetAccount();
             dataGridView2.DataSource = DatabaseManager.DBManager.Init.Admin.GetAccount();
         }
 
         private void AdminControl_Load(object sender, EventArgs e)
         {
-
             load();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            SttTbx.ReadOnly = true;
             int i;
             i = dataGridView1.CurrentRow.Index;
-            SttTbx.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            AccTbx.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            PassTbx.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
+            AccTbx.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            PassTbx.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            RoleCbx.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
             string acc = AccTbx.Text;
             string pass = PassTbx.Text;
-            int isLocked = 0;
-            
-            //DatabaseManager.AdminDBManager.AddAccount(pass, acc, role, isLocked);
+            string role = RoleCbx.Text;
+
+            DatabaseManager.DBManager.Init.Admin.AddAccount(acc, pass, role);
             MessageBox.Show("Thêm thành công");
             load();
         }
@@ -80,8 +77,7 @@ namespace HQTCSDL_G6.Components.AdminControl
         {
             string acc = AccTbx.Text;
             string pass = PassTbx.Text;
-            int isLocked = 0;
-            //DatabaseManager.DBManager.Init.Admin.UpdateAccount(pass, acc, role, isLocked);
+            DatabaseManager.DBManager.Init.Admin.UpdateAccount(pass, acc);
 
             MessageBox.Show("Sửa thành công");
             load();
@@ -111,6 +107,13 @@ namespace HQTCSDL_G6.Components.AdminControl
         public void SetDelay(TimeSpan delay)
         {
             CurrentDelay = delay;
+        }
+
+        private void ClrBtn_Click(object sender, EventArgs e)
+        {
+            AccTbx.Text = "";
+            PassTbx.Text = "";
+            RoleCbx.Text = "";
         }
     }
 }

@@ -23,7 +23,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "Select * from TaiKhoan"
+                    CommandText = "select * from TaiKhoan where Loai in (N'NV', N'AD')"
                 };
                 using var adapter = new SqlDataAdapter(command);
                 using var table = new DataTable();
@@ -36,7 +36,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 return null;
             }
         }   
-        public void AddAccount (string username, string password, string role, int isLocked)
+        public void AddAccount (string username, string password, string role)
         {
             try
             {
@@ -46,12 +46,11 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "Insert into TaiKhoan values (@username, @password, @role, @isLocked)"
+                    CommandText = "Insert into TaiKhoan (TaiKhoan, Pass, Loai) values (@username, @password, @role)"
                 };
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
                 command.Parameters.AddWithValue("@role", role);
-                command.Parameters.AddWithValue("@isLocked", isLocked);
                 command.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -81,22 +80,21 @@ namespace HQTCSDL_G6.DatabaseManager
             }
         }   
 
-        public void UpdateAccount (string username,string password, string role, int isLocked)
+        public void UpdateAccount (string username,string password)
         {
             try
             {
                 using SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
+
                 using var command = new SqlCommand()
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "Update TaiKhoan set password = @password, role = @role, isLocked = @isLocked where TaiKhoan = @username"
+                    CommandText = "Update TaiKhoan set Pass = @password where TaiKhoan = @username"
                 };
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
-                command.Parameters.AddWithValue("@role", role);
-                command.Parameters.AddWithValue("@isLocked", isLocked);
                 command.ExecuteNonQuery();
             }
             catch (Exception e)

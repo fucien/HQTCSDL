@@ -31,8 +31,9 @@
             tabControl1 = new System.Windows.Forms.TabControl();
             tabPage1 = new System.Windows.Forms.TabPage();
             tabPage2 = new System.Windows.Forms.TabPage();
-            label3 = new System.Windows.Forms.Label();
-            SttTbx = new System.Windows.Forms.TextBox();
+            ClrBtn = new System.Windows.Forms.Button();
+            RoleCbx = new System.Windows.Forms.ComboBox();
+            label5 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             PassTbx = new System.Windows.Forms.TextBox();
@@ -77,8 +78,9 @@
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(label3);
-            tabPage2.Controls.Add(SttTbx);
+            tabPage2.Controls.Add(ClrBtn);
+            tabPage2.Controls.Add(RoleCbx);
+            tabPage2.Controls.Add(label5);
             tabPage2.Controls.Add(label2);
             tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(PassTbx);
@@ -95,26 +97,38 @@
             tabPage2.Text = "Thêm - xóa - sửa tài khoản";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // ClrBtn
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(14, 23);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(55, 15);
-            label3.TabIndex = 9;
-            label3.Text = "Số thứ tự";
+            ClrBtn.Location = new System.Drawing.Point(6, 36);
+            ClrBtn.Name = "ClrBtn";
+            ClrBtn.Size = new System.Drawing.Size(50, 23);
+            ClrBtn.TabIndex = 13;
+            ClrBtn.Text = "Clear";
+            ClrBtn.UseVisualStyleBackColor = true;
+            ClrBtn.Click += ClrBtn_Click;
             // 
-            // SttTbx
+            // RoleCbx
             // 
-            SttTbx.Location = new System.Drawing.Point(23, 44);
-            SttTbx.Name = "SttTbx";
-            SttTbx.Size = new System.Drawing.Size(37, 23);
-            SttTbx.TabIndex = 8;
+            RoleCbx.FormattingEnabled = true;
+            RoleCbx.Items.AddRange(new object[] { "AD", "NV", "KH", "DT", "TX" });
+            RoleCbx.Location = new System.Drawing.Point(125, 64);
+            RoleCbx.Name = "RoleCbx";
+            RoleCbx.Size = new System.Drawing.Size(208, 23);
+            RoleCbx.TabIndex = 11;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(62, 68);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(40, 15);
+            label5.TabIndex = 10;
+            label5.Text = "Vai trò";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(75, 52);
+            label2.Location = new System.Drawing.Point(62, 39);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(57, 15);
             label2.TabIndex = 7;
@@ -123,7 +137,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(75, 23);
+            label1.Location = new System.Drawing.Point(62, 10);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(57, 15);
             label1.TabIndex = 6;
@@ -131,14 +145,14 @@
             // 
             // PassTbx
             // 
-            PassTbx.Location = new System.Drawing.Point(138, 49);
+            PassTbx.Location = new System.Drawing.Point(125, 36);
             PassTbx.Name = "PassTbx";
             PassTbx.Size = new System.Drawing.Size(208, 23);
             PassTbx.TabIndex = 5;
             // 
             // AccTbx
             // 
-            AccTbx.Location = new System.Drawing.Point(138, 20);
+            AccTbx.Location = new System.Drawing.Point(125, 7);
             AccTbx.Name = "AccTbx";
             AccTbx.Size = new System.Drawing.Size(208, 23);
             AccTbx.TabIndex = 4;
@@ -276,12 +290,13 @@
         private System.Windows.Forms.TextBox AccTbx;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox SttTbx;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button AcBtn;
         private System.Windows.Forms.Button DeBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox SttDATbx;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox RoleCbx;
+        private System.Windows.Forms.Button ClrBtn;
     }
 }
