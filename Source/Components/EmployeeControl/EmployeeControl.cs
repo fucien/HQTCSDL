@@ -91,5 +91,10 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
             command.CommandText = "delete from HopDong where MaHD = @num";
             load1();
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

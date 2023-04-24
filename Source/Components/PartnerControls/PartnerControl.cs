@@ -36,5 +36,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             updateProductAmountControl.CurrentDelay = delay;
             partnerStatisticsControl.CurrentDelay = delay;
         }
+
+        private void extendContractControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

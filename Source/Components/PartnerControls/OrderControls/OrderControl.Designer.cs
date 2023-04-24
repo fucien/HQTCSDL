@@ -72,110 +72,100 @@ namespace HQTCSDL_G6.Components.PartnerControls.OrderControls
             panel.Dock = System.Windows.Forms.DockStyle.Fill;
             panel.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns;
             panel.Location = new System.Drawing.Point(0, 0);
-            panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             panel.Name = "panel";
             panel.RowCount = 1;
             panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            panel.Size = new System.Drawing.Size(760, 29);
+            panel.Size = new System.Drawing.Size(860, 39);
             panel.TabIndex = 0;
             // 
             // shippingPriceTb
             // 
             shippingPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
             shippingPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            shippingPriceTb.Location = new System.Drawing.Point(595, 2);
-            shippingPriceTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            shippingPriceTb.Location = new System.Drawing.Point(673, 3);
             shippingPriceTb.Name = "shippingPriceTb";
             shippingPriceTb.ReadOnly = true;
-            shippingPriceTb.Size = new System.Drawing.Size(70, 25);
+            shippingPriceTb.Size = new System.Drawing.Size(80, 30);
             shippingPriceTb.TabIndex = 8;
             // 
             // productPriceTb
             // 
             productPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
             productPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            productPriceTb.Location = new System.Drawing.Point(519, 2);
-            productPriceTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            productPriceTb.Location = new System.Drawing.Point(587, 3);
             productPriceTb.Name = "productPriceTb";
             productPriceTb.ReadOnly = true;
-            productPriceTb.Size = new System.Drawing.Size(70, 25);
+            productPriceTb.Size = new System.Drawing.Size(80, 30);
             productPriceTb.TabIndex = 7;
             // 
             // orderStateTb
             // 
             orderStateTb.Dock = System.Windows.Forms.DockStyle.Fill;
             orderStateTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            orderStateTb.Location = new System.Drawing.Point(443, 2);
-            orderStateTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            orderStateTb.Location = new System.Drawing.Point(501, 3);
             orderStateTb.Name = "orderStateTb";
             orderStateTb.ReadOnly = true;
-            orderStateTb.Size = new System.Drawing.Size(70, 25);
+            orderStateTb.Size = new System.Drawing.Size(80, 30);
             orderStateTb.TabIndex = 6;
             // 
             // addressTb
             // 
             addressTb.Dock = System.Windows.Forms.DockStyle.Fill;
             addressTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            addressTb.Location = new System.Drawing.Point(291, 2);
-            addressTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            addressTb.Location = new System.Drawing.Point(329, 3);
             addressTb.Name = "addressTb";
             addressTb.ReadOnly = true;
-            addressTb.Size = new System.Drawing.Size(146, 25);
+            addressTb.Size = new System.Drawing.Size(166, 30);
             addressTb.TabIndex = 5;
             // 
             // shippingMethodTb
             // 
             shippingMethodTb.Dock = System.Windows.Forms.DockStyle.Fill;
             shippingMethodTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            shippingMethodTb.Location = new System.Drawing.Point(215, 2);
-            shippingMethodTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            shippingMethodTb.Location = new System.Drawing.Point(243, 3);
             shippingMethodTb.Name = "shippingMethodTb";
             shippingMethodTb.ReadOnly = true;
-            shippingMethodTb.Size = new System.Drawing.Size(70, 25);
+            shippingMethodTb.Size = new System.Drawing.Size(80, 30);
             shippingMethodTb.TabIndex = 4;
             // 
             // shipperIDTb
             // 
             shipperIDTb.Dock = System.Windows.Forms.DockStyle.Fill;
             shipperIDTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            shipperIDTb.Location = new System.Drawing.Point(162, 2);
-            shipperIDTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            shipperIDTb.Location = new System.Drawing.Point(183, 3);
             shipperIDTb.Name = "shipperIDTb";
             shipperIDTb.ReadOnly = true;
-            shipperIDTb.Size = new System.Drawing.Size(47, 25);
+            shipperIDTb.Size = new System.Drawing.Size(54, 30);
             shipperIDTb.TabIndex = 3;
             // 
             // customerIDTb
             // 
             customerIDTb.Dock = System.Windows.Forms.DockStyle.Fill;
             customerIDTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            customerIDTb.Location = new System.Drawing.Point(109, 2);
-            customerIDTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            customerIDTb.Location = new System.Drawing.Point(123, 3);
             customerIDTb.Name = "customerIDTb";
             customerIDTb.ReadOnly = true;
-            customerIDTb.Size = new System.Drawing.Size(47, 25);
+            customerIDTb.Size = new System.Drawing.Size(54, 30);
             customerIDTb.TabIndex = 2;
             // 
             // branchIDTb
             // 
             branchIDTb.Dock = System.Windows.Forms.DockStyle.Fill;
             branchIDTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            branchIDTb.Location = new System.Drawing.Point(56, 2);
-            branchIDTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            branchIDTb.Location = new System.Drawing.Point(63, 3);
             branchIDTb.Name = "branchIDTb";
             branchIDTb.ReadOnly = true;
-            branchIDTb.Size = new System.Drawing.Size(47, 25);
+            branchIDTb.Size = new System.Drawing.Size(54, 30);
             branchIDTb.TabIndex = 1;
             // 
             // orderIDTb
             // 
             orderIDTb.Dock = System.Windows.Forms.DockStyle.Fill;
             orderIDTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            orderIDTb.Location = new System.Drawing.Point(3, 2);
-            orderIDTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            orderIDTb.Location = new System.Drawing.Point(3, 3);
             orderIDTb.Name = "orderIDTb";
             orderIDTb.ReadOnly = true;
-            orderIDTb.Size = new System.Drawing.Size(47, 25);
+            orderIDTb.Size = new System.Drawing.Size(54, 30);
             orderIDTb.TabIndex = 0;
             // 
             // viewProductButton
@@ -184,10 +174,9 @@ namespace HQTCSDL_G6.Components.PartnerControls.OrderControls
             viewProductButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             viewProductButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             viewProductButton.ForeColor = System.Drawing.Color.White;
-            viewProductButton.Location = new System.Drawing.Point(671, 2);
-            viewProductButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            viewProductButton.Location = new System.Drawing.Point(759, 3);
             viewProductButton.Name = "viewProductButton";
-            viewProductButton.Size = new System.Drawing.Size(82, 25);
+            viewProductButton.Size = new System.Drawing.Size(94, 33);
             viewProductButton.TabIndex = 9;
             viewProductButton.Text = "Chi tiết";
             viewProductButton.UseVisualStyleBackColor = false;
@@ -195,14 +184,13 @@ namespace HQTCSDL_G6.Components.PartnerControls.OrderControls
             // 
             // OrderControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoSize = true;
             AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             Controls.Add(panel);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "OrderControl";
-            Size = new System.Drawing.Size(760, 29);
+            Size = new System.Drawing.Size(860, 39);
             panel.ResumeLayout(false);
             panel.PerformLayout();
             ResumeLayout(false);

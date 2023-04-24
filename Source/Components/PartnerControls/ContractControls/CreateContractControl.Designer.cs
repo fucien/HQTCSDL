@@ -88,21 +88,20 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             tableLayoutPanel3.Controls.Add(label2, 0, 0);
             tableLayoutPanel3.Controls.Add(taxNumberTb, 1, 0);
             tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel3.Location = new System.Drawing.Point(3, 41);
-            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel3.Location = new System.Drawing.Point(3, 55);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new System.Drawing.Size(642, 35);
+            tableLayoutPanel3.Size = new System.Drawing.Size(735, 46);
             tableLayoutPanel3.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(61, 19);
+            label2.Size = new System.Drawing.Size(76, 23);
             label2.TabIndex = 0;
             label2.Text = "Mã thuế";
             // 
@@ -110,10 +109,9 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             // 
             taxNumberTb.Dock = System.Windows.Forms.DockStyle.Fill;
             taxNumberTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            taxNumberTb.Location = new System.Drawing.Point(195, 2);
-            taxNumberTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            taxNumberTb.Location = new System.Drawing.Point(223, 3);
             taxNumberTb.Name = "taxNumberTb";
-            taxNumberTb.Size = new System.Drawing.Size(444, 25);
+            taxNumberTb.Size = new System.Drawing.Size(509, 30);
             taxNumberTb.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -124,21 +122,20 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             tableLayoutPanel4.Controls.Add(label3, 0, 0);
             tableLayoutPanel4.Controls.Add(repTb, 1, 0);
             tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel4.Location = new System.Drawing.Point(3, 80);
-            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel4.Location = new System.Drawing.Point(3, 107);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new System.Drawing.Size(642, 35);
+            tableLayoutPanel4.Size = new System.Drawing.Size(735, 46);
             tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label3.Location = new System.Drawing.Point(3, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(98, 19);
+            label3.Size = new System.Drawing.Size(131, 23);
             label3.TabIndex = 0;
             label3.Text = "Người đại diện";
             // 
@@ -146,10 +143,9 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             // 
             repTb.Dock = System.Windows.Forms.DockStyle.Fill;
             repTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            repTb.Location = new System.Drawing.Point(195, 2);
-            repTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            repTb.Location = new System.Drawing.Point(223, 3);
             repTb.Name = "repTb";
-            repTb.Size = new System.Drawing.Size(444, 25);
+            repTb.Size = new System.Drawing.Size(509, 30);
             repTb.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -172,7 +168,7 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(3, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(47, 57);
+            label4.Size = new System.Drawing.Size(52, 92);
             label4.TabIndex = 0;
             label4.Text = "Thời gian (ngày)";
             // 
@@ -180,20 +176,20 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             // 
             label5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(84, 0);
+            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(91, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(41, 19);
+            label5.Size = new System.Drawing.Size(52, 23);
             label5.TabIndex = 1;
             label5.Text = "Ngày";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(39, 35);
+            label1.Size = new System.Drawing.Size(51, 46);
             label1.TabIndex = 0;
             label1.Text = "Thời hạn";
             label1.Click += label1_Click;
@@ -202,10 +198,10 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             // 
             label6.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(270, 0);
+            label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.Location = new System.Drawing.Point(303, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(47, 19);
+            label6.Size = new System.Drawing.Size(60, 23);
             label6.TabIndex = 2;
             label6.Text = "Tháng";
             // 
@@ -213,10 +209,10 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             // 
             label7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(471, 0);
+            label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label7.Location = new System.Drawing.Point(535, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(38, 19);
+            label7.Size = new System.Drawing.Size(48, 23);
             label7.TabIndex = 3;
             label7.Text = "Năm";
             // 
@@ -233,7 +229,6 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             tableLayoutPanel1.Controls.Add(branchGridView, 0, 4);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 6;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -242,8 +237,8 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(648, 397);
+            tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new System.Drawing.Size(741, 529);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -264,45 +259,41 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             tableLayoutPanel2.Controls.Add(label5, 1, 0);
             tableLayoutPanel2.Controls.Add(label1, 0, 0);
             tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel2.Location = new System.Drawing.Point(3, 2);
-            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new System.Drawing.Size(642, 35);
+            tableLayoutPanel2.Size = new System.Drawing.Size(735, 46);
             tableLayoutPanel2.TabIndex = 6;
             // 
             // numericUpDown1
             // 
             numericUpDown1.Dock = System.Windows.Forms.DockStyle.Fill;
             numericUpDown1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            numericUpDown1.Location = new System.Drawing.Point(515, 2);
-            numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            numericUpDown1.Location = new System.Drawing.Point(589, 3);
             numericUpDown1.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new System.Drawing.Size(124, 25);
+            numericUpDown1.Size = new System.Drawing.Size(143, 30);
             numericUpDown1.TabIndex = 5;
             // 
             // numericUpDown2
             // 
             numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
             numericUpDown2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            numericUpDown2.Location = new System.Drawing.Point(323, 2);
-            numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            numericUpDown2.Location = new System.Drawing.Point(369, 3);
             numericUpDown2.Maximum = new decimal(new int[] { 11, 0, 0, 0 });
             numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new System.Drawing.Size(122, 25);
+            numericUpDown2.Size = new System.Drawing.Size(141, 30);
             numericUpDown2.TabIndex = 4;
             // 
             // daysNumeric
             // 
             daysNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
             daysNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            daysNumeric.Location = new System.Drawing.Point(131, 2);
-            daysNumeric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            daysNumeric.Location = new System.Drawing.Point(149, 3);
             daysNumeric.Maximum = new decimal(new int[] { 29, 0, 0, 0 });
             daysNumeric.Name = "daysNumeric";
-            daysNumeric.Size = new System.Drawing.Size(122, 25);
+            daysNumeric.Size = new System.Drawing.Size(141, 30);
             daysNumeric.TabIndex = 1;
             // 
             // addBranchButton
@@ -312,10 +303,9 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             addBranchButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             addBranchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             addBranchButton.ForeColor = System.Drawing.Color.White;
-            addBranchButton.Location = new System.Drawing.Point(261, 125);
-            addBranchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            addBranchButton.Location = new System.Drawing.Point(294, 166);
             addBranchButton.Name = "addBranchButton";
-            addBranchButton.Size = new System.Drawing.Size(126, 29);
+            addBranchButton.Size = new System.Drawing.Size(153, 39);
             addBranchButton.TabIndex = 3;
             addBranchButton.Text = "Thêm chi nhánh";
             addBranchButton.UseVisualStyleBackColor = false;
@@ -327,10 +317,9 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             confirmButton.ForeColor = System.Drawing.Color.White;
-            confirmButton.Location = new System.Drawing.Point(283, 356);
-            confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            confirmButton.Location = new System.Drawing.Point(323, 475);
             confirmButton.Name = "confirmButton";
-            confirmButton.Size = new System.Drawing.Size(82, 22);
+            confirmButton.Size = new System.Drawing.Size(94, 29);
             confirmButton.TabIndex = 5;
             confirmButton.Text = "Xác nhận";
             confirmButton.UseVisualStyleBackColor = false;
@@ -342,13 +331,12 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             branchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             branchGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { BranchID, BranchName, BranchAddress });
             branchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            branchGridView.Location = new System.Drawing.Point(3, 158);
-            branchGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            branchGridView.Location = new System.Drawing.Point(3, 211);
             branchGridView.Name = "branchGridView";
             branchGridView.ReadOnly = true;
             branchGridView.RowHeadersWidth = 51;
             branchGridView.RowTemplate.Height = 29;
-            branchGridView.Size = new System.Drawing.Size(642, 194);
+            branchGridView.Size = new System.Drawing.Size(735, 258);
             branchGridView.TabIndex = 7;
             // 
             // BranchID
@@ -379,7 +367,7 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox4.Location = new System.Drawing.Point(63, 3);
             textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(134, 25);
+            textBox4.Size = new System.Drawing.Size(134, 30);
             textBox4.TabIndex = 1;
             // 
             // tableLayoutPanel6
@@ -406,7 +394,7 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             yearsNumeric.Location = new System.Drawing.Point(163, 3);
             yearsNumeric.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
             yearsNumeric.Name = "yearsNumeric";
-            yearsNumeric.Size = new System.Drawing.Size(34, 25);
+            yearsNumeric.Size = new System.Drawing.Size(34, 30);
             yearsNumeric.TabIndex = 5;
             // 
             // monthsNumeric
@@ -415,17 +403,16 @@ namespace HQTCSDL_G6.Components.PartnerControls.ContractControls
             monthsNumeric.Location = new System.Drawing.Point(103, 3);
             monthsNumeric.Maximum = new decimal(new int[] { 11, 0, 0, 0 });
             monthsNumeric.Name = "monthsNumeric";
-            monthsNumeric.Size = new System.Drawing.Size(34, 25);
+            monthsNumeric.Size = new System.Drawing.Size(34, 30);
             monthsNumeric.TabIndex = 4;
             // 
             // CreateContractControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "CreateContractControl";
-            Size = new System.Drawing.Size(648, 397);
+            Size = new System.Drawing.Size(741, 529);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
             tableLayoutPanel4.ResumeLayout(false);
