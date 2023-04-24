@@ -80,14 +80,15 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
             int num = int.Parse(NumTbx.Text);
             command = connection.CreateCommand();
             command.CommandText = "update ///// set ///// = @num where ///// = @num"; // biến nhận thông báo/
-            load1();
+            load();
         }
 
         private void RejBtn_Click(object sender, EventArgs e)
         {
             int num = int.Parse(NumTbx.Text);
             command = connection.CreateCommand();
-            command.CommandText = "delete from ///// where ///// = @num"; // biến nhận thông báo/
+            command.CommandText = "delete from ///// where ///// = @num"; // xóa hợp đồng khỏi danh sách chờ/
+            load1();
         }
     }
 }
