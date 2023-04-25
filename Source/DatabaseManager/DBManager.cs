@@ -15,6 +15,8 @@ namespace HQTCSDL_G6.DatabaseManager
 
         public AdminDBManager Admin { get; } = new AdminDBManager();
 
+        public EmployeeDBManager Employee { get; } = new EmployeeDBManager();
+
         public PartnerDBManager Partner { get; } = new PartnerDBManager();
 
         public CustomerDBManager Customer { get; } = new CustomerDBManager();

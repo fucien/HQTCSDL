@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HQTCSDL_G6.Components;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +10,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.EmployeeControl
+namespace HQTCSDL_G6.Components.EmployeeControl
 {
-    public partial class EmployeeControl : UserControl
+    public partial class EmployeeControl : UserControl, IDelay
     {
+        public int CurrentID { get; internal set; }
+
+        public bool Error { get; set; } = false;
+
+        public TimeSpan CurrentDelay { get; set; }
+
         SqlConnection connection;
         SqlCommand command;
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         string query = "đường dẫn";
 
+        public EmployeeControl(int id, bool error)
+        {
+            InitializeComponent();
+
+            CurrentID = id;
+            Error = error;
+
+        }
         public EmployeeControl()
         {
             InitializeComponent();
@@ -95,6 +110,11 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void SetDelay(TimeSpan delay)
+        {
+            CurrentDelay = delay;
         }
     }
 }

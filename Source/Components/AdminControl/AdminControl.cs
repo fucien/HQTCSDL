@@ -13,12 +13,7 @@ namespace HQTCSDL_G6.Components.AdminControl
     {
         public int CurrentID { get; internal set; }
 
-        public bool Error { get; set; } = false;
-        SqlConnection connection;
-        SqlCommand command;
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-        //string query = "Data Source=LAPTOP-KSF5NDFT\SQLEXPRESS01;Initial Catalog=CHUYEN_HANG_ONLINE;User ID=QTV1; Password=QTV1;Connect Timeout=30; Encrypt=False;TrustServerCertificate=False;MultiSubnetFailover=False";
+        public bool Error { get; set; } = false; 
         public TimeSpan CurrentDelay { get; set; }
 
         public AdminControl(int id, bool error)
@@ -28,11 +23,6 @@ namespace HQTCSDL_G6.Components.AdminControl
             CurrentID = id;
             Error = error;
 
-            //customerViewOrderControl.CurrentID = id;
-            //customerViewOrderControl.Error = error;
-
-            //customerOrderStatisticsControl.CurrentID = id;
-            //customerOrderStatisticsControl.Error = error;
         }
         void load()
         {

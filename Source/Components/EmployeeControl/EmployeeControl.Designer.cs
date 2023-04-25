@@ -1,4 +1,4 @@
-﻿namespace HQTCSDL_Group01.Components.EmployeeControl
+﻿namespace HQTCSDL_G6.Components.EmployeeControl
 {
     partial class EmployeeControl
     {
