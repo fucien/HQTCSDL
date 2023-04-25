@@ -13,7 +13,7 @@ namespace HQTCSDL_G6.Components.AdminControl
     {
         public int CurrentID { get; internal set; }
 
-        public bool Error { get; set; } = false; 
+        public bool Error { get; set; } = false;
         public TimeSpan CurrentDelay { get; set; }
 
         public AdminControl(int id, bool error)
