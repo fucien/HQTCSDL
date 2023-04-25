@@ -1,4 +1,4 @@
-﻿namespace HQTCSDL_Group01.Components.EmployeeControl
+﻿namespace HQTCSDL_G6.Components.EmployeeControl
 {
     partial class EmployeeControl
     {
@@ -115,7 +115,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new System.Drawing.Size(427, 459);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // tabPage2
             // 
@@ -191,7 +191,7 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new System.Drawing.Size(427, 459);
             dataGridView2.TabIndex = 1;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dataGridView2.CellClick += dataGridView2_CellClick;
             // 
             // EmployeeControl
             // 

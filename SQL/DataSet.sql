@@ -55,8 +55,8 @@ VALUES
 (9, 3, 120),
 (10, 3, 90);
 
-DBCC CHECKIDENT ('KhachHang', RESEED, 0);
-DELETE FROM DonHang
+--DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+--DELETE FROM DonHang
 
 INSERT INTO KhachHang (TaiKhoan, HoTen, DiaChi, SDT, Email)
 VALUES ('khachhang1', 'Uyên Nguyễn', '226 Pasteur Q1 TPHCM', '0932222862', 'uyen73@gmail.com'),

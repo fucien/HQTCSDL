@@ -60,17 +60,17 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(790, 45);
+            tableLayoutPanel1.Size = new System.Drawing.Size(795, 45);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // productPriceTb
             // 
             productPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
             productPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            productPriceTb.Location = new System.Drawing.Point(319, 3);
+            productPriceTb.Location = new System.Drawing.Point(321, 3);
             productPriceTb.Name = "productPriceTb";
             productPriceTb.ReadOnly = true;
-            productPriceTb.Size = new System.Drawing.Size(152, 30);
+            productPriceTb.Size = new System.Drawing.Size(153, 30);
             productPriceTb.TabIndex = 2;
             // 
             // productIDCbb
@@ -80,23 +80,23 @@ namespace HQTCSDL_G6.Components
             productIDCbb.FormattingEnabled = true;
             productIDCbb.Location = new System.Drawing.Point(3, 3);
             productIDCbb.Name = "productIDCbb";
-            productIDCbb.Size = new System.Drawing.Size(152, 31);
+            productIDCbb.Size = new System.Drawing.Size(153, 31);
             productIDCbb.TabIndex = 0;
             // 
             // productNameTb
             // 
             productNameTb.Dock = System.Windows.Forms.DockStyle.Fill;
             productNameTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            productNameTb.Location = new System.Drawing.Point(161, 3);
+            productNameTb.Location = new System.Drawing.Point(162, 3);
             productNameTb.Name = "productNameTb";
             productNameTb.ReadOnly = true;
-            productNameTb.Size = new System.Drawing.Size(152, 30);
+            productNameTb.Size = new System.Drawing.Size(153, 30);
             productNameTb.TabIndex = 1;
             // 
             // amountNumeric
             // 
             amountNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            amountNumeric.Location = new System.Drawing.Point(477, 3);
+            amountNumeric.Location = new System.Drawing.Point(480, 3);
             amountNumeric.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             amountNumeric.Name = "amountNumeric";
             amountNumeric.Size = new System.Drawing.Size(150, 30);
@@ -110,9 +110,9 @@ namespace HQTCSDL_G6.Components
             deleteButton.Dock = System.Windows.Forms.DockStyle.Top;
             deleteButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             deleteButton.ForeColor = System.Drawing.Color.White;
-            deleteButton.Location = new System.Drawing.Point(635, 3);
+            deleteButton.Location = new System.Drawing.Point(639, 3);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new System.Drawing.Size(152, 39);
+            deleteButton.Size = new System.Drawing.Size(153, 39);
             deleteButton.TabIndex = 4;
             deleteButton.Text = "Xóa sản phẩm";
             deleteButton.UseVisualStyleBackColor = false;
@@ -125,7 +125,7 @@ namespace HQTCSDL_G6.Components
             AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             Controls.Add(tableLayoutPanel1);
             Name = "ProductAmountDeleteControl";
-            Size = new System.Drawing.Size(790, 45);
+            Size = new System.Drawing.Size(795, 45);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)amountNumeric).EndInit();

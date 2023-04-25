@@ -81,13 +81,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel1.Controls.Add(productsGridView, 0, 2);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(496, 424);
+            tableLayoutPanel1.Size = new System.Drawing.Size(567, 565);
             tableLayoutPanel1.TabIndex = 5;
             // 
             // viewButton
@@ -96,10 +95,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             viewButton.Dock = System.Windows.Forms.DockStyle.Fill;
             viewButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             viewButton.ForeColor = System.Drawing.Color.White;
-            viewButton.Location = new System.Drawing.Point(3, 2);
-            viewButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            viewButton.Location = new System.Drawing.Point(3, 3);
             viewButton.Name = "viewButton";
-            viewButton.Size = new System.Drawing.Size(490, 38);
+            viewButton.Size = new System.Drawing.Size(561, 50);
             viewButton.TabIndex = 2;
             viewButton.Text = "Tải lại đơn hàng";
             viewButton.UseVisualStyleBackColor = false;
@@ -112,13 +110,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             panel.Controls.Add(tableLayoutPanel4, 0, 0);
             panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            panel.Location = new System.Drawing.Point(3, 44);
-            panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            panel.Location = new System.Drawing.Point(3, 59);
             panel.Name = "panel";
             panel.RowCount = 2;
             panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            panel.Size = new System.Drawing.Size(490, 186);
+            panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            panel.Size = new System.Drawing.Size(561, 248);
             panel.TabIndex = 3;
             // 
             // tableLayoutPanel4
@@ -128,13 +125,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
             tableLayoutPanel4.Controls.Add(ordersPanel, 0, 1);
             tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel4.Location = new System.Drawing.Point(3, 2);
-            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
             tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            tableLayoutPanel4.Size = new System.Drawing.Size(484, 167);
+            tableLayoutPanel4.Size = new System.Drawing.Size(555, 222);
             tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -164,22 +160,21 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel5.Controls.Add(label6, 1, 0);
             tableLayoutPanel5.Controls.Add(label5, 0, 0);
             tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel5.Location = new System.Drawing.Point(3, 2);
-            tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new System.Drawing.Size(478, 29);
+            tableLayoutPanel5.Size = new System.Drawing.Size(549, 38);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label14.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label14.Location = new System.Drawing.Point(418, 0);
+            label14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label14.Location = new System.Drawing.Point(480, 0);
             label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(51, 29);
+            label14.Size = new System.Drawing.Size(61, 38);
             label14.TabIndex = 9;
             label14.Text = "Xem chi tiết";
             // 
@@ -187,10 +182,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label13.AutoSize = true;
             label13.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label13.Location = new System.Drawing.Point(371, 0);
+            label13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label13.Location = new System.Drawing.Point(426, 0);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(37, 29);
+            label13.Size = new System.Drawing.Size(45, 38);
             label13.TabIndex = 8;
             label13.Text = "Phí vận chuyển";
             // 
@@ -198,10 +193,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label12.AutoSize = true;
             label12.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label12.Location = new System.Drawing.Point(324, 0);
+            label12.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label12.Location = new System.Drawing.Point(372, 0);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(33, 29);
+            label12.Size = new System.Drawing.Size(44, 38);
             label12.TabIndex = 7;
             label12.Text = "Phí sản phẩm";
             // 
@@ -209,10 +204,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label11.AutoSize = true;
             label11.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label11.Location = new System.Drawing.Point(277, 0);
+            label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.Location = new System.Drawing.Point(318, 0);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(41, 29);
+            label11.Size = new System.Drawing.Size(46, 38);
             label11.TabIndex = 6;
             label11.Text = "Tình trạng đơn hàng";
             // 
@@ -220,10 +215,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label10.AutoSize = true;
             label10.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label10.Location = new System.Drawing.Point(182, 0);
+            label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label10.Location = new System.Drawing.Point(209, 0);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(86, 29);
+            label10.Size = new System.Drawing.Size(84, 38);
             label10.TabIndex = 5;
             label10.Text = "Địa chỉ giao hàng";
             // 
@@ -231,10 +226,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label9.AutoSize = true;
             label9.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label9.Location = new System.Drawing.Point(135, 0);
+            label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label9.Location = new System.Drawing.Point(155, 0);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(40, 29);
+            label9.Size = new System.Drawing.Size(45, 38);
             label9.TabIndex = 4;
             label9.Text = "Hình thức thanh toán";
             // 
@@ -242,10 +237,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label8.AutoSize = true;
             label8.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(102, 0);
+            label8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label8.Location = new System.Drawing.Point(117, 0);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(27, 29);
+            label8.Size = new System.Drawing.Size(29, 38);
             label8.TabIndex = 3;
             label8.Text = "Mã tài xế";
             // 
@@ -253,10 +248,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label7.AutoSize = true;
             label7.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(69, 0);
+            label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label7.Location = new System.Drawing.Point(79, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(27, 29);
+            label7.Size = new System.Drawing.Size(32, 38);
             label7.TabIndex = 2;
             label7.Text = "Mã khách hàng";
             // 
@@ -264,10 +259,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label6.AutoSize = true;
             label6.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(36, 0);
+            label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label6.Location = new System.Drawing.Point(41, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(27, 29);
+            label6.Size = new System.Drawing.Size(32, 38);
             label6.TabIndex = 1;
             label6.Text = "Mã chi nhánh";
             // 
@@ -275,10 +270,10 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label5.AutoSize = true;
             label5.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label5.Location = new System.Drawing.Point(3, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(27, 29);
+            label5.Size = new System.Drawing.Size(32, 38);
             label5.TabIndex = 0;
             label5.Text = "Mã hóa đơn";
             // 
@@ -289,12 +284,11 @@ namespace HQTCSDL_G6.Components.ShipperControl
             ordersPanel.ColumnCount = 1;
             ordersPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             ordersPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            ordersPanel.Location = new System.Drawing.Point(3, 35);
-            ordersPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            ordersPanel.Location = new System.Drawing.Point(3, 47);
             ordersPanel.Name = "ordersPanel";
             ordersPanel.RowCount = 1;
             ordersPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            ordersPanel.Size = new System.Drawing.Size(478, 130);
+            ordersPanel.Size = new System.Drawing.Size(549, 172);
             ordersPanel.TabIndex = 2;
             // 
             // productsGridView
@@ -305,13 +299,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             productsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             productsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { id, name, amount, price });
             productsGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            productsGridView.Location = new System.Drawing.Point(3, 234);
-            productsGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            productsGridView.Location = new System.Drawing.Point(3, 313);
             productsGridView.Name = "productsGridView";
             productsGridView.ReadOnly = true;
             productsGridView.RowHeadersWidth = 51;
             productsGridView.RowTemplate.Height = 29;
-            productsGridView.Size = new System.Drawing.Size(490, 188);
+            productsGridView.Size = new System.Drawing.Size(561, 249);
             productsGridView.TabIndex = 4;
             // 
             // id
@@ -344,12 +337,11 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             // UpdateOrderControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "UpdateOrderControl";
-            Size = new System.Drawing.Size(496, 424);
+            Size = new System.Drawing.Size(567, 565);
             tableLayoutPanel1.ResumeLayout(false);
             panel.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);

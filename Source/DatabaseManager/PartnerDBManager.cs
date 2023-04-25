@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
+using System.Windows.Forms;
 
 namespace HQTCSDL_G6.DatabaseManager
 {
@@ -186,12 +187,22 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT hd.MaHD, hd.MaSoThue, hd.NguoiDaiDien, hd.NgayBatDau, hd.NgayKetThuc FROM HopDong hd WHERE hd.MaDT = @partner_id"
+                    CommandText = "SELECT hd.MaHD, hd.MaSoThue, hd.NguoiDaiDien, hd.NgayBatDau, hd.NgayKetThuc , hd.isNotified FROM HopDong hd WHERE hd.MaDT = @partner_id"
                 };
                 command.Parameters.AddWithValue("@partner_id", partnerID);
                 using var reader = command.ExecuteReader();
                 while (reader.Read())
+                {
+                    if (reader.GetInt32(5) == 1)
+                    {
+                        MessageBox.Show("Thông báo từ hệ thống: Hợp đồng " + reader.GetInt32(0) + " sắp hết hạn.");
+                    }
+                    if (reader.GetInt32(5) == 2)
+                    {
+                        MessageBox.Show("Thông báo từ hệ thống: Hợp đồng " + reader.GetInt32(0) + " đã được duyệt.");
+                    }
                     yield return new Contract(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetDateTime(4));
+                }
             }
             finally { }
         }

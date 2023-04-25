@@ -263,9 +263,9 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(531, 293);
+            dataGridView1.Size = new System.Drawing.Size(970, 354);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellClick += dataGridView1_CellContentClick;
             // 
             // tabPage3
             // 
@@ -315,16 +315,16 @@
             label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(56, 19);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(75, 20);
+            label4.Size = new System.Drawing.Size(103, 20);
             label4.TabIndex = 11;
-            label4.Text = "Số thứ tự";
+            label4.Text = "Tên tài khoản";
             // 
             // SttDATbx
             // 
-            SttDATbx.Location = new System.Drawing.Point(66, 47);
+            SttDATbx.Location = new System.Drawing.Point(56, 47);
             SttDATbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             SttDATbx.Name = "SttDATbx";
-            SttDATbx.Size = new System.Drawing.Size(42, 27);
+            SttDATbx.Size = new System.Drawing.Size(113, 27);
             SttDATbx.TabIndex = 10;
             // 
             // dataGridView2
@@ -335,9 +335,9 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new System.Drawing.Size(531, 311);
+            dataGridView2.Size = new System.Drawing.Size(1004, 430);
             dataGridView2.TabIndex = 0;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dataGridView2.CellClick += dataGridView2_CellContentClick;
             // 
             // AdminControl
             // 

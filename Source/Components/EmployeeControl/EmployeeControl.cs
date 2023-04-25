@@ -1,4 +1,7 @@
-﻿using System;
+﻿using HQTCSDL_G6.Components;
+using HQTCSDL_G6.DatabaseManager;
+using HQTCSDL_G6.DatabaseManager.DTOs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +12,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HQTCSDL_Group01.Components.EmployeeControl
+namespace HQTCSDL_G6.Components.EmployeeControl
 {
-    public partial class EmployeeControl : UserControl
+    public partial class EmployeeControl : UserControl, IDelay
     {
-        SqlConnection connection;
-        SqlCommand command;
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-        string query = "đường dẫn";
+        public int CurrentID { get; internal set; }
 
+        public bool Error { get; set; } = false;
+
+        public TimeSpan CurrentDelay { get; set; }
+
+ 
+
+        public EmployeeControl(int id, bool error)
+        {
+            InitializeComponent();
+            load();
+            load1();
+
+            CurrentID = id;
+            Error = error;
+
+        }
         public EmployeeControl()
         {
             InitializeComponent();
@@ -26,28 +41,17 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
 
         void load()
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from HopDong where HD_Status = 1";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dataGridView1.DataSource = table;
+            dataGridView1.DataSource = DBManager.Init.Employee.GetActiveHD();
         }
 
         void load1()
         {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from HopDong where HD_Status = 0";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dataGridView2.DataSource = table;
+            
+            dataGridView2.DataSource = DBManager.Init.Employee.GetInactiveHD();
         }
 
         private void EmployeeControl_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(query);
-            connection.Open();
             load();
             load1();
         }
@@ -55,20 +59,19 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
         private void GuiBtn_Click(object sender, EventArgs e)
         {
             int num = int.Parse(NummTbx.Text);
-            command = connection.CreateCommand();
-            command.CommandText = "update HopDong set ///// = @num where MaHD = @num"; // biến nhận thông báo/
-            command.Parameters.AddWithValue("@num", num);
-            command.ExecuteNonQuery();
+            DBManager.Init.Employee.SendNotification(num);
+            load();
+            load1();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView1.Rows[index];
             NummTbx.Text = selectedRow.Cells[0].Value.ToString();
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView2.Rows[index];
@@ -78,23 +81,27 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
         private void AccBtn_Click(object sender, EventArgs e)
         {
             int num = int.Parse(NumTbx.Text);
-            command = connection.CreateCommand();
-            command.CommandText = "update HopDong set HD_Status = 1 where MaHD = @num";
-            command.CommandText = "update HopDong set ///// = 1 where MaHD = @num"; // biến nhận thông báo/
+            DBManager.Init.Employee.AcceptHD(num);
             load();
+            load1();
         }
 
         private void RejBtn_Click(object sender, EventArgs e)
         {
             int num = int.Parse(NumTbx.Text);
-            command = connection.CreateCommand();
-            command.CommandText = "delete from HopDong where MaHD = @num";
+            DBManager.Init.Employee.RejectHD(num);
+            load();
             load1();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void SetDelay(TimeSpan delay)
+        {
+            CurrentDelay = delay;
         }
     }
 }
