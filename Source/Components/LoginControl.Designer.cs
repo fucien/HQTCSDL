@@ -143,6 +143,14 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel6.TabIndex = 3;
             tableLayoutPanel6.Paint += tableLayoutPanel6_Paint;
             // 
+            // accountTb
+            // 
+            accountTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            accountTb.Location = new System.Drawing.Point(3, 29);
+            accountTb.Name = "accountTb";
+            accountTb.Size = new System.Drawing.Size(180, 27);
+            accountTb.TabIndex = 1;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -152,14 +160,6 @@ namespace HQTCSDL_G6.Components
             label2.Size = new System.Drawing.Size(117, 23);
             label2.TabIndex = 0;
             label2.Text = "Tên tài khoản";
-            // 
-            // accountTb
-            // 
-            accountTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            accountTb.Location = new System.Drawing.Point(3, 29);
-            accountTb.Name = "accountTb";
-            accountTb.Size = new System.Drawing.Size(180, 27);
-            accountTb.TabIndex = 1;
             // 
             // confirmButton
             // 
@@ -176,16 +176,6 @@ namespace HQTCSDL_G6.Components
             confirmButton.UseVisualStyleBackColor = false;
             confirmButton.Click += confirmButton_Click;
             // 
-            // label1
-            // 
-            label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(149, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(189, 46);
-            label1.TabIndex = 0;
-            label1.Text = "Đăng nhập";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logo;
@@ -195,6 +185,16 @@ namespace HQTCSDL_G6.Components
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            // 
+            // label1
+            // 
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            label1.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(149, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(189, 46);
+            label1.TabIndex = 0;
+            label1.Text = "Đăng nhập";
             // 
             // LoginControl
             // 
