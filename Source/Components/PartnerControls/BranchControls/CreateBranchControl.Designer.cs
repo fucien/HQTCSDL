@@ -75,8 +75,8 @@ namespace HQTCSDL_G6.Components.PartnerControls.BranchControls
             tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 58.2089539F));
+            tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.9402981F));
             tableLayoutPanel17.Size = new System.Drawing.Size(581, 603);
             tableLayoutPanel17.TabIndex = 3;
             // 
@@ -194,7 +194,7 @@ namespace HQTCSDL_G6.Components.PartnerControls.BranchControls
             tableLayoutPanel21.RowCount = 2;
             tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            tableLayoutPanel21.Size = new System.Drawing.Size(575, 355);
+            tableLayoutPanel21.Size = new System.Drawing.Size(575, 344);
             tableLayoutPanel21.TabIndex = 7;
             // 
             // addBranchButton
@@ -215,9 +215,9 @@ namespace HQTCSDL_G6.Components.PartnerControls.BranchControls
             // addContractBranchPanel
             // 
             addContractBranchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            addContractBranchPanel.Location = new System.Drawing.Point(3, 74);
+            addContractBranchPanel.Location = new System.Drawing.Point(3, 71);
             addContractBranchPanel.Name = "addContractBranchPanel";
-            addContractBranchPanel.Size = new System.Drawing.Size(569, 278);
+            addContractBranchPanel.Size = new System.Drawing.Size(569, 270);
             addContractBranchPanel.TabIndex = 1;
             // 
             // confirmButton
@@ -227,7 +227,7 @@ namespace HQTCSDL_G6.Components.PartnerControls.BranchControls
             confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             confirmButton.ForeColor = System.Drawing.Color.White;
-            confirmButton.Location = new System.Drawing.Point(214, 544);
+            confirmButton.Location = new System.Drawing.Point(214, 533);
             confirmButton.Name = "confirmButton";
             confirmButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             confirmButton.Size = new System.Drawing.Size(152, 44);
