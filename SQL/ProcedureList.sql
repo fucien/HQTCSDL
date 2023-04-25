@@ -66,6 +66,9 @@ BEGIN TRANSACTION
 		UPDATE HopDong
 		SET NgayKetThuc = @ngay_hien_tai
 		WHERE MaHD = @ma_hd;
+		UPDATE HopDong
+		SET isNotified = 0
+		WHERE MaHD = @ma_hd;
 	END
 	COMMIT TRANSACTION;
 GO
@@ -90,6 +93,9 @@ BEGIN TRANSACTION
 		--Update lại ngày cuối của hợp đồng
 		UPDATE HopDong
 		SET NgayKetThuc = @ngay_hien_tai
+		WHERE MaHD = @ma_hd;
+		UPDATE HopDong
+		SET isNotified = 0
 		WHERE MaHD = @ma_hd;
 	END
 	COMMIT TRANSACTION;
