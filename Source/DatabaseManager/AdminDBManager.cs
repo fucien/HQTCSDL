@@ -35,8 +35,33 @@ namespace HQTCSDL_G6.DatabaseManager
                 MessageBox.Show(e.Message);
                 return null;
             }
-        }   
-        public void AddAccount (string username, string password, string role)
+        }
+
+        public DataTable GetTable(string tableName)
+        {
+            try
+            {
+                using SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                using var command = new SqlCommand()
+                {
+                    Connection = connection,
+                    CommandType = System.Data.CommandType.Text,
+                    CommandText = "select * from " + tableName
+                };
+                using var adapter = new SqlDataAdapter(command);
+                using var table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        public void AddAccount(string username, string password, string role)
         {
             try
             {

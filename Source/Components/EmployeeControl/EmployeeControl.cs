@@ -27,7 +27,7 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
         void load()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * from /////"; // bản hợp đồng đã được duyệt
+            command.CommandText = "select * from HopDong where HD_Status = 1";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -37,7 +37,7 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
         void load1()
         {
             command = connection.CreateCommand();
-            command.CommandText = "select * from /////"; // bảng hợp đồng chưa được duyệt
+            command.CommandText = "select * from HopDong where HD_Status = 0";
             adapter.SelectCommand = command;
             table.Clear();
             adapter.Fill(table);
@@ -54,9 +54,9 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
 
         private void GuiBtn_Click(object sender, EventArgs e)
         {
-            int num = int.Parse(NummTbx.Text); // num là số thứ tự của hợp đồng
+            int num = int.Parse(NummTbx.Text);
             command = connection.CreateCommand();
-            command.CommandText = "update ///// set ///// = @num where ///// = @num"; // biến nhận thông báo/
+            command.CommandText = "update HopDong set ///// = @num where MaHD = @num"; // biến nhận thông báo/
             command.Parameters.AddWithValue("@num", num);
             command.ExecuteNonQuery();
         }
@@ -79,15 +79,22 @@ namespace HQTCSDL_Group01.Components.EmployeeControl
         {
             int num = int.Parse(NumTbx.Text);
             command = connection.CreateCommand();
-            command.CommandText = "update ///// set ///// = @num where ///// = @num"; // biến nhận thông báo/
-            load1();
+            command.CommandText = "update HopDong set HD_Status = 1 where MaHD = @num";
+            command.CommandText = "update HopDong set ///// = 1 where MaHD = @num"; // biến nhận thông báo/
+            load();
         }
 
         private void RejBtn_Click(object sender, EventArgs e)
         {
             int num = int.Parse(NumTbx.Text);
             command = connection.CreateCommand();
-            command.CommandText = "delete from ///// where ///// = @num"; // biến nhận thông báo/
+            command.CommandText = "delete from HopDong where MaHD = @num";
+            load1();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

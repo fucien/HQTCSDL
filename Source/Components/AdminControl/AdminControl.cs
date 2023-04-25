@@ -36,8 +36,31 @@ namespace HQTCSDL_G6.Components.AdminControl
         }
         void load()
         {
+            string table;
+            switch (Cbx.Text)
+            {
+                case "Admin":
+                    table = "Admin";
+                    break;
+                case "Nhân Viên":
+                    table = "NhanVien";
+                    break;
+                case "Đối Tác":
+                    table = "DoiTac";
+                    break;
+                case "Khách Hàng":
+                    table = "KhachHang";
+                    break;
+                case "Tài Xế":
+                    table = "TaiXe";
+                    break;
+                default:
+                    table = "Admin";
+                    break;
+            }
             dataGridView1.DataSource = DatabaseManager.DBManager.Init.Admin.GetAccount();
             dataGridView2.DataSource = DatabaseManager.DBManager.Init.Admin.GetAccount();
+            dataGridView3.DataSource = DatabaseManager.DBManager.Init.Admin.GetTable(table);
         }
 
         private void AdminControl_Load(object sender, EventArgs e)
@@ -117,6 +140,33 @@ namespace HQTCSDL_G6.Components.AdminControl
             AccTbx.Text = "";
             PassTbx.Text = "";
             RoleCbx.Text = "";
+        }
+
+        private void ShowBtn_Click(object sender, EventArgs e)
+        {
+            string table;
+            switch (Cbx.Text)
+            {
+                case "Admin":
+                    table = "Admin";
+                    break;
+                case "Nhân Viên":
+                    table = "NhanVien";
+                    break;
+                case "Đối Tác":
+                    table = "DoiTac";
+                    break;
+                case "Khách Hàng":
+                    table = "KhachHang";
+                    break;
+                case "Tài Xế":
+                    table = "TaiXe";
+                    break;
+                default:
+                    table = "Admin";
+                    break;
+            }
+            dataGridView3.DataSource = DatabaseManager.DBManager.Init.Admin.GetTable(table);
         }
     }
 }

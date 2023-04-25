@@ -72,13 +72,12 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel27.Controls.Add(viewButton, 0, 0);
             tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel27.Location = new System.Drawing.Point(0, 0);
-            tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel27.Name = "tableLayoutPanel27";
             tableLayoutPanel27.RowCount = 3;
             tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            tableLayoutPanel27.Size = new System.Drawing.Size(721, 448);
+            tableLayoutPanel27.Size = new System.Drawing.Size(824, 597);
             tableLayoutPanel27.TabIndex = 3;
             // 
             // tableLayoutPanel31
@@ -88,13 +87,12 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel31.Controls.Add(tableLayoutPanel1, 0, 0);
             tableLayoutPanel31.Controls.Add(contractsPanel, 0, 1);
             tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel31.Location = new System.Drawing.Point(3, 46);
-            tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel31.Location = new System.Drawing.Point(3, 62);
             tableLayoutPanel31.Name = "tableLayoutPanel31";
             tableLayoutPanel31.RowCount = 2;
             tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            tableLayoutPanel31.Size = new System.Drawing.Size(715, 264);
+            tableLayoutPanel31.Size = new System.Drawing.Size(818, 352);
             tableLayoutPanel31.TabIndex = 7;
             // 
             // tableLayoutPanel1
@@ -111,61 +109,62 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel1.Controls.Add(label2, 1, 0);
             tableLayoutPanel1.Controls.Add(labrl, 0, 0);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel1.Location = new System.Drawing.Point(3, 2);
-            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(709, 22);
+            tableLayoutPanel1.Size = new System.Drawing.Size(812, 29);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(568, 0);
+            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(651, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(100, 19);
+            label5.Size = new System.Drawing.Size(128, 23);
             label5.TabIndex = 5;
             label5.Text = "Xem chi nhánh";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(391, 0);
+            label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(448, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(65, 19);
+            label4.Size = new System.Drawing.Size(86, 23);
             label4.TabIndex = 4;
             label4.Text = "Thời gian";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(250, 0);
+            label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(286, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(98, 19);
+            label3.Size = new System.Drawing.Size(131, 23);
             label3.TabIndex = 3;
-            label3.Text = "Người đại diên";
+            label3.Text = "Người đại diện";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(109, 0);
+            label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(124, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(79, 19);
+            label2.Size = new System.Drawing.Size(98, 23);
             label2.TabIndex = 2;
             label2.Text = "Mã số thuế";
             // 
             // labrl
             // 
             labrl.AutoSize = true;
-            labrl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            labrl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             labrl.Location = new System.Drawing.Point(3, 0);
             labrl.Name = "labrl";
-            labrl.Size = new System.Drawing.Size(93, 19);
+            labrl.Size = new System.Drawing.Size(77, 29);
             labrl.TabIndex = 1;
             labrl.Text = "Mã hợp đồng";
             // 
@@ -175,12 +174,11 @@ namespace HQTCSDL_G6.Components.PartnerControls
             contractsPanel.ColumnCount = 1;
             contractsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             contractsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            contractsPanel.Location = new System.Drawing.Point(3, 28);
-            contractsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            contractsPanel.Location = new System.Drawing.Point(3, 38);
             contractsPanel.Name = "contractsPanel";
             contractsPanel.RowCount = 1;
             contractsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            contractsPanel.Size = new System.Drawing.Size(709, 234);
+            contractsPanel.Size = new System.Drawing.Size(812, 311);
             contractsPanel.TabIndex = 1;
             // 
             // tableLayoutPanel32
@@ -190,23 +188,22 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel32.Controls.Add(label27, 0, 0);
             tableLayoutPanel32.Controls.Add(branchGridView, 0, 1);
             tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel32.Location = new System.Drawing.Point(3, 314);
-            tableLayoutPanel32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel32.Location = new System.Drawing.Point(3, 420);
             tableLayoutPanel32.Name = "tableLayoutPanel32";
             tableLayoutPanel32.RowCount = 2;
             tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            tableLayoutPanel32.Size = new System.Drawing.Size(715, 132);
+            tableLayoutPanel32.Size = new System.Drawing.Size(818, 174);
             tableLayoutPanel32.TabIndex = 8;
             // 
             // label27
             // 
             label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label27.AutoSize = true;
-            label27.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label27.Location = new System.Drawing.Point(310, 0);
+            label27.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label27.Location = new System.Drawing.Point(349, 0);
             label27.Name = "label27";
-            label27.Size = new System.Drawing.Size(95, 19);
+            label27.Size = new System.Drawing.Size(120, 23);
             label27.TabIndex = 0;
             label27.Text = "Các chi nhánh";
             // 
@@ -218,13 +215,12 @@ namespace HQTCSDL_G6.Components.PartnerControls
             branchGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             branchGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { branchID, branchName, branchAddress });
             branchGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            branchGridView.Location = new System.Drawing.Point(3, 28);
-            branchGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            branchGridView.Location = new System.Drawing.Point(3, 37);
             branchGridView.Name = "branchGridView";
             branchGridView.ReadOnly = true;
             branchGridView.RowHeadersWidth = 51;
             branchGridView.RowTemplate.Height = 29;
-            branchGridView.Size = new System.Drawing.Size(709, 102);
+            branchGridView.Size = new System.Drawing.Size(812, 134);
             branchGridView.TabIndex = 1;
             // 
             // branchID
@@ -255,10 +251,9 @@ namespace HQTCSDL_G6.Components.PartnerControls
             viewButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             viewButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             viewButton.ForeColor = System.Drawing.Color.White;
-            viewButton.Location = new System.Drawing.Point(288, 2);
-            viewButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            viewButton.Location = new System.Drawing.Point(315, 3);
             viewButton.Name = "viewButton";
-            viewButton.Size = new System.Drawing.Size(144, 40);
+            viewButton.Size = new System.Drawing.Size(194, 53);
             viewButton.TabIndex = 9;
             viewButton.Text = "Xem các hợp đồng";
             viewButton.UseVisualStyleBackColor = false;
@@ -266,12 +261,11 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             // ViewContractControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel27);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "ViewContractControl";
-            Size = new System.Drawing.Size(721, 448);
+            Size = new System.Drawing.Size(824, 597);
             tableLayoutPanel27.ResumeLayout(false);
             tableLayoutPanel27.PerformLayout();
             tableLayoutPanel31.ResumeLayout(false);

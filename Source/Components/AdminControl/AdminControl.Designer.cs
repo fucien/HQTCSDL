@@ -30,6 +30,9 @@
         {
             tabControl1 = new System.Windows.Forms.TabControl();
             tabPage1 = new System.Windows.Forms.TabPage();
+            ShowBtn = new System.Windows.Forms.Button();
+            dataGridView3 = new System.Windows.Forms.DataGridView();
+            Cbx = new System.Windows.Forms.ComboBox();
             tabPage2 = new System.Windows.Forms.TabPage();
             ClrBtn = new System.Windows.Forms.Button();
             RoleCbx = new System.Windows.Forms.ComboBox();
@@ -49,6 +52,8 @@
             SttDATbx = new System.Windows.Forms.TextBox();
             dataGridView2 = new System.Windows.Forms.DataGridView();
             tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage3.SuspendLayout();
@@ -68,6 +73,9 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(ShowBtn);
+            tabPage1.Controls.Add(dataGridView3);
+            tabPage1.Controls.Add(Cbx);
             tabPage1.Location = new System.Drawing.Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -75,6 +83,34 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cập nhật thông tin tài khoản";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // ShowBtn
+            // 
+            ShowBtn.Location = new System.Drawing.Point(387, 6);
+            ShowBtn.Name = "ShowBtn";
+            ShowBtn.Size = new System.Drawing.Size(75, 23);
+            ShowBtn.TabIndex = 3;
+            ShowBtn.Text = "Show";
+            ShowBtn.UseVisualStyleBackColor = true;
+            ShowBtn.Click += ShowBtn_Click;
+            // 
+            // dataGridView3
+            // 
+            dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Location = new System.Drawing.Point(6, 35);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowTemplate.Height = 25;
+            dataGridView3.Size = new System.Drawing.Size(465, 275);
+            dataGridView3.TabIndex = 2;
+            // 
+            // Cbx
+            // 
+            Cbx.FormattingEnabled = true;
+            Cbx.Items.AddRange(new object[] { "Admin", "Nhân Viên", "Đối Tác", "Khách Hàng", "Tài Xế" });
+            Cbx.Location = new System.Drawing.Point(6, 6);
+            Cbx.Name = "Cbx";
+            Cbx.Size = new System.Drawing.Size(360, 23);
+            Cbx.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -267,6 +303,8 @@
             Size = new System.Drawing.Size(488, 350);
             Load += AdminControl_Load;
             tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -298,5 +336,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox RoleCbx;
         private System.Windows.Forms.Button ClrBtn;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.ComboBox Cbx;
+        private System.Windows.Forms.Button ShowBtn;
     }
 }
