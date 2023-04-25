@@ -1,10 +1,13 @@
-﻿using System;
+﻿using HQTCSDL_G6.DatabaseManager.DTOs;
+using HQTCSDL_G6.DatabaseManager;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Data.SqlClient;
 using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
 
-namespace HQTCSDL_Group01.DatabaseManager
+namespace HQTCSDL_G6.DatabaseManager
 {
     internal class EmployeeDBManager
     {

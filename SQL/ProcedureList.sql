@@ -38,6 +38,12 @@ BEGIN TRANSACTION
 					COMMIT TRAN;
 					RETURN;
 				END
+			ELSE IF @loai_tk = 'NV'
+				BEGIN
+					SELECT @loai_tk AS 'loai_tk', nv.MaNV  AS 'ma',nv.Ten as 'name' FROM NhanVien nv WHERE nv.TaiKhoan = @tai_khoan;
+					COMMIT TRAN;
+					RETURN;
+				END
 		END
 COMMIT TRANSACTION
 GO
