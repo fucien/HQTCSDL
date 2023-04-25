@@ -61,7 +61,7 @@ namespace HQTCSDL_G6.Components.AdminControl
             string role = RoleCbx.Text;
 
             DatabaseManager.DBManager.Init.Admin.AddAccount(acc, pass, role);
-            MessageBox.Show("Thêm thành công");
+
             load();
         }
 
@@ -69,7 +69,7 @@ namespace HQTCSDL_G6.Components.AdminControl
         {
             string acc = AccTbx.Text;
             DatabaseManager.DBManager.Init.Admin.DeleteAccount(acc);
-            MessageBox.Show("Xóa thành công");
+
             load();
         }
 
@@ -79,7 +79,6 @@ namespace HQTCSDL_G6.Components.AdminControl
             string pass = PassTbx.Text;
             DatabaseManager.DBManager.Init.Admin.UpdateAccount(pass, acc);
 
-            MessageBox.Show("Sửa thành công");
             load();
         }
 
@@ -94,14 +93,18 @@ namespace HQTCSDL_G6.Components.AdminControl
         {
             string username = AccTbx.Text;
             DatabaseManager.DBManager.Init.Admin.LockAccount(username);
-            MessageBox.Show("Khóa thành công");
+
+            load();
+
         }
 
         private void AcBtn_Click(object sender, EventArgs e)
         {
             string username = AccTbx.Text;
             DatabaseManager.DBManager.Init.Admin.UnlockAccount(username);
-            MessageBox.Show("Mở khóa thành công");
+
+            load();
+
         }
 
         public void SetDelay(TimeSpan delay)

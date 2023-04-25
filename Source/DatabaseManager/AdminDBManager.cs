@@ -52,6 +52,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 command.Parameters.AddWithValue("@password", password);
                 command.Parameters.AddWithValue("@role", role);
                 command.ExecuteNonQuery();
+                MessageBox.Show("Thêm thành công");
             }
             catch (Exception e)
             {
@@ -73,7 +74,8 @@ namespace HQTCSDL_G6.DatabaseManager
                 };
                 command.Parameters.AddWithValue("@username", username);
                 command.ExecuteNonQuery();
-                 }
+                MessageBox.Show("Xóa thành công");
+            }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
@@ -96,6 +98,8 @@ namespace HQTCSDL_G6.DatabaseManager
                 command.Parameters.AddWithValue("@username", username);
                 command.Parameters.AddWithValue("@password", password);
                 command.ExecuteNonQuery();
+
+                MessageBox.Show("Sửa thành công");
             }
             catch (Exception e)
             {
@@ -117,6 +121,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 };
                 command.Parameters.AddWithValue("@username", username);
                 command.ExecuteNonQuery();
+                MessageBox.Show("Khóa thành công");
                 return true;
             }
             catch (Exception e)
@@ -140,6 +145,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 };
                 command.Parameters.AddWithValue("@username", username);
                 command.ExecuteNonQuery();
+                MessageBox.Show("Mở khóa thành công");
                 return true;
             }
             catch (Exception e)
