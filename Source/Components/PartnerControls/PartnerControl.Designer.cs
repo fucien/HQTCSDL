@@ -157,7 +157,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             productTab.Controls.Add(tabControl4);
             productTab.Location = new System.Drawing.Point(4, 29);
             productTab.Name = "productTab";
-            productTab.Size = new System.Drawing.Size(678, 464);
+            productTab.Size = new System.Drawing.Size(192, 67);
             productTab.TabIndex = 2;
             productTab.Text = "Sản phẩm";
             productTab.UseVisualStyleBackColor = true;
@@ -172,7 +172,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl4.Location = new System.Drawing.Point(0, 0);
             tabControl4.Name = "tabControl4";
             tabControl4.SelectedIndex = 0;
-            tabControl4.Size = new System.Drawing.Size(678, 464);
+            tabControl4.Size = new System.Drawing.Size(192, 67);
             tabControl4.TabIndex = 0;
             // 
             // tabPage4
@@ -181,7 +181,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabPage4.Location = new System.Drawing.Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            tabPage4.Size = new System.Drawing.Size(670, 431);
+            tabPage4.Size = new System.Drawing.Size(184, 34);
             tabPage4.TabIndex = 0;
             tabPage4.Text = "Thêm sản phẩm";
             tabPage4.UseVisualStyleBackColor = true;
@@ -191,7 +191,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             addProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
             addProductControl.Location = new System.Drawing.Point(3, 3);
             addProductControl.Name = "addProductControl";
-            addProductControl.Size = new System.Drawing.Size(664, 425);
+            addProductControl.Size = new System.Drawing.Size(178, 28);
             addProductControl.TabIndex = 0;
             // 
             // tabPage5
@@ -257,7 +257,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             orderTab.Controls.Add(tabControl6);
             orderTab.Location = new System.Drawing.Point(4, 29);
             orderTab.Name = "orderTab";
-            orderTab.Size = new System.Drawing.Size(678, 464);
+            orderTab.Size = new System.Drawing.Size(192, 67);
             orderTab.TabIndex = 3;
             orderTab.Text = "Đơn hàng";
             // 
@@ -269,7 +269,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl6.Location = new System.Drawing.Point(0, 0);
             tabControl6.Name = "tabControl6";
             tabControl6.SelectedIndex = 0;
-            tabControl6.Size = new System.Drawing.Size(678, 464);
+            tabControl6.Size = new System.Drawing.Size(192, 67);
             tabControl6.TabIndex = 0;
             // 
             // tabPage14
@@ -278,7 +278,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabPage14.Location = new System.Drawing.Point(4, 29);
             tabPage14.Name = "tabPage14";
             tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            tabPage14.Size = new System.Drawing.Size(670, 431);
+            tabPage14.Size = new System.Drawing.Size(184, 34);
             tabPage14.TabIndex = 0;
             tabPage14.Text = "Xem đơn hàng";
             tabPage14.UseVisualStyleBackColor = true;
@@ -290,7 +290,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             partnerViewOrderControl.ForeColor = System.Drawing.Color.Black;
             partnerViewOrderControl.Location = new System.Drawing.Point(3, 3);
             partnerViewOrderControl.Name = "partnerViewOrderControl";
-            partnerViewOrderControl.Size = new System.Drawing.Size(664, 425);
+            partnerViewOrderControl.Size = new System.Drawing.Size(178, 28);
             partnerViewOrderControl.TabIndex = 0;
             // 
             // tabPage15
@@ -299,7 +299,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabPage15.Location = new System.Drawing.Point(4, 29);
             tabPage15.Name = "tabPage15";
             tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            tabPage15.Size = new System.Drawing.Size(670, 431);
+            tabPage15.Size = new System.Drawing.Size(184, 34);
             tabPage15.TabIndex = 1;
             tabPage15.Text = "Thống kê đơn hàng";
             tabPage15.UseVisualStyleBackColor = true;
@@ -311,7 +311,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             partnerStatisticsControl.Error = false;
             partnerStatisticsControl.Location = new System.Drawing.Point(3, 3);
             partnerStatisticsControl.Name = "partnerStatisticsControl";
-            partnerStatisticsControl.Size = new System.Drawing.Size(664, 425);
+            partnerStatisticsControl.Size = new System.Drawing.Size(178, 28);
             partnerStatisticsControl.TabIndex = 0;
             // 
             // PartnerControl
