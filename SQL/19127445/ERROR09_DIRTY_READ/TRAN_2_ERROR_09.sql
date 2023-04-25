@@ -1,3 +1,0 @@
-﻿USE CHUYEN_HANG_ONLINE;
-
-EXEC GetThongKe_ERROR 1, '00:00:00';
