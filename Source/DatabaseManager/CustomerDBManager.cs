@@ -44,7 +44,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "khach_hang_thong_ke"
+                    CommandText = "Thongke_KH"
                 };
                 command.Parameters.AddWithValue("@ma_kh", customerID);
                 command.Parameters.AddWithValue("@delay", delay);
@@ -83,7 +83,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "khach_hang_thong_ke_ERROR"
+                    CommandText = "GetThongKe_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_kh", customerID);
                 command.Parameters.AddWithValue("@delay", delay);
@@ -144,7 +144,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "tao_don_dat_hang"
+                    CommandText = "TaoDonDatHang"
                 };
                 command.Parameters.AddWithValue("@ma_cn", order.BranchID);
                 command.Parameters.AddWithValue("@ma_kh", order.CustomerID);
@@ -183,7 +183,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "tao_don_dat_hang_ERROR"
+                    CommandText = "TaoDonDatHang_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_cn", order.BranchID);
                 command.Parameters.AddWithValue("@ma_kh", order.CustomerID);
@@ -222,7 +222,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "huy_don_dat_hang_ERROR"
+                    CommandText = "HuyDH_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_dh", orderID);
                 command.Parameters.AddWithValue("@delay", delay);
@@ -245,7 +245,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "huy_don_dat_hang"
+                    CommandText = "HuyDH"
                 };
                 command.Parameters.AddWithValue("@ma_dh", orderID);
                 command.Parameters.AddWithValue("@delay", delay);

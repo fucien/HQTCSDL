@@ -49,7 +49,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure gia hạn hợp đồng
-CREATE PROCEDURE gia_han_hop_dong_ERROR @ma_hd INT, @so_ngay_them INT, @delay DATETIME
+CREATE PROCEDURE GiaHanHD_ERROR @ma_hd INT, @so_ngay_them INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	DECLARE @ngay_hien_tai DATE;
@@ -71,7 +71,7 @@ BEGIN TRANSACTION
 GO
 
 --Procedure gia hạn hợp đồng
-CREATE PROCEDURE gia_han_hop_dong @ma_hd INT, @so_ngay_them INT, 
+CREATE PROCEDURE GiaHanHD @ma_hd INT, @so_ngay_them INT, 
 									@delay DATETIME
 AS
 BEGIN TRANSACTION
@@ -122,7 +122,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure tài xế tiếp nhận đơn hàng
-CREATE PROCEDURE tiep_nhan_dh_ERROR @ma_tx INT, @ma_dh INT, 
+CREATE PROCEDURE NhanDH_ERROR @ma_tx INT, @ma_dh INT, 
 									@delay DATETIME
 AS
 BEGIN TRANSACTION
@@ -149,7 +149,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure tài xế tiếp nhận đơn hàng
-CREATE PROCEDURE tiep_nhan_dh @ma_tx INT, @ma_dh INT, 
+CREATE PROCEDURE NhanDH @ma_tx INT, @ma_dh INT, 
 									@delay DATETIME
 AS
 BEGIN TRANSACTION
@@ -176,7 +176,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure tăng, giảm số lượng sản phẩm đang có
-CREATE PROCEDURE cap_nhat_so_luong_cnsp_ERROR @ma_sp INT, @ma_cn INT, 
+CREATE PROCEDURE CapNhatSoLuongSP_ERROR @ma_sp INT, @ma_cn INT, 
 												@chenh_lech INT, 
 												@delay DATETIME
 AS
@@ -216,7 +216,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure tăng, giảm số lượng sản phẩm đang có
-CREATE PROCEDURE cap_nhat_so_luong_cnsp @ma_sp INT, @ma_cn INT, 
+CREATE PROCEDURE CapNhatSoLuongSP @ma_sp INT, @ma_cn INT, 
 												@chenh_lech INT, 
 												@delay DATETIME
 AS
@@ -263,7 +263,7 @@ CREATE TYPE SAN_PHAM_SO_LUONG AS TABLE
 GO
 
 --Procedure tạo đơn hàng
-CREATE PROCEDURE tao_don_dat_hang_ERROR @ma_cn INT, @ma_kh INT, @hinh_thuc_tt NVARCHAR(30),
+CREATE PROCEDURE TaoDonDatHang_ERROR @ma_cn INT, @ma_kh INT, @hinh_thuc_tt NVARCHAR(30),
 									@dia_chi_gh NVARCHAR(30),  @phi_vc INT, @delay DATETIME, 
 									@san_pham_so_luong SAN_PHAM_SO_LUONG READONLY
 AS
@@ -309,7 +309,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure tạo đơn hàng
-CREATE PROCEDURE tao_don_dat_hang @ma_cn INT, @ma_kh INT, @hinh_thuc_tt NVARCHAR(30),
+CREATE PROCEDURE TaoDonDatHang @ma_cn INT, @ma_kh INT, @hinh_thuc_tt NVARCHAR(30),
 									@dia_chi_gh NVARCHAR(30),  @phi_vc INT, @delay DATETIME, 
 									@san_pham_so_luong SAN_PHAM_SO_LUONG READONLY
 AS
@@ -360,7 +360,7 @@ COMMIT TRANSACTION
 GO
 
 --Procedure cho khách hàng hủy đơn đặt hàng
-CREATE PROC huy_don_dat_hang_ERROR @ma_dh INT, @delay DATETIME
+CREATE PROC HuyDH_ERROR @ma_dh INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	BEGIN TRY
@@ -405,7 +405,7 @@ BEGIN TRANSACTION
 GO
 
 --Procedure cho khách hàng hủy đơn đặt hàng
-CREATE PROC huy_don_dat_hang @ma_dh INT, @delay DATETIME
+CREATE PROC HuyDH @ma_dh INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	BEGIN TRY
@@ -450,7 +450,7 @@ BEGIN TRANSACTION
 GO
 
 --Store procedure để đối tác thống kê đơn hàng
-CREATE PROC doi_tac_thong_ke_ERROR @ma_dt INT, 
+CREATE PROC DoiTacThongKe_ERROR @ma_dt INT, 
 									@delay DATETIME
 AS
 BEGIN TRANSACTION
@@ -500,7 +500,7 @@ COMMIT TRANSACTION;
 GO
 
 --Store procedure để đối tác thống kê đơn hàng
-CREATE PROC doi_tac_thong_ke @ma_dt INT, 
+CREATE PROC DoiTacThongKe @ma_dt INT, 
 									@delay DATETIME
 AS
 BEGIN TRANSACTION
@@ -551,7 +551,7 @@ GO
 
 
 --Store procedure để khách hàng thống kê đơn hàng
-CREATE PROC khach_hang_thong_ke_ERROR @ma_kh INT, @delay DATETIME
+CREATE PROC Thongke_KH_ERROR @ma_kh INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
@@ -574,7 +574,7 @@ GO
 
 
 --Store procedure để khách hàng thống kê đơn hàng
-CREATE PROC khach_hang_thong_ke @ma_kh INT, @delay DATETIME
+CREATE PROC Thongke_KH @ma_kh INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
@@ -596,7 +596,7 @@ COMMIT TRANSACTION;
 GO
 
 --Store procedure để tài xế thống kê đơn hàng
-CREATE PROC tai_xe_thong_ke_ERROR @ma_tx INT, @delay DATETIME
+CREATE PROC GetThongKe_ERROR @ma_tx INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
@@ -618,7 +618,7 @@ COMMIT TRANSACTION;
 GO
 
 --Store procedure để tài xế thống kê đơn hàng
-CREATE PROC tai_xe_thong_ke @ma_tx INT, @delay DATETIME
+CREATE PROC GetThongKe @ma_tx INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
