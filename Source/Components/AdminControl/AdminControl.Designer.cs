@@ -265,7 +265,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new System.Drawing.Size(970, 354);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellClick += dataGridView1_CellContentClick;
             // 
             // tabPage3
             // 
@@ -337,7 +337,7 @@
             dataGridView2.RowTemplate.Height = 25;
             dataGridView2.Size = new System.Drawing.Size(1004, 430);
             dataGridView2.TabIndex = 0;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dataGridView2.CellClick += dataGridView2_CellContentClick;
             // 
             // AdminControl
             // 
