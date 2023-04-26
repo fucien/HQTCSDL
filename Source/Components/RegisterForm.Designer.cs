@@ -31,11 +31,12 @@
             TxBtn = new System.Windows.Forms.Button();
             KhBtn = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
+            DtBtn = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // TxBtn
             // 
-            TxBtn.Location = new System.Drawing.Point(57, 56);
+            TxBtn.Location = new System.Drawing.Point(23, 56);
             TxBtn.Name = "TxBtn";
             TxBtn.Size = new System.Drawing.Size(75, 23);
             TxBtn.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // KhBtn
             // 
-            KhBtn.Location = new System.Drawing.Point(151, 56);
+            KhBtn.Location = new System.Drawing.Point(104, 56);
             KhBtn.Name = "KhBtn";
             KhBtn.Size = new System.Drawing.Size(82, 23);
             KhBtn.TabIndex = 1;
@@ -62,10 +63,21 @@
             label1.TabIndex = 2;
             label1.Text = "Chọn vai trò muốn đăng ký";
             // 
+            // DtBtn
+            // 
+            DtBtn.Location = new System.Drawing.Point(192, 56);
+            DtBtn.Name = "DtBtn";
+            DtBtn.Size = new System.Drawing.Size(82, 23);
+            DtBtn.TabIndex = 3;
+            DtBtn.Text = "Đối tác";
+            DtBtn.UseVisualStyleBackColor = true;
+            DtBtn.Click += DtBtn_Click;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(DtBtn);
             Controls.Add(label1);
             Controls.Add(KhBtn);
             Controls.Add(TxBtn);
@@ -80,5 +92,6 @@
         private System.Windows.Forms.Button TxBtn;
         private System.Windows.Forms.Button KhBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button DtBtn;
     }
 }

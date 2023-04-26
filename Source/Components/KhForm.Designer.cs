@@ -70,7 +70,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(65, 12);
+            label7.Location = new System.Drawing.Point(71, 11);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(115, 15);
             label7.TabIndex = 26;

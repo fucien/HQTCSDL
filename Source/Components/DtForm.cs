@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace HQTCSDL_G6.Components
 {
-    public partial class TxForm : UserControl
+    public partial class DtForm : UserControl
     {
-        public TxForm()
+        public DtForm()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void DkBtn_Click(object sender, EventArgs e)
