@@ -41,5 +41,15 @@ namespace HQTCSDL_G6.Components.PartnerControls
         {
 
         }
+
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewContractControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
