@@ -27,9 +27,14 @@ namespace HQTCSDL_G6.Components
         {
             this.Hide();
             // add to database
-            DatabaseManager.DBManager.SignupDT();
+            DBManager.Init.SignupDT(TkTbx.Text, MkTbx.Text, ChTbx.Text, HtTbx.Text, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, SdtBtn.Text, ETbx.Text);
             MessageBox.Show("Đăng ký thành công!");
             this.Parent.Controls.Add(new LoginControl());
+        }
+
+        private void TkTbx_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

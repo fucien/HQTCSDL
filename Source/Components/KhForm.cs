@@ -34,7 +34,7 @@ namespace HQTCSDL_G6.Components
         private void ReBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DatabaseManager.DBManager.SignupKH("nhet ten may cai table vo day");
+            DatabaseManager.DBManager.Init.SignupKH(TkTbx.Text, MkTbx.Text, HtTbx.Text, DcTbx.Text, SdtTbx.Text, ETbx.Text);
 
             MessageBox.Show("Đăng ký thành công!");
             this.Parent.Controls.Add(new LoginControl());

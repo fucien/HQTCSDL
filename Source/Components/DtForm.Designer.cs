@@ -43,16 +43,16 @@
             ChTbx = new System.Windows.Forms.TextBox();
             label11 = new System.Windows.Forms.Label();
             panel1 = new System.Windows.Forms.Panel();
-            label3 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            label4 = new System.Windows.Forms.Label();
-            textBox2 = new System.Windows.Forms.TextBox();
-            label5 = new System.Windows.Forms.Label();
-            textBox3 = new System.Windows.Forms.TextBox();
-            label8 = new System.Windows.Forms.Label();
-            textBox4 = new System.Windows.Forms.TextBox();
             label12 = new System.Windows.Forms.Label();
             textBox5 = new System.Windows.Forms.TextBox();
+            label8 = new System.Windows.Forms.Label();
+            textBox4 = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            textBox3 = new System.Windows.Forms.TextBox();
+            label4 = new System.Windows.Forms.Label();
+            textBox2 = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             TkTbx.Name = "TkTbx";
             TkTbx.Size = new System.Drawing.Size(157, 23);
             TkTbx.TabIndex = 35;
+            TkTbx.TextChanged += TkTbx_TextChanged;
             // 
             // label2
             // 
@@ -203,53 +204,21 @@
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
             // 
-            // label3
+            // label12
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(18, 173);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(64, 15);
-            label3.TabIndex = 57;
-            label3.Text = "Thành phố";
+            label12.AutoSize = true;
+            label12.Location = new System.Drawing.Point(3, 289);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(76, 15);
+            label12.TabIndex = 65;
+            label12.Text = "Loại ẩm thực";
             // 
-            // textBox1
+            // textBox5
             // 
-            textBox1.Location = new System.Drawing.Point(81, 170);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(157, 23);
-            textBox1.TabIndex = 56;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(18, 202);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(36, 15);
-            label4.TabIndex = 59;
-            label4.Text = "Quận";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new System.Drawing.Point(81, 199);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(157, 23);
-            textBox2.TabIndex = 58;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(18, 231);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(43, 15);
-            label5.TabIndex = 61;
-            label5.Text = "Địa chỉ";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new System.Drawing.Point(81, 228);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new System.Drawing.Size(157, 23);
-            textBox3.TabIndex = 60;
+            textBox5.Location = new System.Drawing.Point(81, 286);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new System.Drawing.Size(157, 23);
+            textBox5.TabIndex = 64;
             // 
             // label8
             // 
@@ -267,21 +236,53 @@
             textBox4.Size = new System.Drawing.Size(157, 23);
             textBox4.TabIndex = 62;
             // 
-            // label12
+            // label5
             // 
-            label12.AutoSize = true;
-            label12.Location = new System.Drawing.Point(3, 289);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(76, 15);
-            label12.TabIndex = 65;
-            label12.Text = "Loại ẩm thực";
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(18, 231);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(43, 15);
+            label5.TabIndex = 61;
+            label5.Text = "Địa chỉ";
             // 
-            // textBox5
+            // textBox3
             // 
-            textBox5.Location = new System.Drawing.Point(81, 286);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(157, 23);
-            textBox5.TabIndex = 64;
+            textBox3.Location = new System.Drawing.Point(81, 228);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new System.Drawing.Size(157, 23);
+            textBox3.TabIndex = 60;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new System.Drawing.Point(18, 202);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(36, 15);
+            label4.TabIndex = 59;
+            label4.Text = "Quận";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new System.Drawing.Point(81, 199);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new System.Drawing.Size(157, 23);
+            textBox2.TabIndex = 58;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(18, 173);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(64, 15);
+            label3.TabIndex = 57;
+            label3.Text = "Thành phố";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(81, 170);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(157, 23);
+            textBox1.TabIndex = 56;
             // 
             // DtForm
             // 

@@ -51,6 +51,17 @@ namespace HQTCSDL_G6.Components.PartnerControls
             extendContractControl = new ExtendContractControl();
             tabPage3 = new System.Windows.Forms.TabPage();
             viewContractControl = new ViewContractControl();
+            tabPage1 = new System.Windows.Forms.TabPage();
+            CCBtn = new System.Windows.Forms.Button();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            textBox2 = new System.Windows.Forms.TextBox();
+            label11 = new System.Windows.Forms.Label();
+            textBox1 = new System.Windows.Forms.TextBox();
+            label10 = new System.Windows.Forms.Label();
+            label9 = new System.Windows.Forms.Label();
+            dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            label8 = new System.Windows.Forms.Label();
+            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             tabControl4 = new System.Windows.Forms.TabControl();
             tabPage4 = new System.Windows.Forms.TabPage();
             addProductControl = new AddProductControl();
@@ -62,6 +73,8 @@ namespace HQTCSDL_G6.Components.PartnerControls
             updateProductAmountControl = new UpdateProductAmountControl();
             partnerViewOrderControl = new OrderControls.PartnerViewOrderControl();
             partnerStatisticsControl = new PartnerStatisticsControl();
+            repTb = new System.Windows.Forms.TextBox();
+            taxNumberTb = new System.Windows.Forms.TextBox();
             monthsNumeric = new System.Windows.Forms.NumericUpDown();
             tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             yearsNumeric = new System.Windows.Forms.NumericUpDown();
@@ -76,20 +89,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             daysNumeric = new System.Windows.Forms.NumericUpDown();
             tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            repTb = new System.Windows.Forms.TextBox();
-            taxNumberTb = new System.Windows.Forms.TextBox();
             branchGridView = new System.Windows.Forms.DataGridView();
-            tabPage1 = new System.Windows.Forms.TabPage();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            label8 = new System.Windows.Forms.Label();
-            label9 = new System.Windows.Forms.Label();
-            dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            label10 = new System.Windows.Forms.Label();
-            textBox1 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            label11 = new System.Windows.Forms.Label();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
-            CCBtn = new System.Windows.Forms.Button();
             tabControl1 = new System.Windows.Forms.TabControl();
             contractTab = new System.Windows.Forms.TabPage();
             productTab = new System.Windows.Forms.TabPage();
@@ -112,6 +112,8 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl3.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             productTab.SuspendLayout();
             tabControl4.SuspendLayout();
             tabPage4.SuspendLayout();
@@ -122,6 +124,8 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl6.SuspendLayout();
             tabPage14.SuspendLayout();
             tabPage15.SuspendLayout();
+            tableLayoutPanel4.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)monthsNumeric).BeginInit();
             tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)yearsNumeric).BeginInit();
@@ -130,11 +134,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             ((System.ComponentModel.ISupportInitialize)daysNumeric).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)branchGridView).BeginInit();
-            tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -223,6 +223,110 @@ namespace HQTCSDL_G6.Components.PartnerControls
             viewContractControl.TabIndex = 0;
             viewContractControl.Load += viewContractControl_Load;
             // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(CCBtn);
+            tabPage1.Controls.Add(pictureBox1);
+            tabPage1.Controls.Add(textBox2);
+            tabPage1.Controls.Add(label11);
+            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(label10);
+            tabPage1.Controls.Add(label9);
+            tabPage1.Controls.Add(dateTimePicker2);
+            tabPage1.Controls.Add(label8);
+            tabPage1.Controls.Add(dateTimePicker1);
+            tabPage1.Location = new System.Drawing.Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            tabPage1.Size = new System.Drawing.Size(578, 313);
+            tabPage1.TabIndex = 3;
+            tabPage1.Text = "Tạo hợp đồng";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // CCBtn
+            // 
+            CCBtn.Location = new System.Drawing.Point(473, 180);
+            CCBtn.Name = "CCBtn";
+            CCBtn.Size = new System.Drawing.Size(90, 23);
+            CCBtn.TabIndex = 9;
+            CCBtn.Text = "Tạo hợp đồng";
+            CCBtn.UseVisualStyleBackColor = true;
+            CCBtn.Click += CCBtn_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.hopdong1;
+            pictureBox1.Location = new System.Drawing.Point(6, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(250, 300);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new System.Drawing.Point(363, 64);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new System.Drawing.Size(200, 23);
+            textBox2.TabIndex = 7;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(265, 67);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(69, 15);
+            label11.TabIndex = 6;
+            label11.Text = "Mã Số Thuế";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(363, 93);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(200, 23);
+            textBox1.TabIndex = 5;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(265, 96);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(90, 15);
+            label10.TabIndex = 4;
+            label10.Text = "Tên khách hàng";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(265, 157);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(81, 15);
+            label9.TabIndex = 3;
+            label9.Text = "Ngày kết thúc";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Location = new System.Drawing.Point(363, 151);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new System.Drawing.Size(200, 23);
+            dateTimePicker2.TabIndex = 2;
+            dateTimePicker2.ValueChanged += dateTimePicker2_ValueChanged;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(265, 128);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(78, 15);
+            label8.TabIndex = 1;
+            label8.Text = "Ngày bắt đầu";
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new System.Drawing.Point(363, 122);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            dateTimePicker1.TabIndex = 0;
+            // 
             // productTab
             // 
             productTab.Controls.Add(tabControl4);
@@ -303,6 +407,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             // updateProductControl
             // 
+            updateProductControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
             updateProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
             updateProductControl.Error = false;
             updateProductControl.Location = new System.Drawing.Point(0, 0);
@@ -386,7 +491,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabPage15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tabPage15.Name = "tabPage15";
             tabPage15.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tabPage15.Size = new System.Drawing.Size(584, 317);
+            tabPage15.Size = new System.Drawing.Size(184, 44);
             tabPage15.TabIndex = 1;
             tabPage15.Text = "Thống kê đơn hàng";
             tabPage15.UseVisualStyleBackColor = true;
@@ -399,8 +504,145 @@ namespace HQTCSDL_G6.Components.PartnerControls
             partnerStatisticsControl.Location = new System.Drawing.Point(3, 2);
             partnerStatisticsControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             partnerStatisticsControl.Name = "partnerStatisticsControl";
-            partnerStatisticsControl.Size = new System.Drawing.Size(578, 313);
+            partnerStatisticsControl.Size = new System.Drawing.Size(178, 40);
             partnerStatisticsControl.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.Location = new System.Drawing.Point(228, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(50, 19);
+            label6.TabIndex = 2;
+            label6.Text = "Tháng";
+            // 
+            // label7
+            // 
+            label7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            label7.AutoSize = true;
+            label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label7.Location = new System.Drawing.Point(406, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(41, 19);
+            label7.TabIndex = 3;
+            label7.Text = "Năm";
+            // 
+            // label5
+            // 
+            label5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(64, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(45, 19);
+            label5.TabIndex = 1;
+            label5.Text = "Ngày";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.Location = new System.Drawing.Point(3, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(42, 26);
+            label1.TabIndex = 0;
+            label1.Text = "Thời hạn";
+            // 
+            // tableLayoutPanel4
+            // 
+            tableLayoutPanel4.ColumnCount = 2;
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            tableLayoutPanel4.Controls.Add(label3, 0, 0);
+            tableLayoutPanel4.Controls.Add(repTb, 1, 0);
+            tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel4.Location = new System.Drawing.Point(3, 62);
+            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel4.Name = "tableLayoutPanel4";
+            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel4.Size = new System.Drawing.Size(566, 26);
+            tableLayoutPanel4.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(3, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(109, 19);
+            label3.TabIndex = 0;
+            label3.Text = "Người đại diện";
+            // 
+            // repTb
+            // 
+            repTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            repTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            repTb.Location = new System.Drawing.Point(172, 2);
+            repTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            repTb.Name = "repTb";
+            repTb.Size = new System.Drawing.Size(391, 25);
+            repTb.TabIndex = 1;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.ColumnCount = 2;
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            tableLayoutPanel3.Controls.Add(label2, 0, 0);
+            tableLayoutPanel3.Controls.Add(taxNumberTb, 1, 0);
+            tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel3.Location = new System.Drawing.Point(3, 32);
+            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tableLayoutPanel3.Size = new System.Drawing.Size(566, 26);
+            tableLayoutPanel3.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label2.Location = new System.Drawing.Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(63, 19);
+            label2.TabIndex = 0;
+            label2.Text = "Mã thuế";
+            // 
+            // taxNumberTb
+            // 
+            taxNumberTb.Dock = System.Windows.Forms.DockStyle.Fill;
+            taxNumberTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            taxNumberTb.Location = new System.Drawing.Point(172, 2);
+            taxNumberTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            taxNumberTb.Name = "taxNumberTb";
+            taxNumberTb.Size = new System.Drawing.Size(391, 25);
+            taxNumberTb.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label4.Location = new System.Drawing.Point(3, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(47, 57);
+            label4.TabIndex = 0;
+            label4.Text = "Thời gian (ngày)";
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 2;
+            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 1;
+            tableLayoutPanel5.Size = new System.Drawing.Size(200, 100);
+            tableLayoutPanel5.TabIndex = 0;
             // 
             // monthsNumeric
             // 
@@ -557,49 +799,6 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel2.Size = new System.Drawing.Size(566, 26);
             tableLayoutPanel2.TabIndex = 6;
             // 
-            // label6
-            // 
-            label6.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(228, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(50, 19);
-            label6.TabIndex = 2;
-            label6.Text = "Tháng";
-            // 
-            // label7
-            // 
-            label7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(406, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(41, 19);
-            label7.TabIndex = 3;
-            label7.Text = "Năm";
-            // 
-            // label5
-            // 
-            label5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(64, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(45, 19);
-            label5.TabIndex = 1;
-            label5.Text = "Ngày";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(42, 26);
-            label1.TabIndex = 0;
-            label1.Text = "Thời hạn";
-            // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
@@ -626,78 +825,6 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel1.Size = new System.Drawing.Size(572, 307);
             tableLayoutPanel1.TabIndex = 6;
             // 
-            // tableLayoutPanel4
-            // 
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            tableLayoutPanel4.Controls.Add(label3, 0, 0);
-            tableLayoutPanel4.Controls.Add(repTb, 1, 0);
-            tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel4.Location = new System.Drawing.Point(3, 62);
-            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
-            tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new System.Drawing.Size(566, 26);
-            tableLayoutPanel4.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(3, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(109, 19);
-            label3.TabIndex = 0;
-            label3.Text = "Người đại diện";
-            // 
-            // repTb
-            // 
-            repTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            repTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            repTb.Location = new System.Drawing.Point(172, 2);
-            repTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            repTb.Name = "repTb";
-            repTb.Size = new System.Drawing.Size(391, 25);
-            repTb.TabIndex = 1;
-            // 
-            // tableLayoutPanel3
-            // 
-            tableLayoutPanel3.ColumnCount = 2;
-            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            tableLayoutPanel3.Controls.Add(label2, 0, 0);
-            tableLayoutPanel3.Controls.Add(taxNumberTb, 1, 0);
-            tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel3.Location = new System.Drawing.Point(3, 32);
-            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            tableLayoutPanel3.Name = "tableLayoutPanel3";
-            tableLayoutPanel3.RowCount = 1;
-            tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new System.Drawing.Size(566, 26);
-            tableLayoutPanel3.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(3, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(63, 19);
-            label2.TabIndex = 0;
-            label2.Text = "Mã thuế";
-            // 
-            // taxNumberTb
-            // 
-            taxNumberTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            taxNumberTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            taxNumberTb.Location = new System.Drawing.Point(172, 2);
-            taxNumberTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            taxNumberTb.Name = "taxNumberTb";
-            taxNumberTb.Size = new System.Drawing.Size(391, 25);
-            taxNumberTb.TabIndex = 1;
-            // 
             // branchGridView
             // 
             branchGridView.AllowUserToAddRows = false;
@@ -714,130 +841,6 @@ namespace HQTCSDL_G6.Components.PartnerControls
             branchGridView.Size = new System.Drawing.Size(566, 149);
             branchGridView.TabIndex = 7;
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(3, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(47, 57);
-            label4.TabIndex = 0;
-            label4.Text = "Thời gian (ngày)";
-            // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 1;
-            tableLayoutPanel5.Size = new System.Drawing.Size(200, 100);
-            tableLayoutPanel5.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(CCBtn);
-            tabPage1.Controls.Add(pictureBox1);
-            tabPage1.Controls.Add(textBox2);
-            tabPage1.Controls.Add(label11);
-            tabPage1.Controls.Add(textBox1);
-            tabPage1.Controls.Add(label10);
-            tabPage1.Controls.Add(label9);
-            tabPage1.Controls.Add(dateTimePicker2);
-            tabPage1.Controls.Add(label8);
-            tabPage1.Controls.Add(dateTimePicker1);
-            tabPage1.Location = new System.Drawing.Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            tabPage1.Size = new System.Drawing.Size(578, 313);
-            tabPage1.TabIndex = 3;
-            tabPage1.Text = "Tạo hợp đồng";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new System.Drawing.Point(363, 122);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            dateTimePicker1.TabIndex = 0;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(265, 128);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(78, 15);
-            label8.TabIndex = 1;
-            label8.Text = "Ngày bắt đầu";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(265, 157);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(81, 15);
-            label9.TabIndex = 3;
-            label9.Text = "Ngày kết thúc";
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Location = new System.Drawing.Point(363, 151);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            dateTimePicker2.TabIndex = 2;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(265, 96);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(90, 15);
-            label10.TabIndex = 4;
-            label10.Text = "Tên khách hàng";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new System.Drawing.Point(363, 93);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(200, 23);
-            textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new System.Drawing.Point(363, 64);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(200, 23);
-            textBox2.TabIndex = 7;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new System.Drawing.Point(265, 67);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(69, 15);
-            label11.TabIndex = 6;
-            label11.Text = "Mã Số Thuế";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.hopdong1;
-            pictureBox1.Location = new System.Drawing.Point(6, 6);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(250, 300);
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
-            // 
-            // CCBtn
-            // 
-            CCBtn.Location = new System.Drawing.Point(473, 180);
-            CCBtn.Name = "CCBtn";
-            CCBtn.Size = new System.Drawing.Size(90, 23);
-            CCBtn.TabIndex = 9;
-            CCBtn.Text = "Tạo hợp đồng";
-            CCBtn.UseVisualStyleBackColor = true;
-            // 
             // PartnerControl
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -851,6 +854,9 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl3.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             productTab.ResumeLayout(false);
             tabControl4.ResumeLayout(false);
             tabPage4.ResumeLayout(false);
@@ -861,6 +867,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl6.ResumeLayout(false);
             tabPage14.ResumeLayout(false);
             tabPage15.ResumeLayout(false);
+            tableLayoutPanel4.ResumeLayout(false);
+            tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)monthsNumeric).EndInit();
             tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)yearsNumeric).EndInit();
@@ -871,14 +881,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel2.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel4.PerformLayout();
-            tableLayoutPanel3.ResumeLayout(false);
-            tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)branchGridView).EndInit();
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 

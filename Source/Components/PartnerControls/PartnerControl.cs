@@ -51,5 +51,15 @@ namespace HQTCSDL_G6.Components.PartnerControls
         {
 
         }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CCBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

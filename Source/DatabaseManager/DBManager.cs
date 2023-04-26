@@ -30,9 +30,10 @@ namespace HQTCSDL_G6.DatabaseManager
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["admin"].ConnectionString))
                 {
                     SqlCommand command = connection.CreateCommand();
+                    connection.Open();
                     command.CommandType = CommandType.Text;
-                    command.CommandText = ("Insert into TaiKhoan (TaiKhoan , pass) values (@account, @password);"
-                        + "Insert into KhachHang (TaiKhoan, HoTen, DiaChi, SDT, Email) values (@account, @name, @address, @sdt, @email");
+                    command.CommandText = ("Insert into TaiKhoan (TaiKhoan , pass, Loai) values (@account, @password, KH);"
+                        + "Insert into KhachHang (TaiKhoan, HoTen, DiaChi, SDT, Email) values (@account, @name, @address, @sdt, @email);");
                     command.Parameters.AddWithValue("@account", account);
                     command.Parameters.AddWithValue("@password", password);
                     command.Parameters.AddWithValue("@name", name);
@@ -41,7 +42,7 @@ namespace HQTCSDL_G6.DatabaseManager
                     command.Parameters.AddWithValue("@email", email);
                     command.ExecuteNonQuery();
 
-                    connection.Open();
+                    
 
                 }
             }
@@ -58,7 +59,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["admin"].ConnectionString))
                 {
                     SqlCommand command = connection.CreateCommand();
-                    command.CommandText = ("Insert into TaiKhoan (TaiKhoan , pass) values (@account, @password);"
+                    command.CommandText = ("Insert into TaiKhoan (TaiKhoan , pass, Loai) values (@account, @password, DT);"
                         + "Insert into DoiTac (TaiKhoan, TenDT, DaiDien, ThanhPho, Quan, DiaChi, SoChiNhanh, LoaiAmThuc, Sdt, Email) values (@account,@password,@partner,@name,@city,@dis,@address,@amount,@type,@sdt,@email);");
                     command.Parameters.AddWithValue("@account", account);
                     command.Parameters.AddWithValue("@password", password);
@@ -92,7 +93,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 using (SqlConnection connection = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["admin"].ConnectionString))
                 { 
                     SqlCommand command = connection.CreateCommand();
-                    command.CommandText = ("Insert into TaiKhoan (TaiKhoan , pass) values (@account, @password);"
+                    command.CommandText = ("Insert into TaiKhoan (TaiKhoan , pass, loai) values (@account, @password, TX);"
                         + "Insert into TaiXe (TaiKhoan, HoTen, CMND, SDT, BienSo, KhuVuc, Email, Bank) values (@account,@password,@name,@cmnd,@sdt,@bienso,@area,@email,@bank);");
                     command.Parameters.AddWithValue("@account", account);
                     command.Parameters.AddWithValue("@password", password);

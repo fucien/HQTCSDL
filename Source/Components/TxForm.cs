@@ -23,7 +23,7 @@ namespace HQTCSDL_G6.Components
             this.Hide();
             // add to database
 
-            DatabaseManager.DBManager.SignupTX("nhet ten bang vo day");
+            DatabaseManager.DBManager.Init.SignupTX(TkTbx.Text, MkTbx.Text, HtTbx.Text, CmndTbx.Text, SdtBtn.Text, BsxTbx.Text, KvTbx.Text, ETbx.Text, BTbx.Text);
             MessageBox.Show("Đăng ký thành công!");
             this.Parent.Controls.Add(new LoginControl());
         }
