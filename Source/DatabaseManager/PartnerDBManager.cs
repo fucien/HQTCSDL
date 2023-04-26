@@ -351,7 +351,31 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "cap_nhat_san_pham"
+                    CommandText = "CapNhatSP"
+                };
+                command.Parameters.AddWithValue("@ma_sp", update.ID);
+                command.Parameters.AddWithValue("@ten_sp", update.Name);
+                command.Parameters.AddWithValue("@mo_ta", update.Description);
+                command.Parameters.AddWithValue("@gia", update.Price);
+                return command.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateProductError(Product update)
+        {
+            try
+            {
+                using SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                using var command = new SqlCommand()
+                {
+                    Connection = connection,
+                    CommandType = System.Data.CommandType.StoredProcedure,
+                    CommandText = "CapNhatSP_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_sp", update.ID);
                 command.Parameters.AddWithValue("@ten_sp", update.Name);

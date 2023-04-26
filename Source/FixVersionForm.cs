@@ -49,7 +49,7 @@ namespace HQTCSDL_G6
                 }
                 else if (loginInfor.Type == "NV")
                 {
-                    currentControl = new EmployeeControl(currentID, true);
+                    currentControl = new EmployeeControl(currentID, false);
                     currentFunctionLabel.Text = "Nhân viên: " + Name;
                 }
                 currentFunctionPanel.Controls.Add(currentControl);

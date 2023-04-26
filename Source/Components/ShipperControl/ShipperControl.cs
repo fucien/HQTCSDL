@@ -17,6 +17,7 @@ namespace HQTCSDL_G6.Components.ShipperControl
             acceptOrderControl.Error = error;
 
             updateOrderControl.CurrentID = id;
+            updateOrderControl.Error = error;
             shipperViewStatisticsControl.CurrentID = id;
             shipperViewStatisticsControl.Error = error;
         }

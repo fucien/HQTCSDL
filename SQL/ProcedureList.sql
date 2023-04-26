@@ -102,7 +102,34 @@ BEGIN TRANSACTION
 GO
 
 --Procedure cập nhật sản phẩm
-CREATE PROCEDURE cap_nhat_san_pham @ma_sp INT, @ten_sp NVARCHAR(20), @mo_ta NVARCHAR(30), @gia INT, @delay DATETIME
+CREATE PROCEDURE CapNhatSP_ERROR @ma_sp INT, @ten_sp NVARCHAR(20), @mo_ta NVARCHAR(30), @gia INT, @delay DATETIME
+AS
+BEGIN TRANSACTION
+	--Nếu tên sản phẩm, mô tả không trống, giá không bị âm -> cập nhật giá trị mới
+	--Nếu không thì giữ những giá trị cũ lại
+	IF (@ten_sp = '')
+		BEGIN
+			SET @ten_sp = (SELECT Ten FROM SanPham WHERE MaSP = @ma_sp);
+		END
+	IF (@mo_ta = '')
+		BEGIN
+			SET @mo_ta = (SELECT Description FROM SanPham WHERE MaSP = @ma_sp);
+		END
+	IF (@gia < 0)
+		BEGIN
+			SET @gia = (SELECT GIA_SP FROM SanPham WHERE MaSP = @ma_sp);
+		END
+
+	WAITFOR DELAY @delay;
+	UPDATE SanPham
+	SET Ten = @ten_sp,
+		Description = @mo_ta,
+		GIA_SP = @gia
+	WHERE MaSP = @ma_sp
+COMMIT TRANSACTION
+GO
+
+CREATE PROCEDURE CapNhatSP @ma_sp INT, @ten_sp NVARCHAR(20), @mo_ta NVARCHAR(30), @gia INT, @delay DATETIME
 AS
 BEGIN TRANSACTION
 	--Nếu tên sản phẩm, mô tả không trống, giá không bị âm -> cập nhật giá trị mới
@@ -126,7 +153,6 @@ BEGIN TRANSACTION
 	WHERE MaSP = @ma_sp
 COMMIT TRANSACTION
 GO
-
 --Procedure tài xế tiếp nhận đơn hàng
 CREATE PROCEDURE NhanDH_ERROR @ma_tx INT, @ma_dh INT, 
 									@delay DATETIME

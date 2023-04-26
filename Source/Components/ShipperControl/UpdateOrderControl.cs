@@ -17,6 +17,7 @@ namespace HQTCSDL_G6.Components.ShipperControl
         }
 
         public int CurrentID { get; internal set; }
+        public bool Error { get; internal set; }
 
         private void ViewButton_Click(object sender, EventArgs e)
         {
