@@ -98,24 +98,20 @@ namespace HQTCSDL_G6.Components.AdminControl
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
-            i = dataGridView1.CurrentRow.Index;
+            i = dataGridView2.CurrentRow.Index;
             SttDATbx.Text = dataGridView2.Rows[i].Cells[0].Value.ToString();
         }
 
         private void DeBtn_Click(object sender, EventArgs e)
         {
-            string username = AccTbx.Text;
-            if (Error)
-            DatabaseManager.DBManager.Init.Admin.LockAccount_error(username);
-            else
-            DatabaseManager.DBManager.Init.Admin.LockAccount(username);
+            string username = SttDATbx.Text;
+            DatabaseManager.DBManager.Init.Admin.LockAccount(username, CurrentDelay);
             load();
-
         }
 
         private void AcBtn_Click(object sender, EventArgs e)
         {
-            string username = AccTbx.Text;
+            string username = SttDATbx.Text;
             DatabaseManager.DBManager.Init.Admin.UnlockAccount(username);
 
             load();
@@ -159,6 +155,11 @@ namespace HQTCSDL_G6.Components.AdminControl
                     break;
             }
             dataGridView3.DataSource = DatabaseManager.DBManager.Init.Admin.GetTable(table);
+        }
+
+        private void SttDATbx_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

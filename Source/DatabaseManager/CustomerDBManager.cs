@@ -85,7 +85,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "GetThongKe_ERROR"
+                    CommandText = "Thongke_KH_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_kh", customerID);
                 command.Parameters.AddWithValue("@delay", delay);

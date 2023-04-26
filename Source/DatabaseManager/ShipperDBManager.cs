@@ -163,7 +163,8 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT dh.MaDH, dh.MaCN, dh.MaKH, dh.MaTX, dh.CachThanhToan, dh.DiaChi, dh.Status, dh.Gia, dh.PhiVanChuyen FROM DonHang dh WHERE dh.MaTX IS NULL AND dh.Status = N'Đang xử lý'"
+
+                CommandText = "SELECT dh.MaDH, dh.MaCN, dh.MaKH, dh.MaTX, dh.CachThanhToan, dh.DiaChi, dh.Status, dh.Gia, dh.PhiVanChuyen FROM DonHang dh WHERE dh.MaTX IS NULL AND dh.Status = N'Đang xử lý'"
                 };
                 using var reader = command.ExecuteReader();
                 while (reader.Read())

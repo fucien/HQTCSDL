@@ -48,18 +48,11 @@ BEGIN TRANSACTION
 COMMIT TRANSACTION
 GO
 
-CREATE PROCEDURE Admin_lock_error @tk varchar(20), @delay DATETIME
-AS
-BEGIN TRANSACTION
-	Update TaiKhoan set Lock = 1 where TaiKhoan = @tk
-COMMIT TRANSACTION;
-GO
-
 CREATE PROCEDURE Admin_lock @tk varchar(20), @delay DATETIME
 AS
 BEGIN TRANSACTION
-	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 	Update TaiKhoan set Lock = 1 where TaiKhoan = @tk
+	WAITFOR DELAY @delay;
 COMMIT TRANSACTION;
 GO
 

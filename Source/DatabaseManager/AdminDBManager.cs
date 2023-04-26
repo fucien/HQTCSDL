@@ -132,30 +132,8 @@ namespace HQTCSDL_G6.DatabaseManager
             }
         }
 
-        public bool LockAccount_error(string username)
-        {
-            try
-            {
-                using SqlConnection connection = new SqlConnection(connectionString);
-                connection.Open();
-                using var command = new SqlCommand()
-                {
-                    Connection = connection,
-                    CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "Admin_lock_error"
-                };
-                command.Parameters.AddWithValue("@tk", username);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Khóa thành công");
-                return true;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                return false;
-            }
-        }
-        public bool LockAccount (string username)
+      
+        public bool LockAccount (string username, TimeSpan delay)
         {
             try
             {
@@ -168,6 +146,7 @@ namespace HQTCSDL_G6.DatabaseManager
                     CommandText = "Admin_lock"
                 };
                 command.Parameters.AddWithValue("@tk", username);
+                command.Parameters.AddWithValue("@delay", delay);
                 command.ExecuteNonQuery();
                 MessageBox.Show("Khóa thành công");
                 return true;

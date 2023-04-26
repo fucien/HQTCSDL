@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HQTCSDL_G6.DatabaseManager;
 
 namespace HQTCSDL_G6.Components
 {
@@ -22,6 +23,7 @@ namespace HQTCSDL_G6.Components
             this.Hide();
             // add to database
 
+            DatabaseManager.DBManager.SignupTX("nhet ten bang vo day");
             MessageBox.Show("Đăng ký thành công!");
             this.Parent.Controls.Add(new LoginControl());
         }
