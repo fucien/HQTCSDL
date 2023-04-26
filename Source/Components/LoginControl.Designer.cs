@@ -38,6 +38,7 @@ namespace HQTCSDL_G6.Components
             passwordTb = new System.Windows.Forms.TextBox();
             tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             accountTb = new System.Windows.Forms.TextBox();
+            button1 = new System.Windows.Forms.Button();
             confirmButton = new System.Windows.Forms.Button();
             loginPanel = new System.Windows.Forms.TableLayoutPanel();
             label1 = new System.Windows.Forms.Label();
@@ -66,16 +67,17 @@ namespace HQTCSDL_G6.Components
             loginPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             loginPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             loginPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            loginPanel.Size = new System.Drawing.Size(427, 362);
+            loginPanel.Size = new System.Drawing.Size(400, 300);
             loginPanel.TabIndex = 4;
+            loginPanel.Paint += loginPanel_Paint_1;
             // 
             // label1
             // 
             label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(151, 0);
+            label1.Location = new System.Drawing.Point(138, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(124, 26);
+            label1.Size = new System.Drawing.Size(124, 18);
             label1.TabIndex = 0;
             label1.Text = "Đăng nhập";
             // 
@@ -88,16 +90,17 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 1, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel6, 1, 0);
+            tableLayoutPanel1.Controls.Add(button1, 2, 2);
             tableLayoutPanel1.Controls.Add(confirmButton, 1, 2);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel1.Location = new System.Drawing.Point(3, 36);
+            tableLayoutPanel1.Location = new System.Drawing.Point(3, 30);
             tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(421, 308);
+            tableLayoutPanel1.Size = new System.Drawing.Size(394, 252);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel5
@@ -107,24 +110,24 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel5.Controls.Add(passwordTb, 0, 1);
             tableLayoutPanel5.Controls.Add(label4, 0, 0);
             tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel5.Location = new System.Drawing.Point(129, 79);
+            tableLayoutPanel5.Location = new System.Drawing.Point(121, 65);
             tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 2;
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            tableLayoutPanel5.Size = new System.Drawing.Size(162, 73);
+            tableLayoutPanel5.Size = new System.Drawing.Size(151, 59);
             tableLayoutPanel5.TabIndex = 2;
             // 
             // passwordTb
             // 
             passwordTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            passwordTb.Location = new System.Drawing.Point(3, 23);
+            passwordTb.Location = new System.Drawing.Point(3, 19);
             passwordTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             passwordTb.Name = "passwordTb";
             passwordTb.PasswordChar = '*';
-            passwordTb.Size = new System.Drawing.Size(156, 23);
+            passwordTb.Size = new System.Drawing.Size(145, 23);
             passwordTb.TabIndex = 1;
             // 
             // label4
@@ -133,7 +136,7 @@ namespace HQTCSDL_G6.Components
             label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label4.Location = new System.Drawing.Point(3, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(71, 19);
+            label4.Size = new System.Drawing.Size(71, 17);
             label4.TabIndex = 0;
             label4.Text = "Mặt khẩu";
             // 
@@ -144,13 +147,13 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel6.Controls.Add(label2, 0, 0);
             tableLayoutPanel6.Controls.Add(accountTb, 0, 1);
             tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel6.Location = new System.Drawing.Point(129, 2);
+            tableLayoutPanel6.Location = new System.Drawing.Point(121, 2);
             tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 2;
             tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            tableLayoutPanel6.Size = new System.Drawing.Size(162, 73);
+            tableLayoutPanel6.Size = new System.Drawing.Size(151, 59);
             tableLayoutPanel6.TabIndex = 3;
             // 
             // label2
@@ -159,18 +162,33 @@ namespace HQTCSDL_G6.Components
             label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label2.Location = new System.Drawing.Point(3, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(98, 19);
+            label2.Size = new System.Drawing.Size(98, 17);
             label2.TabIndex = 0;
             label2.Text = "Tên tài khoản";
             // 
             // accountTb
             // 
             accountTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            accountTb.Location = new System.Drawing.Point(3, 23);
+            accountTb.Location = new System.Drawing.Point(3, 19);
             accountTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             accountTb.Name = "accountTb";
-            accountTb.Size = new System.Drawing.Size(156, 23);
+            accountTb.Size = new System.Drawing.Size(145, 23);
             accountTb.TabIndex = 1;
+            // 
+            // button1
+            // 
+            button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            button1.AutoSize = true;
+            button1.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.Color.White;
+            button1.Location = new System.Drawing.Point(291, 128);
+            button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(86, 27);
+            button1.TabIndex = 4;
+            button1.Text = "Đăng nhập";
+            button1.UseVisualStyleBackColor = false;
             // 
             // confirmButton
             // 
@@ -179,10 +197,10 @@ namespace HQTCSDL_G6.Components
             confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             confirmButton.ForeColor = System.Drawing.Color.White;
-            confirmButton.Location = new System.Drawing.Point(166, 156);
+            confirmButton.Location = new System.Drawing.Point(153, 128);
             confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             confirmButton.Name = "confirmButton";
-            confirmButton.Size = new System.Drawing.Size(87, 29);
+            confirmButton.Size = new System.Drawing.Size(87, 27);
             confirmButton.TabIndex = 0;
             confirmButton.Text = "Đăng nhập";
             confirmButton.UseVisualStyleBackColor = false;
@@ -193,9 +211,9 @@ namespace HQTCSDL_G6.Components
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(loginPanel);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             Name = "LoginControl";
-            Size = new System.Drawing.Size(427, 362);
+            Size = new System.Drawing.Size(400, 300);
             loginPanel.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
@@ -208,10 +226,11 @@ namespace HQTCSDL_G6.Components
 
         #endregion
 
-        private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TextBox passwordTb;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TextBox accountTb;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button confirmButton;
     }
 }

@@ -55,5 +55,10 @@ namespace HQTCSDL_G6.Components
         {
 
         }
+
+        private void loginPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
