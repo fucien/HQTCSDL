@@ -62,21 +62,20 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel34.Controls.Add(label28, 0, 0);
             tableLayoutPanel34.Controls.Add(nameTb, 1, 0);
             tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel34.Location = new System.Drawing.Point(3, 2);
-            tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel34.Location = new System.Drawing.Point(3, 3);
             tableLayoutPanel34.Name = "tableLayoutPanel34";
             tableLayoutPanel34.RowCount = 1;
             tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel34.Size = new System.Drawing.Size(622, 85);
+            tableLayoutPanel34.Size = new System.Drawing.Size(712, 113);
             tableLayoutPanel34.TabIndex = 4;
             // 
             // label28
             // 
             label28.AutoSize = true;
-            label28.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label28.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label28.Location = new System.Drawing.Point(3, 0);
             label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(94, 19);
+            label28.Size = new System.Drawing.Size(119, 23);
             label28.TabIndex = 0;
             label28.Text = "Tên sản phẩm";
             // 
@@ -84,10 +83,9 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             nameTb.Dock = System.Windows.Forms.DockStyle.Fill;
             nameTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            nameTb.Location = new System.Drawing.Point(127, 2);
-            nameTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            nameTb.Location = new System.Drawing.Point(145, 3);
             nameTb.Name = "nameTb";
-            nameTb.Size = new System.Drawing.Size(492, 25);
+            nameTb.Size = new System.Drawing.Size(564, 30);
             nameTb.TabIndex = 1;
             // 
             // tableLayoutPanel35
@@ -99,21 +97,20 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel35.Controls.Add(label29, 0, 0);
             tableLayoutPanel35.Controls.Add(descriptionTb, 1, 0);
             tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel35.Location = new System.Drawing.Point(3, 91);
-            tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel35.Location = new System.Drawing.Point(3, 122);
             tableLayoutPanel35.Name = "tableLayoutPanel35";
             tableLayoutPanel35.RowCount = 1;
             tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel35.Size = new System.Drawing.Size(622, 85);
+            tableLayoutPanel35.Size = new System.Drawing.Size(712, 113);
             tableLayoutPanel35.TabIndex = 5;
             // 
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label29.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label29.Location = new System.Drawing.Point(3, 0);
             label29.Name = "label29";
-            label29.Size = new System.Drawing.Size(110, 19);
+            label29.Size = new System.Drawing.Size(93, 46);
             label29.TabIndex = 0;
             label29.Text = "Mô tả sản phẩm";
             // 
@@ -121,10 +118,9 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             descriptionTb.Dock = System.Windows.Forms.DockStyle.Fill;
             descriptionTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            descriptionTb.Location = new System.Drawing.Point(127, 2);
-            descriptionTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            descriptionTb.Location = new System.Drawing.Point(145, 3);
             descriptionTb.Name = "descriptionTb";
-            descriptionTb.Size = new System.Drawing.Size(492, 25);
+            descriptionTb.Size = new System.Drawing.Size(564, 30);
             descriptionTb.TabIndex = 1;
             // 
             // tableLayoutPanel36
@@ -136,21 +132,20 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel36.Controls.Add(label30, 0, 0);
             tableLayoutPanel36.Controls.Add(priceNumeric, 1, 0);
             tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel36.Location = new System.Drawing.Point(3, 180);
-            tableLayoutPanel36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel36.Location = new System.Drawing.Point(3, 241);
             tableLayoutPanel36.Name = "tableLayoutPanel36";
             tableLayoutPanel36.RowCount = 1;
             tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel36.Size = new System.Drawing.Size(622, 85);
+            tableLayoutPanel36.Size = new System.Drawing.Size(712, 113);
             tableLayoutPanel36.TabIndex = 6;
             // 
             // label30
             // 
             label30.AutoSize = true;
-            label30.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label30.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label30.Location = new System.Drawing.Point(3, 0);
             label30.Name = "label30";
-            label30.Size = new System.Drawing.Size(93, 19);
+            label30.Size = new System.Drawing.Size(118, 23);
             label30.TabIndex = 0;
             label30.Text = "Giá sản phẩm";
             // 
@@ -159,11 +154,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             priceNumeric.Dock = System.Windows.Forms.DockStyle.Fill;
             priceNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             priceNumeric.Increment = new decimal(new int[] { 10000, 0, 0, 0 });
-            priceNumeric.Location = new System.Drawing.Point(127, 2);
-            priceNumeric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            priceNumeric.Location = new System.Drawing.Point(145, 3);
             priceNumeric.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             priceNumeric.Name = "priceNumeric";
-            priceNumeric.Size = new System.Drawing.Size(492, 25);
+            priceNumeric.Size = new System.Drawing.Size(564, 30);
             priceNumeric.TabIndex = 1;
             priceNumeric.ThousandsSeparator = true;
             // 
@@ -178,15 +172,14 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tableLayoutPanel33.Controls.Add(confirmButton, 0, 3);
             tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel33.Location = new System.Drawing.Point(0, 0);
-            tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel33.Name = "tableLayoutPanel33";
             tableLayoutPanel33.RowCount = 4;
             tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            tableLayoutPanel33.Size = new System.Drawing.Size(628, 446);
+            tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel33.Size = new System.Drawing.Size(718, 595);
             tableLayoutPanel33.TabIndex = 3;
             // 
             // confirmButton
@@ -196,10 +189,9 @@ namespace HQTCSDL_G6.Components.PartnerControls
             confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             confirmButton.ForeColor = System.Drawing.Color.White;
-            confirmButton.Location = new System.Drawing.Point(273, 269);
-            confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            confirmButton.Location = new System.Drawing.Point(306, 360);
             confirmButton.Name = "confirmButton";
-            confirmButton.Size = new System.Drawing.Size(82, 29);
+            confirmButton.Size = new System.Drawing.Size(105, 44);
             confirmButton.TabIndex = 7;
             confirmButton.Text = "Xác nhận";
             confirmButton.UseVisualStyleBackColor = false;
@@ -207,12 +199,11 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             // AddProductControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel33);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "AddProductControl";
-            Size = new System.Drawing.Size(628, 446);
+            Size = new System.Drawing.Size(718, 595);
             tableLayoutPanel34.ResumeLayout(false);
             tableLayoutPanel34.PerformLayout();
             tableLayoutPanel35.ResumeLayout(false);

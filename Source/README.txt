@@ -1,1 +1,0 @@
-Cô hãy vào file App.config để sửa thông tin các connectionString ạ :D

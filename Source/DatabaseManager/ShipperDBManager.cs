@@ -19,7 +19,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "tiep_nhan_dh_ERROR"
+                    CommandText = "NhanDH_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_dh", orderID);
                 command.Parameters.AddWithValue("@ma_tx", shipperID);
@@ -42,7 +42,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "tiep_nhan_dh"
+                    CommandText = "NhanDH"
                 };
                 command.Parameters.AddWithValue("@ma_dh", orderID);
                 command.Parameters.AddWithValue("@ma_tx", shipperID);
@@ -65,7 +65,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "tai_xe_thong_ke"
+                    CommandText = "GetThongKe"
                 };
                 command.Parameters.AddWithValue("@ma_tx", shipperID);
                 command.Parameters.AddWithValue("@delay", delay);
@@ -104,7 +104,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "tai_xe_thong_ke_ERROR"
+                    CommandText = "GetThongKe_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_tx", shipperID);
                 command.Parameters.AddWithValue("@delay", delay);

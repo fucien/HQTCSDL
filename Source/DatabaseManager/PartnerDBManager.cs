@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
+using System.Windows.Forms;
 
 namespace HQTCSDL_G6.DatabaseManager
 {
@@ -119,7 +120,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "gia_han_hop_dong_ERROR"
+                    CommandText = "GiaHanHD_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_hd", contractID);
                 command.Parameters.AddWithValue("@so_ngay_them", addDays);
@@ -143,7 +144,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "gia_han_hop_dong"
+                    CommandText = "GiaHanHD"
                 };
                 command.Parameters.AddWithValue("@ma_hd", contractID);
                 command.Parameters.AddWithValue("@so_ngay_them", addDays);
@@ -186,12 +187,22 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.Text,
-                    CommandText = "SELECT hd.MaHD, hd.MaSoThue, hd.NguoiDaiDien, hd.NgayBatDau, hd.NgayKetThuc FROM HopDong hd WHERE hd.MaDT = @partner_id"
+                    CommandText = "SELECT hd.MaHD, hd.MaSoThue, hd.NguoiDaiDien, hd.NgayBatDau, hd.NgayKetThuc , hd.isNotified FROM HopDong hd WHERE hd.MaDT = @partner_id"
                 };
                 command.Parameters.AddWithValue("@partner_id", partnerID);
                 using var reader = command.ExecuteReader();
                 while (reader.Read())
+                {
+                    if (reader.GetInt32(5) == 1)
+                    {
+                        MessageBox.Show("Thông báo từ hệ thống: Hợp đồng " + reader.GetInt32(0) + " sắp hết hạn.");
+                    }
+                    if (reader.GetInt32(5) == 2)
+                    {
+                        MessageBox.Show("Thông báo từ hệ thống: Hợp đồng " + reader.GetInt32(0) + " đã được duyệt.");
+                    }
                     yield return new Contract(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3), reader.GetDateTime(4));
+                }
             }
             finally { }
         }
@@ -340,7 +351,31 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "cap_nhat_san_pham"
+                    CommandText = "CapNhatSP"
+                };
+                command.Parameters.AddWithValue("@ma_sp", update.ID);
+                command.Parameters.AddWithValue("@ten_sp", update.Name);
+                command.Parameters.AddWithValue("@mo_ta", update.Description);
+                command.Parameters.AddWithValue("@gia", update.Price);
+                return command.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateProductError(Product update)
+        {
+            try
+            {
+                using SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                using var command = new SqlCommand()
+                {
+                    Connection = connection,
+                    CommandType = System.Data.CommandType.StoredProcedure,
+                    CommandText = "CapNhatSP_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_sp", update.ID);
                 command.Parameters.AddWithValue("@ten_sp", update.Name);
@@ -391,7 +426,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "cap_nhat_so_luong_cnsp_ERROR"
+                    CommandText = "CapNhatSoLuongSP_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_sp", productID);
                 command.Parameters.AddWithValue("@ma_cn", branchID);
@@ -415,7 +450,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "cap_nhat_so_luong_cnsp"
+                    CommandText = "CapNhatSoLuongSP"
                 };
                 command.Parameters.AddWithValue("@ma_sp", productID);
                 command.Parameters.AddWithValue("@ma_cn", branchID);
@@ -480,7 +515,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "doi_tac_thong_ke"
+                    CommandText = "DoiTacThongKe"
                 };
                 command.Parameters.AddWithValue("@ma_dt", partnerID);
                 command.Parameters.AddWithValue("@delay", delay);
@@ -526,7 +561,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 {
                     Connection = connection,
                     CommandType = System.Data.CommandType.StoredProcedure,
-                    CommandText = "doi_tac_thong_ke_ERROR"
+                    CommandText = "DoiTacThongKe_ERROR"
                 };
                 command.Parameters.AddWithValue("@ma_dt", partnerID);
                 command.Parameters.AddWithValue("@delay", delay);

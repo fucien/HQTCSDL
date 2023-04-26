@@ -19,6 +19,9 @@
     <Compile Update="Components\EmployeeControl\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Components\KhForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Components\LoginControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,6 +70,9 @@
     <Compile Update="Components\CustomerControl\ProductAmountDeleteControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Components\RegisterForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Components\ShipperControl\AcceptOrderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -77,6 +83,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Components\ShipperControl\UpdateOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Components\TxForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="ErrorVersionForm.cs">

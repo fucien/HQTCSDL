@@ -1,6 +1,7 @@
 ﻿using HQTCSDL_G6.Components;
 using HQTCSDL_G6.Components.AdminControl;
 using HQTCSDL_G6.Components.CustomerControl;
+using HQTCSDL_G6.Components.EmployeeControl;
 using HQTCSDL_G6.Components.PartnerControls;
 using HQTCSDL_G6.Components.ShipperControl;
 using System;
@@ -45,6 +46,11 @@ namespace HQTCSDL_G6
                 {
                     currentControl = new AdminControl(currentID, false);
                     currentFunctionLabel.Text = "Quản lý: " + Name;
+                }
+                else if (loginInfor.Type == "NV")
+                {
+                    currentControl = new EmployeeControl(currentID, false);
+                    currentFunctionLabel.Text = "Nhân viên: " + Name;
                 }
                 currentFunctionPanel.Controls.Add(currentControl);
                 currentControl.Dock = DockStyle.Fill;

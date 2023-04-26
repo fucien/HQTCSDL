@@ -80,9 +80,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(279, 0);
+            label4.Location = new System.Drawing.Point(319, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(92, 38);
+            label4.Size = new System.Drawing.Size(114, 46);
             label4.TabIndex = 2;
             label4.Text = "Tổng giá vận chuyển";
             // 
@@ -90,9 +90,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(141, 0);
+            label5.Location = new System.Drawing.Point(161, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(126, 19);
+            label5.Size = new System.Drawing.Size(113, 46);
             label5.TabIndex = 1;
             label5.Text = "Tổng giá sản phẩm";
             // 
@@ -102,7 +102,7 @@ namespace HQTCSDL_G6.Components.ShipperControl
             label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.Location = new System.Drawing.Point(3, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(95, 19);
+            label6.Size = new System.Drawing.Size(118, 23);
             label6.TabIndex = 0;
             label6.Text = "Tổng hóa đơn";
             // 
@@ -110,9 +110,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label3.AutoSize = true;
             label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(279, 0);
+            label3.Location = new System.Drawing.Point(319, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(92, 38);
+            label3.Size = new System.Drawing.Size(114, 46);
             label3.TabIndex = 2;
             label3.Text = "Tổng giá vận chuyển";
             // 
@@ -120,9 +120,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(141, 0);
+            label2.Location = new System.Drawing.Point(161, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(126, 19);
+            label2.Size = new System.Drawing.Size(113, 46);
             label2.TabIndex = 1;
             label2.Text = "Tổng giá sản phẩm";
             // 
@@ -132,7 +132,7 @@ namespace HQTCSDL_G6.Components.ShipperControl
             label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(95, 19);
+            label1.Size = new System.Drawing.Size(118, 23);
             label1.TabIndex = 0;
             label1.Text = "Tổng hóa đơn";
             // 
@@ -140,9 +140,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(279, 0);
+            label8.Location = new System.Drawing.Point(319, 0);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(92, 38);
+            label8.Size = new System.Drawing.Size(114, 46);
             label8.TabIndex = 2;
             label8.Text = "Tổng giá vận chuyển";
             // 
@@ -150,9 +150,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             // 
             label9.AutoSize = true;
             label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label9.Location = new System.Drawing.Point(141, 0);
+            label9.Location = new System.Drawing.Point(161, 0);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(126, 19);
+            label9.Size = new System.Drawing.Size(113, 46);
             label9.TabIndex = 1;
             label9.Text = "Tổng giá sản phẩm";
             // 
@@ -162,7 +162,7 @@ namespace HQTCSDL_G6.Components.ShipperControl
             label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label10.Location = new System.Drawing.Point(3, 0);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(95, 19);
+            label10.Size = new System.Drawing.Size(118, 23);
             label10.TabIndex = 0;
             label10.Text = "Tổng hóa đơn";
             // 
@@ -177,15 +177,14 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel93.Controls.Add(tableLayoutPanel5, 0, 3);
             tableLayoutPanel93.Dock = System.Windows.Forms.DockStyle.Fill;
             tableLayoutPanel93.Location = new System.Drawing.Point(0, 0);
-            tableLayoutPanel93.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel93.Name = "tableLayoutPanel93";
             tableLayoutPanel93.RowCount = 4;
             tableLayoutPanel93.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             tableLayoutPanel93.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
             tableLayoutPanel93.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
             tableLayoutPanel93.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            tableLayoutPanel93.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            tableLayoutPanel93.Size = new System.Drawing.Size(426, 392);
+            tableLayoutPanel93.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tableLayoutPanel93.Size = new System.Drawing.Size(487, 523);
             tableLayoutPanel93.TabIndex = 5;
             // 
             // tableLayoutPanel3
@@ -196,13 +195,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel3.Controls.Add(tableLayoutPanel4, 0, 1);
             tableLayoutPanel3.Controls.Add(label7, 0, 0);
             tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel3.Location = new System.Drawing.Point(3, 169);
-            tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel3.Location = new System.Drawing.Point(3, 226);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            tableLayoutPanel3.Size = new System.Drawing.Size(420, 108);
+            tableLayoutPanel3.Size = new System.Drawing.Size(481, 143);
             tableLayoutPanel3.TabIndex = 5;
             // 
             // tableLayoutPanel4
@@ -218,43 +216,39 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel4.Controls.Add(label5, 1, 0);
             tableLayoutPanel4.Controls.Add(label6, 0, 0);
             tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel4.Location = new System.Drawing.Point(3, 23);
-            tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel4.Location = new System.Drawing.Point(3, 31);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
             tableLayoutPanel4.RowCount = 2;
             tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel4.Size = new System.Drawing.Size(414, 83);
+            tableLayoutPanel4.Size = new System.Drawing.Size(475, 109);
             tableLayoutPanel4.TabIndex = 1;
             // 
             // shippingShippingTb
             // 
             shippingShippingTb.Dock = System.Windows.Forms.DockStyle.Fill;
             shippingShippingTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            shippingShippingTb.Location = new System.Drawing.Point(279, 43);
-            shippingShippingTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            shippingShippingTb.Location = new System.Drawing.Point(319, 57);
             shippingShippingTb.Name = "shippingShippingTb";
-            shippingShippingTb.Size = new System.Drawing.Size(132, 25);
+            shippingShippingTb.Size = new System.Drawing.Size(153, 30);
             shippingShippingTb.TabIndex = 6;
             // 
             // shippingPriceTb
             // 
             shippingPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
             shippingPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            shippingPriceTb.Location = new System.Drawing.Point(141, 43);
-            shippingPriceTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            shippingPriceTb.Location = new System.Drawing.Point(161, 57);
             shippingPriceTb.Name = "shippingPriceTb";
-            shippingPriceTb.Size = new System.Drawing.Size(132, 25);
+            shippingPriceTb.Size = new System.Drawing.Size(152, 30);
             shippingPriceTb.TabIndex = 5;
             // 
             // shippingOrderTb
             // 
             shippingOrderTb.Dock = System.Windows.Forms.DockStyle.Fill;
             shippingOrderTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            shippingOrderTb.Location = new System.Drawing.Point(3, 43);
-            shippingOrderTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            shippingOrderTb.Location = new System.Drawing.Point(3, 57);
             shippingOrderTb.Name = "shippingOrderTb";
-            shippingOrderTb.Size = new System.Drawing.Size(132, 25);
+            shippingOrderTb.Size = new System.Drawing.Size(152, 30);
             shippingOrderTb.TabIndex = 4;
             // 
             // label7
@@ -262,9 +256,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             label7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             label7.AutoSize = true;
             label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(118, 0);
+            label7.Location = new System.Drawing.Point(131, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(184, 21);
+            label7.Size = new System.Drawing.Size(219, 28);
             label7.TabIndex = 0;
             label7.Text = "Hóa đơn đang vận chuyển";
             // 
@@ -276,13 +270,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
             tableLayoutPanel1.Controls.Add(label, 0, 0);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel1.Location = new System.Drawing.Point(3, 57);
-            tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel1.Location = new System.Drawing.Point(3, 77);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(420, 108);
+            tableLayoutPanel1.Size = new System.Drawing.Size(481, 143);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // tableLayoutPanel2
@@ -298,43 +291,39 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel2.Controls.Add(label1, 0, 0);
             tableLayoutPanel2.Controls.Add(totalOrderTb, 0, 1);
             tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel2.Location = new System.Drawing.Point(3, 23);
-            tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel2.Location = new System.Drawing.Point(3, 31);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel2.Size = new System.Drawing.Size(414, 83);
+            tableLayoutPanel2.Size = new System.Drawing.Size(475, 109);
             tableLayoutPanel2.TabIndex = 1;
             // 
             // totalShippingTb
             // 
             totalShippingTb.Dock = System.Windows.Forms.DockStyle.Fill;
             totalShippingTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            totalShippingTb.Location = new System.Drawing.Point(279, 43);
-            totalShippingTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            totalShippingTb.Location = new System.Drawing.Point(319, 57);
             totalShippingTb.Name = "totalShippingTb";
-            totalShippingTb.Size = new System.Drawing.Size(132, 25);
+            totalShippingTb.Size = new System.Drawing.Size(153, 30);
             totalShippingTb.TabIndex = 5;
             // 
             // totalPriceTb
             // 
             totalPriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
             totalPriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            totalPriceTb.Location = new System.Drawing.Point(141, 43);
-            totalPriceTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            totalPriceTb.Location = new System.Drawing.Point(161, 57);
             totalPriceTb.Name = "totalPriceTb";
-            totalPriceTb.Size = new System.Drawing.Size(132, 25);
+            totalPriceTb.Size = new System.Drawing.Size(152, 30);
             totalPriceTb.TabIndex = 4;
             // 
             // totalOrderTb
             // 
             totalOrderTb.Dock = System.Windows.Forms.DockStyle.Fill;
             totalOrderTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            totalOrderTb.Location = new System.Drawing.Point(3, 43);
-            totalOrderTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            totalOrderTb.Location = new System.Drawing.Point(3, 57);
             totalOrderTb.Name = "totalOrderTb";
-            totalOrderTb.Size = new System.Drawing.Size(132, 25);
+            totalOrderTb.Size = new System.Drawing.Size(152, 30);
             totalOrderTb.TabIndex = 3;
             // 
             // label
@@ -342,9 +331,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             label.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             label.AutoSize = true;
             label.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label.Location = new System.Drawing.Point(156, 0);
+            label.Location = new System.Drawing.Point(176, 0);
             label.Name = "label";
-            label.Size = new System.Drawing.Size(108, 21);
+            label.Size = new System.Drawing.Size(129, 28);
             label.TabIndex = 0;
             label.Text = "Tất cả hóa đơn";
             // 
@@ -354,10 +343,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             viewButton.Dock = System.Windows.Forms.DockStyle.Fill;
             viewButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             viewButton.ForeColor = System.Drawing.Color.White;
-            viewButton.Location = new System.Drawing.Point(3, 2);
-            viewButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            viewButton.Location = new System.Drawing.Point(3, 3);
             viewButton.Name = "viewButton";
-            viewButton.Size = new System.Drawing.Size(420, 51);
+            viewButton.Size = new System.Drawing.Size(481, 68);
             viewButton.TabIndex = 8;
             viewButton.Text = "Xem thống kê";
             viewButton.UseVisualStyleBackColor = false;
@@ -371,13 +359,12 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel5.Controls.Add(label11, 0, 0);
             tableLayoutPanel5.Controls.Add(tableLayoutPanel6, 0, 1);
             tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel5.Location = new System.Drawing.Point(3, 281);
-            tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel5.Location = new System.Drawing.Point(3, 375);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 2;
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            tableLayoutPanel5.Size = new System.Drawing.Size(420, 109);
+            tableLayoutPanel5.Size = new System.Drawing.Size(481, 145);
             tableLayoutPanel5.TabIndex = 6;
             // 
             // label11
@@ -385,9 +372,9 @@ namespace HQTCSDL_G6.Components.ShipperControl
             label11.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label11.Location = new System.Drawing.Point(137, 0);
+            label11.Location = new System.Drawing.Point(153, 0);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(145, 21);
+            label11.Size = new System.Drawing.Size(174, 29);
             label11.TabIndex = 0;
             label11.Text = "Hóa đơn thành công";
             // 
@@ -404,53 +391,48 @@ namespace HQTCSDL_G6.Components.ShipperControl
             tableLayoutPanel6.Controls.Add(label9, 1, 0);
             tableLayoutPanel6.Controls.Add(label10, 0, 0);
             tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel6.Location = new System.Drawing.Point(3, 23);
-            tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel6.Location = new System.Drawing.Point(3, 32);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 2;
             tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new System.Drawing.Size(414, 84);
+            tableLayoutPanel6.Size = new System.Drawing.Size(475, 110);
             tableLayoutPanel6.TabIndex = 1;
             // 
             // doneOrderTb
             // 
             doneOrderTb.Dock = System.Windows.Forms.DockStyle.Fill;
             doneOrderTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            doneOrderTb.Location = new System.Drawing.Point(3, 44);
-            doneOrderTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            doneOrderTb.Location = new System.Drawing.Point(3, 58);
             doneOrderTb.Name = "doneOrderTb";
-            doneOrderTb.Size = new System.Drawing.Size(132, 25);
+            doneOrderTb.Size = new System.Drawing.Size(152, 30);
             doneOrderTb.TabIndex = 7;
             // 
             // donePriceTb
             // 
             donePriceTb.Dock = System.Windows.Forms.DockStyle.Fill;
             donePriceTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            donePriceTb.Location = new System.Drawing.Point(141, 44);
-            donePriceTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            donePriceTb.Location = new System.Drawing.Point(161, 58);
             donePriceTb.Name = "donePriceTb";
-            donePriceTb.Size = new System.Drawing.Size(132, 25);
+            donePriceTb.Size = new System.Drawing.Size(152, 30);
             donePriceTb.TabIndex = 6;
             // 
             // doneShippingTb
             // 
             doneShippingTb.Dock = System.Windows.Forms.DockStyle.Fill;
             doneShippingTb.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            doneShippingTb.Location = new System.Drawing.Point(279, 44);
-            doneShippingTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            doneShippingTb.Location = new System.Drawing.Point(319, 58);
             doneShippingTb.Name = "doneShippingTb";
-            doneShippingTb.Size = new System.Drawing.Size(132, 25);
+            doneShippingTb.Size = new System.Drawing.Size(153, 30);
             doneShippingTb.TabIndex = 5;
             // 
             // ShipperViewStatisticsControl
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel93);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "ShipperViewStatisticsControl";
-            Size = new System.Drawing.Size(426, 392);
+            Size = new System.Drawing.Size(487, 523);
             tableLayoutPanel93.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();

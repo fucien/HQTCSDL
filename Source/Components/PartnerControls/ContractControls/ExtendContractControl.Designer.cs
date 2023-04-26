@@ -148,20 +148,20 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             label5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(68, 0);
+            label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label5.Location = new System.Drawing.Point(64, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(41, 19);
+            label5.Size = new System.Drawing.Size(45, 19);
             label5.TabIndex = 1;
             label5.Text = "Ngày";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(39, 38);
+            label1.Size = new System.Drawing.Size(42, 38);
             label1.TabIndex = 0;
             label1.Text = "Thời hạn";
             // 
@@ -169,10 +169,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             label6.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(230, 0);
+            label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label6.Location = new System.Drawing.Point(227, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(47, 19);
+            label6.Size = new System.Drawing.Size(50, 19);
             label6.TabIndex = 2;
             label6.Text = "Tháng";
             // 
@@ -180,10 +180,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             label7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label7.Location = new System.Drawing.Point(407, 0);
+            label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label7.Location = new System.Drawing.Point(404, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(38, 19);
+            label7.Size = new System.Drawing.Size(41, 19);
             label7.TabIndex = 3;
             label7.Text = "Năm";
             // 
@@ -207,10 +207,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // label21
             // 
             label21.AutoSize = true;
-            label21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label21.Location = new System.Drawing.Point(3, 0);
             label21.Name = "label21";
-            label21.Size = new System.Drawing.Size(105, 19);
+            label21.Size = new System.Drawing.Size(98, 38);
             label21.TabIndex = 0;
             label21.Text = "Thời hạn còn lại";
             // 
@@ -244,10 +244,10 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // label20
             // 
             label20.AutoSize = true;
-            label20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label20.Location = new System.Drawing.Point(3, 0);
             label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(93, 19);
+            label20.Size = new System.Drawing.Size(99, 19);
             label20.TabIndex = 0;
             label20.Text = "Mã hợp đồng";
             // 
@@ -272,7 +272,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             confirmButton.Location = new System.Drawing.Point(242, 221);
             confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             confirmButton.Name = "confirmButton";
-            confirmButton.Size = new System.Drawing.Size(82, 29);
+            confirmButton.Size = new System.Drawing.Size(82, 33);
             confirmButton.TabIndex = 4;
             confirmButton.Text = "Gia hạn";
             confirmButton.UseVisualStyleBackColor = false;

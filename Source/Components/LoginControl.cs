@@ -60,5 +60,26 @@ namespace HQTCSDL_G6.Components
         {
 
         }
+
+        private void tableLayoutPanel1_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Parent.Controls.Add(new RegisterForm());
+        }
     }
 }

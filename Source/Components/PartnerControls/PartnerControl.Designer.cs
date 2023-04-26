@@ -36,22 +36,22 @@ namespace HQTCSDL_G6.Components.PartnerControls
             System.Windows.Forms.TabControl tabControl6;
             System.Windows.Forms.TabPage tabPage14;
             System.Windows.Forms.TabPage tabPage15;
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.extendContractControl = new HQTCSDL_G6.Components.PartnerControls.ExtendContractControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.viewContractControl = new HQTCSDL_G6.Components.PartnerControls.ViewContractControl();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.addProductControl = new HQTCSDL_G6.Components.PartnerControls.AddProductControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.deleteProductControl = new HQTCSDL_G6.Components.PartnerControls.DeleteProductControl();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.updateProductControl = new HQTCSDL_G6.Components.PartnerControls.UpdateProductControl();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.updateProductAmountControl = new HQTCSDL_G6.Components.PartnerControls.UpdateProductAmountControl();
-            this.partnerViewOrderControl = new HQTCSDL_G6.Components.PartnerControls.OrderControls.PartnerViewOrderControl();
-            this.partnerStatisticsControl = new HQTCSDL_G6.Components.PartnerControls.PartnerStatisticsControl();
+            tabControl3 = new System.Windows.Forms.TabControl();
+            tabPage2 = new System.Windows.Forms.TabPage();
+            extendContractControl = new ExtendContractControl();
+            tabPage3 = new System.Windows.Forms.TabPage();
+            viewContractControl = new ViewContractControl();
+            tabControl4 = new System.Windows.Forms.TabControl();
+            tabPage4 = new System.Windows.Forms.TabPage();
+            addProductControl = new AddProductControl();
+            tabPage5 = new System.Windows.Forms.TabPage();
+            deleteProductControl = new DeleteProductControl();
+            tabPage6 = new System.Windows.Forms.TabPage();
+            updateProductControl = new UpdateProductControl();
+            tabPage7 = new System.Windows.Forms.TabPage();
+            updateProductAmountControl = new UpdateProductAmountControl();
+            partnerViewOrderControl = new OrderControls.PartnerViewOrderControl();
+            partnerStatisticsControl = new PartnerStatisticsControl();
             tabControl1 = new System.Windows.Forms.TabControl();
             contractTab = new System.Windows.Forms.TabPage();
             productTab = new System.Windows.Forms.TabPage();
@@ -61,20 +61,20 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabPage15 = new System.Windows.Forms.TabPage();
             tabControl1.SuspendLayout();
             contractTab.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            tabControl3.SuspendLayout();
+            tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             productTab.SuspendLayout();
-            this.tabControl4.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
+            tabControl4.SuspendLayout();
+            tabPage4.SuspendLayout();
+            tabPage5.SuspendLayout();
+            tabPage6.SuspendLayout();
+            tabPage7.SuspendLayout();
             orderTab.SuspendLayout();
             tabControl6.SuspendLayout();
             tabPage14.SuspendLayout();
             tabPage15.SuspendLayout();
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // tabControl1
             // 
@@ -91,7 +91,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             // contractTab
             // 
-            contractTab.Controls.Add(this.tabControl3);
+            contractTab.Controls.Add(tabControl3);
             contractTab.Location = new System.Drawing.Point(4, 29);
             contractTab.Name = "contractTab";
             contractTab.Padding = new System.Windows.Forms.Padding(3);
@@ -102,163 +102,164 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             // tabControl3
             // 
-            this.tabControl3.Controls.Add(this.tabPage2);
-            this.tabControl3.Controls.Add(this.tabPage3);
-            this.tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl3.Location = new System.Drawing.Point(3, 3);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(672, 458);
-            this.tabControl3.TabIndex = 0;
+            tabControl3.Controls.Add(tabPage2);
+            tabControl3.Controls.Add(tabPage3);
+            tabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl3.Location = new System.Drawing.Point(3, 3);
+            tabControl3.Name = "tabControl3";
+            tabControl3.SelectedIndex = 0;
+            tabControl3.Size = new System.Drawing.Size(672, 458);
+            tabControl3.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.extendContractControl);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(664, 425);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Gia hạn hợp đồng";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            tabPage2.Controls.Add(extendContractControl);
+            tabPage2.Location = new System.Drawing.Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            tabPage2.Size = new System.Drawing.Size(664, 425);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Gia hạn hợp đồng";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // extendContractControl
             // 
-            this.extendContractControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
-            this.extendContractControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.extendContractControl.Error = false;
-            this.extendContractControl.Location = new System.Drawing.Point(3, 3);
-            this.extendContractControl.Name = "extendContractControl";
-            this.extendContractControl.Size = new System.Drawing.Size(658, 419);
-            this.extendContractControl.TabIndex = 0;
+            extendContractControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
+            extendContractControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            extendContractControl.Error = false;
+            extendContractControl.Location = new System.Drawing.Point(3, 3);
+            extendContractControl.Name = "extendContractControl";
+            extendContractControl.Size = new System.Drawing.Size(658, 419);
+            extendContractControl.TabIndex = 0;
+            extendContractControl.Load += extendContractControl_Load;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.viewContractControl);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(664, 425);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Xem hợp đồng";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            tabPage3.Controls.Add(viewContractControl);
+            tabPage3.Location = new System.Drawing.Point(4, 29);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new System.Drawing.Size(664, 425);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Xem hợp đồng";
+            tabPage3.UseVisualStyleBackColor = true;
             // 
             // viewContractControl
             // 
-            this.viewContractControl.CurrentID = 0;
-            this.viewContractControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewContractControl.Location = new System.Drawing.Point(0, 0);
-            this.viewContractControl.Name = "viewContractControl";
-            this.viewContractControl.Size = new System.Drawing.Size(664, 425);
-            this.viewContractControl.TabIndex = 0;
+            viewContractControl.CurrentID = 0;
+            viewContractControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            viewContractControl.Location = new System.Drawing.Point(0, 0);
+            viewContractControl.Name = "viewContractControl";
+            viewContractControl.Size = new System.Drawing.Size(664, 425);
+            viewContractControl.TabIndex = 0;
             // 
             // productTab
             // 
-            productTab.Controls.Add(this.tabControl4);
+            productTab.Controls.Add(tabControl4);
             productTab.Location = new System.Drawing.Point(4, 29);
             productTab.Name = "productTab";
-            productTab.Size = new System.Drawing.Size(678, 464);
+            productTab.Size = new System.Drawing.Size(192, 67);
             productTab.TabIndex = 2;
             productTab.Text = "Sản phẩm";
             productTab.UseVisualStyleBackColor = true;
             // 
             // tabControl4
             // 
-            this.tabControl4.Controls.Add(this.tabPage4);
-            this.tabControl4.Controls.Add(this.tabPage5);
-            this.tabControl4.Controls.Add(this.tabPage6);
-            this.tabControl4.Controls.Add(this.tabPage7);
-            this.tabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl4.Location = new System.Drawing.Point(0, 0);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(678, 464);
-            this.tabControl4.TabIndex = 0;
+            tabControl4.Controls.Add(tabPage4);
+            tabControl4.Controls.Add(tabPage5);
+            tabControl4.Controls.Add(tabPage6);
+            tabControl4.Controls.Add(tabPage7);
+            tabControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            tabControl4.Location = new System.Drawing.Point(0, 0);
+            tabControl4.Name = "tabControl4";
+            tabControl4.SelectedIndex = 0;
+            tabControl4.Size = new System.Drawing.Size(192, 67);
+            tabControl4.TabIndex = 0;
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.addProductControl);
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(670, 431);
-            this.tabPage4.TabIndex = 0;
-            this.tabPage4.Text = "Thêm sản phẩm";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            tabPage4.Controls.Add(addProductControl);
+            tabPage4.Location = new System.Drawing.Point(4, 29);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            tabPage4.Size = new System.Drawing.Size(184, 34);
+            tabPage4.TabIndex = 0;
+            tabPage4.Text = "Thêm sản phẩm";
+            tabPage4.UseVisualStyleBackColor = true;
             // 
             // addProductControl
             // 
-            this.addProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addProductControl.Location = new System.Drawing.Point(3, 3);
-            this.addProductControl.Name = "addProductControl";
-            this.addProductControl.Size = new System.Drawing.Size(664, 425);
-            this.addProductControl.TabIndex = 0;
+            addProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            addProductControl.Location = new System.Drawing.Point(3, 3);
+            addProductControl.Name = "addProductControl";
+            addProductControl.Size = new System.Drawing.Size(178, 28);
+            addProductControl.TabIndex = 0;
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.deleteProductControl);
-            this.tabPage5.Location = new System.Drawing.Point(4, 29);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(184, 34);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "Xóa sản phẩm";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            tabPage5.Controls.Add(deleteProductControl);
+            tabPage5.Location = new System.Drawing.Point(4, 29);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            tabPage5.Size = new System.Drawing.Size(192, 67);
+            tabPage5.TabIndex = 1;
+            tabPage5.Text = "Xóa sản phẩm";
+            tabPage5.UseVisualStyleBackColor = true;
             // 
             // deleteProductControl
             // 
-            this.deleteProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.deleteProductControl.Location = new System.Drawing.Point(3, 3);
-            this.deleteProductControl.Name = "deleteProductControl";
-            this.deleteProductControl.Size = new System.Drawing.Size(178, 28);
-            this.deleteProductControl.TabIndex = 0;
+            deleteProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            deleteProductControl.Location = new System.Drawing.Point(3, 3);
+            deleteProductControl.Name = "deleteProductControl";
+            deleteProductControl.Size = new System.Drawing.Size(186, 61);
+            deleteProductControl.TabIndex = 0;
             // 
             // tabPage6
             // 
-            this.tabPage6.Controls.Add(this.updateProductControl);
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(184, 34);
-            this.tabPage6.TabIndex = 2;
-            this.tabPage6.Text = "Cập nhật thông tin sản phẩm";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            tabPage6.Controls.Add(updateProductControl);
+            tabPage6.Location = new System.Drawing.Point(4, 29);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Size = new System.Drawing.Size(192, 67);
+            tabPage6.TabIndex = 2;
+            tabPage6.Text = "Cập nhật thông tin sản phẩm";
+            tabPage6.UseVisualStyleBackColor = true;
             // 
             // updateProductControl
             // 
-            this.updateProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateProductControl.Location = new System.Drawing.Point(0, 0);
-            this.updateProductControl.Name = "updateProductControl";
-            this.updateProductControl.Size = new System.Drawing.Size(184, 34);
-            this.updateProductControl.TabIndex = 0;
+            updateProductControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            updateProductControl.Location = new System.Drawing.Point(0, 0);
+            updateProductControl.Name = "updateProductControl";
+            updateProductControl.Size = new System.Drawing.Size(192, 67);
+            updateProductControl.TabIndex = 0;
             // 
             // tabPage7
             // 
-            this.tabPage7.Controls.Add(this.updateProductAmountControl);
-            this.tabPage7.Location = new System.Drawing.Point(4, 29);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(184, 34);
-            this.tabPage7.TabIndex = 3;
-            this.tabPage7.Text = "Cập nhật số lượng sản phẩm";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            tabPage7.Controls.Add(updateProductAmountControl);
+            tabPage7.Location = new System.Drawing.Point(4, 29);
+            tabPage7.Name = "tabPage7";
+            tabPage7.Size = new System.Drawing.Size(192, 67);
+            tabPage7.TabIndex = 3;
+            tabPage7.Text = "Cập nhật số lượng sản phẩm";
+            tabPage7.UseVisualStyleBackColor = true;
             // 
             // updateProductAmountControl
             // 
-            this.updateProductAmountControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
-            this.updateProductAmountControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateProductAmountControl.Error = false;
-            this.updateProductAmountControl.Location = new System.Drawing.Point(0, 0);
-            this.updateProductAmountControl.Name = "updateProductAmountControl";
-            this.updateProductAmountControl.Size = new System.Drawing.Size(184, 34);
-            this.updateProductAmountControl.TabIndex = 0;
+            updateProductAmountControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
+            updateProductAmountControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            updateProductAmountControl.Error = false;
+            updateProductAmountControl.Location = new System.Drawing.Point(0, 0);
+            updateProductAmountControl.Name = "updateProductAmountControl";
+            updateProductAmountControl.Size = new System.Drawing.Size(192, 67);
+            updateProductAmountControl.TabIndex = 0;
             // 
             // orderTab
             // 
+            orderTab.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             orderTab.Controls.Add(tabControl6);
             orderTab.Location = new System.Drawing.Point(4, 29);
             orderTab.Name = "orderTab";
-            orderTab.Size = new System.Drawing.Size(678, 464);
+            orderTab.Size = new System.Drawing.Size(192, 67);
             orderTab.TabIndex = 3;
             orderTab.Text = "Đơn hàng";
-            orderTab.UseVisualStyleBackColor = true;
             // 
             // tabControl6
             // 
@@ -268,31 +269,33 @@ namespace HQTCSDL_G6.Components.PartnerControls
             tabControl6.Location = new System.Drawing.Point(0, 0);
             tabControl6.Name = "tabControl6";
             tabControl6.SelectedIndex = 0;
-            tabControl6.Size = new System.Drawing.Size(678, 464);
+            tabControl6.Size = new System.Drawing.Size(192, 67);
             tabControl6.TabIndex = 0;
             // 
             // tabPage14
             // 
-            tabPage14.Controls.Add(this.partnerViewOrderControl);
+            tabPage14.Controls.Add(partnerViewOrderControl);
             tabPage14.Location = new System.Drawing.Point(4, 29);
             tabPage14.Name = "tabPage14";
             tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            tabPage14.Size = new System.Drawing.Size(670, 431);
+            tabPage14.Size = new System.Drawing.Size(184, 34);
             tabPage14.TabIndex = 0;
             tabPage14.Text = "Xem đơn hàng";
             tabPage14.UseVisualStyleBackColor = true;
             // 
             // partnerViewOrderControl
             // 
-            this.partnerViewOrderControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.partnerViewOrderControl.Location = new System.Drawing.Point(3, 3);
-            this.partnerViewOrderControl.Name = "partnerViewOrderControl";
-            this.partnerViewOrderControl.Size = new System.Drawing.Size(664, 425);
-            this.partnerViewOrderControl.TabIndex = 0;
+            partnerViewOrderControl.BackColor = System.Drawing.Color.Black;
+            partnerViewOrderControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            partnerViewOrderControl.ForeColor = System.Drawing.Color.Black;
+            partnerViewOrderControl.Location = new System.Drawing.Point(3, 3);
+            partnerViewOrderControl.Name = "partnerViewOrderControl";
+            partnerViewOrderControl.Size = new System.Drawing.Size(178, 28);
+            partnerViewOrderControl.TabIndex = 0;
             // 
             // tabPage15
             // 
-            tabPage15.Controls.Add(this.partnerStatisticsControl);
+            tabPage15.Controls.Add(partnerStatisticsControl);
             tabPage15.Location = new System.Drawing.Point(4, 29);
             tabPage15.Name = "tabPage15";
             tabPage15.Padding = new System.Windows.Forms.Padding(3);
@@ -303,38 +306,37 @@ namespace HQTCSDL_G6.Components.PartnerControls
             // 
             // partnerStatisticsControl
             // 
-            this.partnerStatisticsControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
-            this.partnerStatisticsControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.partnerStatisticsControl.Error = false;
-            this.partnerStatisticsControl.Location = new System.Drawing.Point(3, 3);
-            this.partnerStatisticsControl.Name = "partnerStatisticsControl";
-            this.partnerStatisticsControl.Size = new System.Drawing.Size(178, 28);
-            this.partnerStatisticsControl.TabIndex = 0;
+            partnerStatisticsControl.CurrentDelay = System.TimeSpan.Parse("00:00:00");
+            partnerStatisticsControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            partnerStatisticsControl.Error = false;
+            partnerStatisticsControl.Location = new System.Drawing.Point(3, 3);
+            partnerStatisticsControl.Name = "partnerStatisticsControl";
+            partnerStatisticsControl.Size = new System.Drawing.Size(178, 28);
+            partnerStatisticsControl.TabIndex = 0;
             // 
             // PartnerControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(tabControl1);
-            this.Name = "PartnerControl";
-            this.Size = new System.Drawing.Size(686, 497);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(tabControl1);
+            Name = "PartnerControl";
+            Size = new System.Drawing.Size(686, 497);
             tabControl1.ResumeLayout(false);
             contractTab.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            tabControl3.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
             productTab.ResumeLayout(false);
-            this.tabControl4.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
+            tabControl4.ResumeLayout(false);
+            tabPage4.ResumeLayout(false);
+            tabPage5.ResumeLayout(false);
+            tabPage6.ResumeLayout(false);
+            tabPage7.ResumeLayout(false);
             orderTab.ResumeLayout(false);
             tabControl6.ResumeLayout(false);
             tabPage14.ResumeLayout(false);
             tabPage15.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            ResumeLayout(false);
         }
 
         #endregion

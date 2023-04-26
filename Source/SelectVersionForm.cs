@@ -28,5 +28,30 @@ namespace HQTCSDL_G6
             });
             thread.Start();
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                Thread thread = new Thread(() =>
+                {
+                    new ErrorVersionForm().ShowDialog();
+                });
+                thread.Start();
+            }
+            else if(radioButton2.Checked)
+            {
+                Thread thread = new Thread(() =>
+                {
+                    new FixVersionForm().ShowDialog();
+                });
+                thread.Start();
+            }
+        }
     }
 }

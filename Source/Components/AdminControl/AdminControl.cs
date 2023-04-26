@@ -14,11 +14,6 @@ namespace HQTCSDL_G6.Components.AdminControl
         public int CurrentID { get; internal set; }
 
         public bool Error { get; set; } = false;
-        SqlConnection connection;
-        SqlCommand command;
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-        //string query = "Data Source=LAPTOP-KSF5NDFT\SQLEXPRESS01;Initial Catalog=CHUYEN_HANG_ONLINE;User ID=QTV1; Password=QTV1;Connect Timeout=30; Encrypt=False;TrustServerCertificate=False;MultiSubnetFailover=False";
         public TimeSpan CurrentDelay { get; set; }
 
         public AdminControl(int id, bool error)
@@ -28,11 +23,6 @@ namespace HQTCSDL_G6.Components.AdminControl
             CurrentID = id;
             Error = error;
 
-            //customerViewOrderControl.CurrentID = id;
-            //customerViewOrderControl.Error = error;
-
-            //customerOrderStatisticsControl.CurrentID = id;
-            //customerOrderStatisticsControl.Error = error;
         }
         void load()
         {
@@ -84,7 +74,7 @@ namespace HQTCSDL_G6.Components.AdminControl
             string role = RoleCbx.Text;
 
             DatabaseManager.DBManager.Init.Admin.AddAccount(acc, pass, role);
-            MessageBox.Show("Thêm thành công");
+
             load();
         }
 
@@ -92,7 +82,7 @@ namespace HQTCSDL_G6.Components.AdminControl
         {
             string acc = AccTbx.Text;
             DatabaseManager.DBManager.Init.Admin.DeleteAccount(acc);
-            MessageBox.Show("Xóa thành công");
+
             load();
         }
 
@@ -102,7 +92,6 @@ namespace HQTCSDL_G6.Components.AdminControl
             string pass = PassTbx.Text;
             DatabaseManager.DBManager.Init.Admin.UpdateAccount(pass, acc);
 
-            MessageBox.Show("Sửa thành công");
             load();
         }
 
@@ -117,14 +106,18 @@ namespace HQTCSDL_G6.Components.AdminControl
         {
             string username = AccTbx.Text;
             DatabaseManager.DBManager.Init.Admin.LockAccount(username);
-            MessageBox.Show("Khóa thành công");
+
+            load();
+
         }
 
         private void AcBtn_Click(object sender, EventArgs e)
         {
             string username = AccTbx.Text;
             DatabaseManager.DBManager.Init.Admin.UnlockAccount(username);
-            MessageBox.Show("Mở khóa thành công");
+
+            load();
+
         }
 
         public void SetDelay(TimeSpan delay)

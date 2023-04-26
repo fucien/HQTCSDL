@@ -30,74 +30,95 @@ namespace HQTCSDL_G6
         private void InitializeComponent()
         {
             System.Windows.Forms.TableLayoutPanel versionsPanel;
-            errorVersionButton = new System.Windows.Forms.Button();
-            fixVersionButton = new System.Windows.Forms.Button();
+            radioButton2 = new System.Windows.Forms.RadioButton();
+            radioButton1 = new System.Windows.Forms.RadioButton();
+            button1 = new System.Windows.Forms.Button();
             versionsPanel = new System.Windows.Forms.TableLayoutPanel();
             versionsPanel.SuspendLayout();
             SuspendLayout();
             // 
             // versionsPanel
             // 
+            versionsPanel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            versionsPanel.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             versionsPanel.ColumnCount = 1;
             versionsPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            versionsPanel.Controls.Add(errorVersionButton, 0, 0);
-            versionsPanel.Controls.Add(fixVersionButton, 0, 1);
-            versionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            versionsPanel.Controls.Add(radioButton2, 0, 1);
+            versionsPanel.Controls.Add(radioButton1, 0, 0);
+            versionsPanel.Controls.Add(button1, 0, 2);
             versionsPanel.Location = new System.Drawing.Point(0, 0);
-            versionsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             versionsPanel.Name = "versionsPanel";
-            versionsPanel.RowCount = 2;
-            versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            versionsPanel.Size = new System.Drawing.Size(700, 338);
+            versionsPanel.RowCount = 4;
+            versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.4586F));
+            versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.5414F));
+            versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            versionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            versionsPanel.Size = new System.Drawing.Size(800, 451);
             versionsPanel.TabIndex = 0;
             // 
-            // errorVersionButton
+            // radioButton2
             // 
-            errorVersionButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
-            errorVersionButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            errorVersionButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            errorVersionButton.ForeColor = System.Drawing.Color.White;
-            errorVersionButton.Location = new System.Drawing.Point(3, 2);
-            errorVersionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            errorVersionButton.Name = "errorVersionButton";
-            errorVersionButton.Size = new System.Drawing.Size(694, 165);
-            errorVersionButton.TabIndex = 0;
-            errorVersionButton.Text = "Phiên bản lỗi";
-            errorVersionButton.UseVisualStyleBackColor = false;
-            errorVersionButton.Click += errorVersionButton_Click;
+            radioButton2.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
+            radioButton2.AutoSize = true;
+            radioButton2.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            radioButton2.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            radioButton2.ForeColor = System.Drawing.Color.Black;
+            radioButton2.Location = new System.Drawing.Point(275, 163);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new System.Drawing.Size(249, 128);
+            radioButton2.TabIndex = 3;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "Phiên bản sửa lỗi";
+            radioButton2.UseVisualStyleBackColor = false;
             // 
-            // fixVersionButton
+            // radioButton1
             // 
-            fixVersionButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
-            fixVersionButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            fixVersionButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            fixVersionButton.ForeColor = System.Drawing.Color.White;
-            fixVersionButton.Location = new System.Drawing.Point(3, 171);
-            fixVersionButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            fixVersionButton.Name = "fixVersionButton";
-            fixVersionButton.Size = new System.Drawing.Size(694, 165);
-            fixVersionButton.TabIndex = 1;
-            fixVersionButton.Text = "Phiên bản sửa lỗi";
-            fixVersionButton.UseVisualStyleBackColor = false;
-            fixVersionButton.Click += fixVersionButton_Click;
+            radioButton1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
+            radioButton1.AutoSize = true;
+            radioButton1.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            radioButton1.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            radioButton1.ForeColor = System.Drawing.Color.Black;
+            radioButton1.Location = new System.Drawing.Point(301, 3);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new System.Drawing.Size(197, 154);
+            radioButton1.TabIndex = 2;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "Phiên bản lỗi";
+            radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            radioButton1.UseVisualStyleBackColor = false;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // button1
+            // 
+            button1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
+            button1.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            button1.ForeColor = System.Drawing.Color.White;
+            button1.Location = new System.Drawing.Point(321, 297);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(158, 65);
+            button1.TabIndex = 4;
+            button1.Text = "Xác nhận";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // SelectVersionForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(700, 338);
+            ClientSize = new System.Drawing.Size(800, 451);
             Controls.Add(versionsPanel);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             Name = "SelectVersionForm";
             Text = "Chọn phiên bản";
             versionsPanel.ResumeLayout(false);
+            versionsPanel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private System.Windows.Forms.Button errorVersionButton;
-        private System.Windows.Forms.Button fixVersionButton;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Button button1;
     }
 }

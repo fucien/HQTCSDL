@@ -248,15 +248,15 @@ namespace HQTCSDL_G6
             label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label3.Location = new System.Drawing.Point(3, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(91, 19);
+            label3.Size = new System.Drawing.Size(112, 23);
             label3.TabIndex = 0;
             label3.Text = "Tên tài khoản";
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(3, 22);
+            textBox2.Location = new System.Drawing.Point(3, 26);
             textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(306, 23);
+            textBox2.Size = new System.Drawing.Size(306, 27);
             textBox2.TabIndex = 1;
             textBox2.Text = "10";
             // 
@@ -265,9 +265,9 @@ namespace HQTCSDL_G6
             label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(42, 0);
+            label5.Location = new System.Drawing.Point(29, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(115, 28);
+            label5.Size = new System.Drawing.Size(142, 35);
             label5.TabIndex = 0;
             label5.Text = "Đăng nhập";
             // 
@@ -306,15 +306,15 @@ namespace HQTCSDL_G6
             label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label6.Location = new System.Drawing.Point(3, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(91, 19);
+            label6.Size = new System.Drawing.Size(112, 23);
             label6.TabIndex = 0;
             label6.Text = "Tên tài khoản";
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(3, 22);
+            textBox1.Location = new System.Drawing.Point(3, 26);
             textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(306, 23);
+            textBox1.Size = new System.Drawing.Size(306, 27);
             textBox1.TabIndex = 1;
             textBox1.Text = "10";
             // 
@@ -335,16 +335,16 @@ namespace HQTCSDL_G6
             label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label7.Location = new System.Drawing.Point(3, 0);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(68, 19);
+            label7.Size = new System.Drawing.Size(82, 23);
             label7.TabIndex = 0;
             label7.Text = "Mặt khẩu";
             // 
             // textBox3
             // 
-            textBox3.Location = new System.Drawing.Point(3, 22);
+            textBox3.Location = new System.Drawing.Point(3, 26);
             textBox3.Name = "textBox3";
             textBox3.PasswordChar = '*';
-            textBox3.Size = new System.Drawing.Size(306, 23);
+            textBox3.Size = new System.Drawing.Size(306, 27);
             textBox3.TabIndex = 1;
             textBox3.Text = "10";
             // 
@@ -410,7 +410,7 @@ namespace HQTCSDL_G6
             textBox5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox5.Location = new System.Drawing.Point(3, 23);
             textBox5.Name = "textBox5";
-            textBox5.Size = new System.Drawing.Size(194, 25);
+            textBox5.Size = new System.Drawing.Size(194, 30);
             textBox5.TabIndex = 1;
             // 
             // label13
@@ -443,7 +443,7 @@ namespace HQTCSDL_G6
             textBox6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox6.Location = new System.Drawing.Point(3, 23);
             textBox6.Name = "textBox6";
-            textBox6.Size = new System.Drawing.Size(194, 25);
+            textBox6.Size = new System.Drawing.Size(194, 30);
             textBox6.TabIndex = 1;
             // 
             // label16
@@ -476,7 +476,7 @@ namespace HQTCSDL_G6
             textBox7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox7.Location = new System.Drawing.Point(3, 23);
             textBox7.Name = "textBox7";
-            textBox7.Size = new System.Drawing.Size(194, 25);
+            textBox7.Size = new System.Drawing.Size(194, 30);
             textBox7.TabIndex = 1;
             // 
             // label17
@@ -507,7 +507,7 @@ namespace HQTCSDL_G6
             textBox8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox8.Location = new System.Drawing.Point(3, 3);
             textBox8.Name = "textBox8";
-            textBox8.Size = new System.Drawing.Size(194, 25);
+            textBox8.Size = new System.Drawing.Size(194, 30);
             textBox8.TabIndex = 1;
             // 
             // label18
@@ -540,7 +540,7 @@ namespace HQTCSDL_G6
             label34.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label34.Location = new System.Drawing.Point(3, 0);
             label34.Name = "label34";
-            label34.Size = new System.Drawing.Size(34, 76);
+            label34.Size = new System.Drawing.Size(34, 100);
             label34.TabIndex = 0;
             label34.Text = "Tên sản phẩm";
             // 
@@ -692,7 +692,7 @@ namespace HQTCSDL_G6
             textBox19.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox19.Location = new System.Drawing.Point(3, 50);
             textBox19.Name = "textBox19";
-            textBox19.Size = new System.Drawing.Size(56, 25);
+            textBox19.Size = new System.Drawing.Size(56, 30);
             textBox19.TabIndex = 1;
             // 
             // tableLayoutPanel108
@@ -727,7 +727,7 @@ namespace HQTCSDL_G6
             textBox20.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox20.Location = new System.Drawing.Point(3, 50);
             textBox20.Name = "textBox20";
-            textBox20.Size = new System.Drawing.Size(54, 25);
+            textBox20.Size = new System.Drawing.Size(54, 30);
             textBox20.TabIndex = 1;
             // 
             // tableLayoutPanel109
@@ -749,7 +749,7 @@ namespace HQTCSDL_G6
             label83.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label83.Location = new System.Drawing.Point(3, 0);
             label83.Name = "label83";
-            label83.Size = new System.Drawing.Size(194, 19);
+            label83.Size = new System.Drawing.Size(194, 23);
             label83.TabIndex = 0;
             label83.Text = "Tổng hóa đơn";
             // 
@@ -800,7 +800,7 @@ namespace HQTCSDL_G6
             textBox22.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox22.Location = new System.Drawing.Point(3, 50);
             textBox22.Name = "textBox22";
-            textBox22.Size = new System.Drawing.Size(56, 25);
+            textBox22.Size = new System.Drawing.Size(56, 30);
             textBox22.TabIndex = 1;
             // 
             // tableLayoutPanel112
@@ -835,7 +835,7 @@ namespace HQTCSDL_G6
             textBox23.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox23.Location = new System.Drawing.Point(3, 50);
             textBox23.Name = "textBox23";
-            textBox23.Size = new System.Drawing.Size(54, 25);
+            textBox23.Size = new System.Drawing.Size(54, 30);
             textBox23.TabIndex = 1;
             // 
             // tableLayoutPanel113
@@ -857,7 +857,7 @@ namespace HQTCSDL_G6
             label86.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label86.Location = new System.Drawing.Point(3, 0);
             label86.Name = "label86";
-            label86.Size = new System.Drawing.Size(194, 19);
+            label86.Size = new System.Drawing.Size(194, 23);
             label86.TabIndex = 0;
             label86.Text = "Tổng hóa đơn";
             // 
@@ -908,7 +908,7 @@ namespace HQTCSDL_G6
             textBox25.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox25.Location = new System.Drawing.Point(3, 50);
             textBox25.Name = "textBox25";
-            textBox25.Size = new System.Drawing.Size(56, 25);
+            textBox25.Size = new System.Drawing.Size(56, 30);
             textBox25.TabIndex = 1;
             // 
             // tableLayoutPanel116
@@ -943,7 +943,7 @@ namespace HQTCSDL_G6
             textBox26.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox26.Location = new System.Drawing.Point(3, 50);
             textBox26.Name = "textBox26";
-            textBox26.Size = new System.Drawing.Size(54, 25);
+            textBox26.Size = new System.Drawing.Size(54, 30);
             textBox26.TabIndex = 1;
             // 
             // tableLayoutPanel117
@@ -965,7 +965,7 @@ namespace HQTCSDL_G6
             label89.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label89.Location = new System.Drawing.Point(3, 0);
             label89.Name = "label89";
-            label89.Size = new System.Drawing.Size(194, 19);
+            label89.Size = new System.Drawing.Size(194, 23);
             label89.TabIndex = 0;
             label89.Text = "Tổng hóa đơn";
             // 
@@ -1016,7 +1016,7 @@ namespace HQTCSDL_G6
             textBox9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox9.Location = new System.Drawing.Point(3, 23);
             textBox9.Name = "textBox9";
-            textBox9.Size = new System.Drawing.Size(188, 25);
+            textBox9.Size = new System.Drawing.Size(188, 30);
             textBox9.TabIndex = 1;
             // 
             // label8
@@ -1025,7 +1025,7 @@ namespace HQTCSDL_G6
             label8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label8.Location = new System.Drawing.Point(3, 0);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(94, 19);
+            label8.Size = new System.Drawing.Size(117, 20);
             label8.TabIndex = 0;
             label8.Text = "Tên chi nhánh";
             // 
@@ -1051,7 +1051,7 @@ namespace HQTCSDL_G6
             textBox10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox10.Location = new System.Drawing.Point(3, 23);
             textBox10.Name = "textBox10";
-            textBox10.Size = new System.Drawing.Size(188, 25);
+            textBox10.Size = new System.Drawing.Size(188, 30);
             textBox10.TabIndex = 2;
             // 
             // label44
@@ -1060,7 +1060,7 @@ namespace HQTCSDL_G6
             label44.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label44.Location = new System.Drawing.Point(3, 0);
             label44.Name = "label44";
-            label44.Size = new System.Drawing.Size(114, 19);
+            label44.Size = new System.Drawing.Size(143, 20);
             label44.TabIndex = 2;
             label44.Text = "Địa chỉ chi nhánh";
             // 
@@ -1082,7 +1082,7 @@ namespace HQTCSDL_G6
             label62.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             label62.Location = new System.Drawing.Point(3, 0);
             label62.Name = "label62";
-            label62.Size = new System.Drawing.Size(153, 19);
+            label62.Size = new System.Drawing.Size(192, 23);
             label62.TabIndex = 3;
             label62.Text = "Số điện thoại chi nhánh";
             // 
@@ -1092,10 +1092,9 @@ namespace HQTCSDL_G6
             flowLayoutPanel2.Controls.Add(label1);
             flowLayoutPanel2.Controls.Add(delayTimeNumeric);
             flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            flowLayoutPanel2.Location = new System.Drawing.Point(3, 2);
-            flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new System.Drawing.Size(292, 30);
+            flowLayoutPanel2.Size = new System.Drawing.Size(335, 39);
             flowLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -1105,17 +1104,16 @@ namespace HQTCSDL_G6
             label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label1.Location = new System.Drawing.Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(133, 17);
+            label1.Size = new System.Drawing.Size(171, 23);
             label1.TabIndex = 1;
             label1.Text = "Thời gian chờ (giây)";
             // 
             // delayTimeNumeric
             // 
             delayTimeNumeric.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            delayTimeNumeric.Location = new System.Drawing.Point(142, 2);
-            delayTimeNumeric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            delayTimeNumeric.Location = new System.Drawing.Point(180, 3);
             delayTimeNumeric.Name = "delayTimeNumeric";
-            delayTimeNumeric.Size = new System.Drawing.Size(131, 25);
+            delayTimeNumeric.Size = new System.Drawing.Size(150, 30);
             delayTimeNumeric.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -1129,12 +1127,11 @@ namespace HQTCSDL_G6
             tableLayoutPanel5.Controls.Add(flowLayoutPanel2, 0, 0);
             tableLayoutPanel5.Controls.Add(currentFunctionLabel, 1, 0);
             tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel5.Location = new System.Drawing.Point(3, 2);
-            tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new System.Drawing.Size(746, 34);
+            tableLayoutPanel5.Size = new System.Drawing.Size(853, 45);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // logoutButton
@@ -1144,10 +1141,9 @@ namespace HQTCSDL_G6
             logoutButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             logoutButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             logoutButton.ForeColor = System.Drawing.Color.White;
-            logoutButton.Location = new System.Drawing.Point(653, 2);
-            logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            logoutButton.Location = new System.Drawing.Point(732, 3);
             logoutButton.Name = "logoutButton";
-            logoutButton.Size = new System.Drawing.Size(90, 29);
+            logoutButton.Size = new System.Drawing.Size(118, 39);
             logoutButton.TabIndex = 3;
             logoutButton.Text = "Đăng xuất";
             logoutButton.UseVisualStyleBackColor = false;
@@ -1157,10 +1153,10 @@ namespace HQTCSDL_G6
             // 
             currentFunctionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             currentFunctionLabel.AutoSize = true;
-            currentFunctionLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            currentFunctionLabel.Location = new System.Drawing.Point(376, 0);
+            currentFunctionLabel.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            currentFunctionLabel.Location = new System.Drawing.Point(448, 0);
             currentFunctionLabel.Name = "currentFunctionLabel";
-            currentFunctionLabel.Size = new System.Drawing.Size(141, 34);
+            currentFunctionLabel.Size = new System.Drawing.Size(127, 45);
             currentFunctionLabel.TabIndex = 4;
             currentFunctionLabel.Text = "Khách hàng 1";
             // 
@@ -1196,7 +1192,7 @@ namespace HQTCSDL_G6
             textBox4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox4.Location = new System.Drawing.Point(3, 23);
             textBox4.Name = "textBox4";
-            textBox4.Size = new System.Drawing.Size(194, 25);
+            textBox4.Size = new System.Drawing.Size(194, 30);
             textBox4.TabIndex = 1;
             // 
             // tableLayoutPanel22
@@ -1215,7 +1211,7 @@ namespace HQTCSDL_G6
             textBox12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox12.Location = new System.Drawing.Point(43, 3);
             textBox12.Name = "textBox12";
-            textBox12.Size = new System.Drawing.Size(154, 25);
+            textBox12.Size = new System.Drawing.Size(154, 30);
             textBox12.TabIndex = 1;
             // 
             // textBox21
@@ -1224,7 +1220,7 @@ namespace HQTCSDL_G6
             textBox21.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox21.Location = new System.Drawing.Point(3, 26);
             textBox21.Name = "textBox21";
-            textBox21.Size = new System.Drawing.Size(194, 25);
+            textBox21.Size = new System.Drawing.Size(194, 30);
             textBox21.TabIndex = 1;
             // 
             // textBox24
@@ -1233,7 +1229,7 @@ namespace HQTCSDL_G6
             textBox24.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox24.Location = new System.Drawing.Point(3, 26);
             textBox24.Name = "textBox24";
-            textBox24.Size = new System.Drawing.Size(194, 25);
+            textBox24.Size = new System.Drawing.Size(194, 30);
             textBox24.TabIndex = 1;
             // 
             // textBox27
@@ -1242,7 +1238,7 @@ namespace HQTCSDL_G6
             textBox27.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox27.Location = new System.Drawing.Point(3, 26);
             textBox27.Name = "textBox27";
-            textBox27.Size = new System.Drawing.Size(194, 25);
+            textBox27.Size = new System.Drawing.Size(194, 30);
             textBox27.TabIndex = 1;
             // 
             // textBox11
@@ -1251,7 +1247,7 @@ namespace HQTCSDL_G6
             textBox11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             textBox11.Location = new System.Drawing.Point(3, 26);
             textBox11.Name = "textBox11";
-            textBox11.Size = new System.Drawing.Size(194, 25);
+            textBox11.Size = new System.Drawing.Size(194, 30);
             textBox11.TabIndex = 4;
             // 
             // functionsPanel
@@ -1263,13 +1259,12 @@ namespace HQTCSDL_G6
             functionsPanel.Controls.Add(currentFunctionPanel, 0, 1);
             functionsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             functionsPanel.Location = new System.Drawing.Point(0, 0);
-            functionsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             functionsPanel.Name = "functionsPanel";
             functionsPanel.RowCount = 3;
             functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            functionsPanel.Size = new System.Drawing.Size(752, 402);
+            functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            functionsPanel.Size = new System.Drawing.Size(859, 536);
             functionsPanel.TabIndex = 1;
             functionsPanel.Visible = false;
             // 
@@ -1277,31 +1272,29 @@ namespace HQTCSDL_G6
             // 
             currentFunctionPanel.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             currentFunctionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            currentFunctionPanel.Location = new System.Drawing.Point(3, 40);
-            currentFunctionPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            currentFunctionPanel.Location = new System.Drawing.Point(3, 54);
             currentFunctionPanel.Name = "currentFunctionPanel";
-            currentFunctionPanel.Size = new System.Drawing.Size(746, 344);
+            currentFunctionPanel.Size = new System.Drawing.Size(853, 458);
             currentFunctionPanel.TabIndex = 2;
             // 
             // loginControl
             // 
             loginControl.Dock = System.Windows.Forms.DockStyle.Fill;
             loginControl.Location = new System.Drawing.Point(0, 0);
-            loginControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             loginControl.Name = "loginControl";
-            loginControl.Size = new System.Drawing.Size(752, 402);
+            loginControl.Size = new System.Drawing.Size(859, 536);
             loginControl.TabIndex = 0;
             loginControl.TabStop = false;
             // 
             // ErrorVersionForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(752, 402);
+            BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
+            ClientSize = new System.Drawing.Size(859, 536);
             Controls.Add(functionsPanel);
             Controls.Add(loginControl);
-            Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            MinimumSize = new System.Drawing.Size(768, 441);
+            MinimumSize = new System.Drawing.Size(875, 572);
             Name = "ErrorVersionForm";
             Text = "Phiên bản lỗi";
             flowLayoutPanel1.ResumeLayout(false);
