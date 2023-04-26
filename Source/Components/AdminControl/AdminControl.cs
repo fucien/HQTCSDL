@@ -105,8 +105,10 @@ namespace HQTCSDL_G6.Components.AdminControl
         private void DeBtn_Click(object sender, EventArgs e)
         {
             string username = AccTbx.Text;
+            if (Error)
+            DatabaseManager.DBManager.Init.Admin.LockAccount_error(username);
+            else
             DatabaseManager.DBManager.Init.Admin.LockAccount(username);
-
             load();
 
         }

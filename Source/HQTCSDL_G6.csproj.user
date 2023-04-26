@@ -16,6 +16,9 @@
     <Compile Update="Components\CustomerControl\CustomerViewOrderControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Components\DtForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Components\EmployeeControl\EmployeeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
