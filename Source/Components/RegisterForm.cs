@@ -28,5 +28,11 @@ namespace HQTCSDL_G6.Components
             this.Hide();
             this.Parent.Controls.Add(new KhForm());
         }
+
+        private void DtBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Parent.Controls.Add(new DtForm());
+        }
     }
 }
