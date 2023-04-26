@@ -13,6 +13,10 @@ VALUES ('admin', 'admin', 'AD'),
 INSERT INTO Admin (TaiKhoan,Ten)
 VALUES ('admin','Uyên');
 
+INSERT INTO NhanVien (TaiKhoan, Ten)
+VALUES ('nhanvien1','Tín'),
+('nhanvien2','Trí');
+
 INSERT INTO DoiTac (TaiKhoan, TenDT, DaiDien, ThanhPho, Quan, DiaChi, SoChiNhanh, LoaiAmThuc, Sdt, Email)
 VALUES ('doitac1', N'Bistro du Philips', N'Trương Trần Phúc Tín', N'TP HCM', N'5', N'227 NVC', 3, N'French Cuisine', '0987654321', 'philipstruong194@gmail.com'),
 ('doitac2', N'PhiCha', N'Philips Trương',N'TP HCM', N'1', N'29/4 An Dương Vương', 3, N'Trà Sữa', '0987654322', 'tintruong@gmail.com');
@@ -51,8 +55,8 @@ VALUES
 (9, 3, 120),
 (10, 3, 90);
 
-DBCC CHECKIDENT ('KhachHang', RESEED, 0);
-DELETE FROM DonHang
+--DBCC CHECKIDENT ('KhachHang', RESEED, 0);
+--DELETE FROM DonHang
 
 INSERT INTO KhachHang (TaiKhoan, HoTen, DiaChi, SDT, Email)
 VALUES ('khachhang1', 'Uyên Nguyễn', '226 Pasteur Q1 TPHCM', '0932222862', 'uyen73@gmail.com'),
