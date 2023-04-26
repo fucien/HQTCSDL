@@ -14,6 +14,8 @@ namespace HQTCSDL_G6.Components.PartnerControls
 
         public bool Error { get; set; } = false;
 
+        public TimeSpan CurrentDelay { get; set; }
+
 
         public UpdateProductControl()
         {
@@ -56,12 +58,7 @@ namespace HQTCSDL_G6.Components.PartnerControls
             try
             {
                 var id = (int)idCbb.SelectedItem;
-                if (Error) 
-                    if (DatabaseManager.DBManager.Init.Partner.UpdateProductError(new DatabaseManager.Product(id, updateNameTb.Text, updateDescriptionTb.Text, (int)updatePriceNumeric.Value)))
-                        MessageBox.Show("Cập nhật sản phẩm thành công!");
-                    else
-                        MessageBox.Show("Cập nhật sản phẩm không thành công! Hãy kiểm tra lại các thông tin!");
-                if (DatabaseManager.DBManager.Init.Partner.UpdateProduct(new DatabaseManager.Product(id, updateNameTb.Text, updateDescriptionTb.Text, (int)updatePriceNumeric.Value)))
+                if (DatabaseManager.DBManager.Init.Partner.UpdateProduct(new DatabaseManager.Product(id, updateNameTb.Text, updateDescriptionTb.Text, (int)updatePriceNumeric.Value), CurrentDelay))
                     MessageBox.Show("Cập nhật sản phẩm thành công!");
                 else
                     MessageBox.Show("Cập nhật sản phẩm không thành công! Hãy kiểm tra lại các thông tin!");

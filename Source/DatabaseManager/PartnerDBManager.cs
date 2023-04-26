@@ -341,7 +341,7 @@ namespace HQTCSDL_G6.DatabaseManager
             }
         }
 
-        public bool UpdateProduct(Product update)
+        public bool UpdateProduct(Product update, TimeSpan delay)
         {
             try
             {
@@ -357,6 +357,7 @@ namespace HQTCSDL_G6.DatabaseManager
                 command.Parameters.AddWithValue("@ten_sp", update.Name);
                 command.Parameters.AddWithValue("@mo_ta", update.Description);
                 command.Parameters.AddWithValue("@gia", update.Price);
+                command.Parameters.AddWithValue("@delay", delay);
                 return command.ExecuteNonQuery() > 0;
             }
             catch (Exception e)

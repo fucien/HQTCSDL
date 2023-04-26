@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using System.Transactions;
 using System.Windows.Forms;
+
 
 namespace HQTCSDL_G6.DatabaseManager
 {
@@ -164,11 +166,12 @@ namespace HQTCSDL_G6.DatabaseManager
                     Value = dt
                 };
                 command.Parameters.Add(param);
-                return command.ExecuteNonQuery() > 0;
+                command.ExecuteNonQuery();
+                return true;
+                
             }
             catch (Exception exception)
             {
-                MessageBox.Show($"Error: {exception.Message}");
                 return false;
             }
         }
@@ -203,7 +206,8 @@ namespace HQTCSDL_G6.DatabaseManager
                     Value = dt
                 };
                 command.Parameters.Add(param);
-                return command.ExecuteNonQuery() > 0;
+                command.ExecuteNonQuery();
+                return true;
             }
             catch (Exception exception)
             {

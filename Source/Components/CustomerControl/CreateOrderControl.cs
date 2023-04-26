@@ -3,6 +3,7 @@ using HQTCSDL_G6.DatabaseManager.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace HQTCSDL_G6.Components.CustomerControl
@@ -112,14 +113,28 @@ namespace HQTCSDL_G6.Components.CustomerControl
                 }
 
                 var order = new OrderWithProducts(products, 0, (int)branchIDCbb.SelectedItem, CurrentID, 0, methodCbb.SelectedItem.ToString(), addressTb.Text, "", 0, 20000);
-                var fine = Error ? DBManager.Init.Customer.CreateOrderError(order, products, CurrentDelay)
-                    : DBManager.Init.Customer.CreateOrder(order, products, CurrentDelay);
-                if (fine)
-                    MessageBox.Show("Tạo hóa đơn thành công!");
+                //var fine = Error ? DBManager.Init.Customer.CreateOrderError(order, products, CurrentDelay)
+                //    : DBManager.Init.Customer.CreateOrder(order, products, CurrentDelay);
+                //if (fine)
+                //    MessageBox.Show("Tạo hóa đơn thành công!");
+                //else
+                //    MessageBox.Show("Lỗi! Không thể tạo hóa đơn!");
+                if (Error)
+                {
+                    if (DBManager.Init.Customer.CreateOrderError(order, products, CurrentDelay))
+                        MessageBox.Show("Tạo hóa đơn thành công!");
+                    else
+                        MessageBox.Show("Lỗi! Không thể tạo hóa đơn!");
+                }
                 else
-                    MessageBox.Show("Tạo hóa đơn thất bại!");
+                {
+                    if (DBManager.Init.Customer.CreateOrder(order, products, CurrentDelay))
+                        MessageBox.Show("Tạo hóa đơn thành công!");
+                    else
+                        MessageBox.Show("Lỗi! Không thể tạo hóa đơn!");
+                }   
             }
-            catch (Exception exception)
+            catch (TransactionAbortedException exception)
             {
                 MessageBox.Show($"Error: {exception.Message}");
             }
