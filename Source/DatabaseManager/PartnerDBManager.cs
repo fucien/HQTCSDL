@@ -301,6 +301,33 @@ namespace HQTCSDL_G6.DatabaseManager
             {
                 using SqlConnection connection = new SqlConnection(connectionString);
                 connection.Open();
+                var transaction = connection.BeginTransaction(IsolationLevel.ReadUncommitted);
+                using var command = new SqlCommand()
+                {
+                    Connection = connection,
+                    CommandType = System.Data.CommandType.Text,
+                    CommandText = "SELECT TOP 1 sp.MaSP, sp.Ten, sp.Description, sp.GIA_SP FROM SanPham sp WHERE sp.MaSP = @ma_sp",
+                    Transaction = transaction
+                };
+                command.Parameters.AddWithValue("@ma_sp", productID);
+
+                using var reader = command.ExecuteReader();
+                if (reader.Read())
+                    return new Product(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3));
+                return null;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public Product GetProductError(int productID)
+        {
+            try
+            {
+                using SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
                 using var command = new SqlCommand()
                 {
                     Connection = connection,

@@ -4,6 +4,7 @@ GO
 --Procedure dùng để đăng nhập
 CREATE PROCEDURE dang_nhap @tai_khoan VARCHAR(20), @mat_khau VARCHAR(50)
 AS
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 BEGIN TRANSACTION
 	DECLARE @loai_tk CHAR(2);
 	SET @loai_tk = NULL;
@@ -51,11 +52,19 @@ GO
 CREATE PROCEDURE Admin_lock @tk varchar(20), @delay DATETIME
 AS
 BEGIN TRANSACTION
+	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 	Update TaiKhoan set Lock = 1 where TaiKhoan = @tk
 	WAITFOR DELAY @delay;
 COMMIT TRANSACTION;
 GO
 
+CREATE PROCEDURE Admin_lock_error @tk varchar(20), @delay DATETIME
+AS
+BEGIN TRANSACTION
+	Update TaiKhoan set Lock = 1 where TaiKhoan = @tk
+	WAITFOR DELAY @delay;
+COMMIT TRANSACTION;
+GO
 
 --Procedure gia hạn hợp đồng
 CREATE PROCEDURE GiaHanHD_ERROR @ma_hd INT, @so_ngay_them INT, @delay DATETIME
@@ -159,7 +168,7 @@ BEGIN TRANSACTION
 	SET Ten = @ten_sp,
 		Description = @mo_ta,
 		GIA_SP = @gia
-	WHERE MaSP = @ma_sp
+	WHERE MaSP = @ma_sp;
 	WAITFOR delay @delay;
 COMMIT TRANSACTION
 GO
@@ -499,6 +508,8 @@ BEGIN TRANSACTION
 
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
+		WAITFOR DELAY @delay;
+
 	SELECT 'total', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
 					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
 					SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
@@ -513,7 +524,6 @@ BEGIN TRANSACTION
 		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
 	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Đang giao';
 
-	WAITFOR DELAY @delay;
 
 	SELECT 'done', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
 					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 

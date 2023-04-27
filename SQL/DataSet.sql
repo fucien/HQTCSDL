@@ -1,4 +1,7 @@
 ﻿
+USE CHUYEN_HANG_ONLINE;
+GO
+
 INSERT INTO TaiKhoan (TaiKhoan, Pass, Loai)
 VALUES ('admin', 'admin', 'AD'),
 ('nhanvien1', 'nhanvien', 'NV'),
@@ -23,12 +26,19 @@ VALUES ('doitac1', N'Bistro du Philips', N'Trương Trần Phúc Tín', N'TP HCM
 
 INSERT INTO HopDong (MaDT, MaSoThue, NguoiDaiDien, NgayBatDau, NgayKetThuc, HD_Status)
 VALUES (1, 'ABC123', 'Trương Trần Phúc Tín', '2023-02-01', '2024-02-01', 1),
-(2, 'XYZ789', 'Philips Trương', '2023-03-01', '2024-03-01', 1);
+(2, 'XYZ789', 'Philips Trương', '2023-03-01', '2024-03-01', 1),
+ (2, 'ASW123', 'Tín Trương', '2023-02-01','2024-02-01', 0),
+ (1, 'ABD456', 'Trương Philips', '2023-02-01', '2024-02-01', 0);
+
 
 INSERT INTO ChiNhanh (MaDT, MaHD, Ten, DiaChi, Sdt)
 VALUES (1, 1, 'Chi nhánh chính', '123 Đường ABC', '0425421231'),
  (2, 2, 'An Dương Vương', '123 An Dương Vương', '0932482726'),
- (2, 2, 'Chi nhánh Minh Khai', '234 NTMK', '0122323421');
+ (2, 2, 'Chi nhánh Minh Khai', '234 NTMK', '0122323421'),
+   (2, 3, 'Chi nhánh Thủ Đức', 'GigaMall', '0133323421'),
+  (1,4, 'Chi nhánh Landmark', 'Landmark 81', '023232323');
+
+
 
 INSERT INTO SanPham (MaDT, Ten, Description, GIA_SP) VALUES 
 (1, 'Coq au Vin', 'Traditional French dish of chicken braised with red wine, mushrooms, and garlic.', 250000),
@@ -44,7 +54,7 @@ INSERT INTO SanPham (MaDT, Ten, Description, GIA_SP) VALUES
 
 INSERT INTO ChiNhanh_SanPham (MaSP, MaCN, SoLuong_CS)
 VALUES 
-(1, 1, 50),
+(1, 1, 0),
 (2, 1, 30),
 (3, 1, 40),
 (4, 1, 20),
@@ -53,7 +63,18 @@ VALUES
 (7, 2, 80),
 (8, 2, 70),
 (9, 3, 120),
-(10, 3, 90);
+(10, 3, 90),
+(1, 5, 50),
+(2, 5, 30),
+(3, 5, 40),
+(4, 5, 20),
+(5, 5, 60),
+(6, 4, 100),
+(7, 4, 80),
+(8, 4, 70),
+(9, 4, 120),
+(10, 4, 90);
+
 
 --DBCC CHECKIDENT ('KhachHang', RESEED, 0);
 --DELETE FROM DonHang

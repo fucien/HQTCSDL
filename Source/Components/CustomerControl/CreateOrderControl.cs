@@ -160,7 +160,11 @@ namespace HQTCSDL_G6.Components.CustomerControl
                     }
                 };
                 productControl.OnGetProductIDs += GetProductIDs;
-                productControl.OnGetProduct += DatabaseManager.DBManager.Init.Partner.GetProduct;
+                if (Error)
+                    productControl.OnGetProduct += DBManager.Init.Partner.GetProductError;
+                else
+                    productControl.OnGetProduct += DBManager.Init.Partner.GetProduct;
+
                 productAmountPanel.RowStyles.Add(new RowStyle() { SizeType = SizeType.AutoSize });
                 productAmountPanel.Controls.Add(productControl, 0, productAmountPanel.RowCount - 1);
                 productControl.Dock = DockStyle.Fill;
