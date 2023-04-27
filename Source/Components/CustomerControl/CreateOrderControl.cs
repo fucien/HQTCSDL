@@ -132,7 +132,7 @@ namespace HQTCSDL_G6.Components.CustomerControl
                         MessageBox.Show("Tạo hóa đơn thành công!");
                     else
                         MessageBox.Show("Lỗi! Không thể tạo hóa đơn!");
-                }   
+                }
             }
             catch (TransactionAbortedException exception)
             {

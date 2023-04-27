@@ -30,6 +30,7 @@ namespace HQTCSDL_G6
         private void InitializeComponent()
         {
             System.Windows.Forms.TableLayoutPanel versionsPanel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectVersionForm));
             radioButton2 = new System.Windows.Forms.RadioButton();
             radioButton1 = new System.Windows.Forms.RadioButton();
             button1 = new System.Windows.Forms.Button();
@@ -108,6 +109,7 @@ namespace HQTCSDL_G6
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(800, 451);
             Controls.Add(versionsPanel);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Name = "SelectVersionForm";
             Text = "Chọn phiên bản";
             versionsPanel.ResumeLayout(false);

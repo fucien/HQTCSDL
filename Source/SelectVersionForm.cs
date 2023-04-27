@@ -44,7 +44,7 @@ namespace HQTCSDL_G6
                 });
                 thread.Start();
             }
-            else if(radioButton2.Checked)
+            else if (radioButton2.Checked)
             {
                 Thread thread = new Thread(() =>
                 {

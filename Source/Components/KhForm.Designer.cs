@@ -48,6 +48,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(ETbx);
             panel1.Controls.Add(label6);
@@ -62,133 +63,146 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(TkTbx);
             panel1.Controls.Add(label1);
-            panel1.Location = new System.Drawing.Point(3, 3);
+            panel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            panel1.Location = new System.Drawing.Point(3, 4);
+            panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(256, 256);
+            panel1.Size = new System.Drawing.Size(293, 341);
             panel1.TabIndex = 0;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(71, 11);
+            label7.Location = new System.Drawing.Point(81, 15);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(115, 15);
+            label7.Size = new System.Drawing.Size(142, 20);
             label7.TabIndex = 26;
             label7.Text = "Đăng ký khách hàng";
             // 
             // ETbx
             // 
-            ETbx.Location = new System.Drawing.Point(80, 193);
+            ETbx.Location = new System.Drawing.Point(91, 257);
+            ETbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             ETbx.Name = "ETbx";
-            ETbx.Size = new System.Drawing.Size(157, 23);
+            ETbx.Size = new System.Drawing.Size(179, 27);
             ETbx.TabIndex = 25;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(17, 109);
+            label6.Location = new System.Drawing.Point(19, 145);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(43, 15);
+            label6.Size = new System.Drawing.Size(54, 20);
             label6.TabIndex = 24;
             label6.Text = "Họ tên";
             // 
             // ReBtn
             // 
-            ReBtn.Location = new System.Drawing.Point(162, 222);
+            ReBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            ReBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            ReBtn.ForeColor = System.Drawing.Color.White;
+            ReBtn.Location = new System.Drawing.Point(185, 296);
+            ReBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             ReBtn.Name = "ReBtn";
-            ReBtn.Size = new System.Drawing.Size(75, 23);
+            ReBtn.Size = new System.Drawing.Size(86, 31);
             ReBtn.TabIndex = 23;
             ReBtn.Text = "Đăng ký";
-            ReBtn.UseVisualStyleBackColor = true;
+            ReBtn.UseVisualStyleBackColor = false;
             ReBtn.Click += ReBtn_Click;
             // 
             // SdtTbx
             // 
-            SdtTbx.Location = new System.Drawing.Point(80, 164);
+            SdtTbx.Location = new System.Drawing.Point(91, 219);
+            SdtTbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             SdtTbx.Name = "SdtTbx";
-            SdtTbx.Size = new System.Drawing.Size(157, 23);
+            SdtTbx.Size = new System.Drawing.Size(179, 27);
             SdtTbx.TabIndex = 22;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(17, 197);
+            label5.Location = new System.Drawing.Point(19, 263);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(36, 15);
+            label5.Size = new System.Drawing.Size(46, 20);
             label5.TabIndex = 21;
             label5.Text = "Email";
             // 
             // DcTbx
             // 
-            DcTbx.Location = new System.Drawing.Point(80, 135);
+            DcTbx.Location = new System.Drawing.Point(91, 180);
+            DcTbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             DcTbx.Name = "DcTbx";
-            DcTbx.Size = new System.Drawing.Size(157, 23);
+            DcTbx.Size = new System.Drawing.Size(179, 27);
             DcTbx.TabIndex = 20;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(17, 168);
+            label4.Location = new System.Drawing.Point(19, 224);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(24, 15);
+            label4.Size = new System.Drawing.Size(31, 20);
             label4.TabIndex = 19;
             label4.Text = "Sđt";
             // 
             // HtTbx
             // 
-            HtTbx.Location = new System.Drawing.Point(80, 106);
+            HtTbx.Location = new System.Drawing.Point(91, 141);
+            HtTbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             HtTbx.Name = "HtTbx";
-            HtTbx.Size = new System.Drawing.Size(157, 23);
+            HtTbx.Size = new System.Drawing.Size(179, 27);
             HtTbx.TabIndex = 18;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(17, 139);
+            label3.Location = new System.Drawing.Point(19, 185);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(43, 15);
+            label3.Size = new System.Drawing.Size(55, 20);
             label3.TabIndex = 17;
             label3.Text = "Địa chỉ";
             // 
             // MkTbx
             // 
-            MkTbx.Location = new System.Drawing.Point(80, 77);
+            MkTbx.Location = new System.Drawing.Point(91, 103);
+            MkTbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             MkTbx.Name = "MkTbx";
-            MkTbx.Size = new System.Drawing.Size(157, 23);
+            MkTbx.Size = new System.Drawing.Size(179, 27);
             MkTbx.TabIndex = 16;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(17, 80);
+            label2.Location = new System.Drawing.Point(19, 107);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(57, 15);
+            label2.Size = new System.Drawing.Size(70, 20);
             label2.TabIndex = 15;
             label2.Text = "Mật khẩu";
             // 
             // TkTbx
             // 
-            TkTbx.Location = new System.Drawing.Point(80, 48);
+            TkTbx.Location = new System.Drawing.Point(91, 64);
+            TkTbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             TkTbx.Name = "TkTbx";
-            TkTbx.Size = new System.Drawing.Size(157, 23);
+            TkTbx.Size = new System.Drawing.Size(179, 27);
             TkTbx.TabIndex = 14;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(17, 51);
+            label1.Location = new System.Drawing.Point(19, 68);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(57, 15);
+            label1.Size = new System.Drawing.Size(71, 20);
             label1.TabIndex = 13;
             label1.Text = "Tài khoản";
             // 
             // KhForm
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(panel1);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "KhForm";
-            Size = new System.Drawing.Size(262, 262);
+            Size = new System.Drawing.Size(299, 349);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
