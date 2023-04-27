@@ -105,7 +105,9 @@ namespace HQTCSDL_G6.Components.AdminControl
         private void DeBtn_Click(object sender, EventArgs e)
         {
             string username = SttDATbx.Text;
-            DatabaseManager.DBManager.Init.Admin.LockAccount(username, CurrentDelay);
+            if (Error) DBManager.Init.Admin.LockAccount_Error(username, CurrentDelay);
+            else
+                DatabaseManager.DBManager.Init.Admin.LockAccount(username, CurrentDelay);
             load();
         }
 
