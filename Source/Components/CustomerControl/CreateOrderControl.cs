@@ -213,5 +213,10 @@ namespace HQTCSDL_G6.Components.CustomerControl
         {
 
         }
+
+        private void label50_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

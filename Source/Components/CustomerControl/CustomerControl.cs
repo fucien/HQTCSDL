@@ -45,5 +45,10 @@ namespace HQTCSDL_G6.Components.CustomerControl
         {
 
         }
+
+        private void tabPage9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
