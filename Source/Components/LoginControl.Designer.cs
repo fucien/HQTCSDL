@@ -36,10 +36,10 @@ namespace HQTCSDL_G6.Components
             System.Windows.Forms.Label label1;
             tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             passwordTb = new System.Windows.Forms.TextBox();
+            RBtn = new System.Windows.Forms.Button();
             tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             accountTb = new System.Windows.Forms.TextBox();
             confirmButton = new System.Windows.Forms.Button();
-            RBtn = new System.Windows.Forms.Button();
             loginPanel = new System.Windows.Forms.TableLayoutPanel();
             tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             label4 = new System.Windows.Forms.Label();
@@ -55,8 +55,9 @@ namespace HQTCSDL_G6.Components
             // 
             loginPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             loginPanel.BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            loginPanel.ColumnCount = 1;
+            loginPanel.ColumnCount = 2;
             loginPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            loginPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
             loginPanel.Controls.Add(tableLayoutPanel1, 0, 1);
             loginPanel.Controls.Add(label1, 0, 0);
             loginPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -66,7 +67,7 @@ namespace HQTCSDL_G6.Components
             loginPanel.RowCount = 2;
             loginPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.4272537F));
             loginPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.57275F));
-            loginPanel.Size = new System.Drawing.Size(557, 368);
+            loginPanel.Size = new System.Drawing.Size(500, 200);
             loginPanel.TabIndex = 4;
             loginPanel.Paint += loginPanel_Paint_1;
             // 
@@ -77,17 +78,17 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.6551743F));
             tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.3448257F));
             tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 1, 1);
+            tableLayoutPanel1.Controls.Add(RBtn, 0, 0);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel6, 1, 0);
-            tableLayoutPanel1.Controls.Add(confirmButton, 0, 0);
-            tableLayoutPanel1.Controls.Add(RBtn, 0, 1);
+            tableLayoutPanel1.Controls.Add(confirmButton, 0, 1);
             tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel1.Location = new System.Drawing.Point(3, 58);
+            tableLayoutPanel1.Location = new System.Drawing.Point(3, 32);
             tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            tableLayoutPanel1.Size = new System.Drawing.Size(551, 308);
+            tableLayoutPanel1.Size = new System.Drawing.Size(298, 166);
             tableLayoutPanel1.TabIndex = 1;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint_2;
             // 
@@ -98,24 +99,24 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel5.Controls.Add(passwordTb, 0, 1);
             tableLayoutPanel5.Controls.Add(label4, 0, 0);
             tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel5.Location = new System.Drawing.Point(221, 81);
+            tableLayoutPanel5.Location = new System.Drawing.Point(121, 81);
             tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 2;
-            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.5060234F));
+            tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.49397F));
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            tableLayoutPanel5.Size = new System.Drawing.Size(327, 225);
+            tableLayoutPanel5.Size = new System.Drawing.Size(174, 83);
             tableLayoutPanel5.TabIndex = 2;
             // 
             // passwordTb
             // 
             passwordTb.Dock = System.Windows.Forms.DockStyle.Fill;
-            passwordTb.Location = new System.Drawing.Point(3, 69);
+            passwordTb.Location = new System.Drawing.Point(3, 24);
             passwordTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             passwordTb.Name = "passwordTb";
             passwordTb.PasswordChar = '*';
-            passwordTb.Size = new System.Drawing.Size(321, 23);
+            passwordTb.Size = new System.Drawing.Size(168, 23);
             passwordTb.TabIndex = 1;
             // 
             // label4
@@ -128,6 +129,22 @@ namespace HQTCSDL_G6.Components
             label4.TabIndex = 0;
             label4.Text = "Mặt khẩu";
             // 
+            // RBtn
+            // 
+            RBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            RBtn.AutoSize = true;
+            RBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
+            RBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            RBtn.ForeColor = System.Drawing.Color.White;
+            RBtn.Location = new System.Drawing.Point(20, 2);
+            RBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            RBtn.Name = "RBtn";
+            RBtn.Size = new System.Drawing.Size(77, 27);
+            RBtn.TabIndex = 4;
+            RBtn.Text = "Đăng ký";
+            RBtn.UseVisualStyleBackColor = false;
+            RBtn.Click += RBtn_Click;
+            // 
             // tableLayoutPanel6
             // 
             tableLayoutPanel6.ColumnCount = 1;
@@ -135,13 +152,13 @@ namespace HQTCSDL_G6.Components
             tableLayoutPanel6.Controls.Add(label2, 0, 0);
             tableLayoutPanel6.Controls.Add(accountTb, 0, 1);
             tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            tableLayoutPanel6.Location = new System.Drawing.Point(221, 2);
+            tableLayoutPanel6.Location = new System.Drawing.Point(121, 2);
             tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 2;
             tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
             tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            tableLayoutPanel6.Size = new System.Drawing.Size(327, 75);
+            tableLayoutPanel6.Size = new System.Drawing.Size(174, 75);
             tableLayoutPanel6.TabIndex = 3;
             // 
             // label2
@@ -160,7 +177,7 @@ namespace HQTCSDL_G6.Components
             accountTb.Location = new System.Drawing.Point(3, 24);
             accountTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             accountTb.Name = "accountTb";
-            accountTb.Size = new System.Drawing.Size(321, 23);
+            accountTb.Size = new System.Drawing.Size(168, 23);
             accountTb.TabIndex = 1;
             // 
             // confirmButton
@@ -170,7 +187,7 @@ namespace HQTCSDL_G6.Components
             confirmButton.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             confirmButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             confirmButton.ForeColor = System.Drawing.Color.White;
-            confirmButton.Location = new System.Drawing.Point(66, 2);
+            confirmButton.Location = new System.Drawing.Point(16, 81);
             confirmButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             confirmButton.Name = "confirmButton";
             confirmButton.Size = new System.Drawing.Size(86, 27);
@@ -179,31 +196,17 @@ namespace HQTCSDL_G6.Components
             confirmButton.UseVisualStyleBackColor = false;
             confirmButton.Click += confirmButton_Click;
             // 
-            // RBtn
-            // 
-            RBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            RBtn.AutoSize = true;
-            RBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
-            RBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            RBtn.ForeColor = System.Drawing.Color.White;
-            RBtn.Location = new System.Drawing.Point(70, 81);
-            RBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            RBtn.Name = "RBtn";
-            RBtn.Size = new System.Drawing.Size(77, 27);
-            RBtn.TabIndex = 4;
-            RBtn.Text = "Đăng ký";
-            RBtn.UseVisualStyleBackColor = false;
-            RBtn.Click += RBtn_Click;
-            // 
             // label1
             // 
             label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(216, 0);
+            label1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            label1.Location = new System.Drawing.Point(31, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(124, 30);
+            label1.Size = new System.Drawing.Size(241, 30);
             label1.TabIndex = 0;
             label1.Text = "Đăng nhập";
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             label1.Click += label1_Click;
             // 
             // LoginControl
@@ -213,7 +216,7 @@ namespace HQTCSDL_G6.Components
             Controls.Add(loginPanel);
             Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             Name = "LoginControl";
-            Size = new System.Drawing.Size(557, 368);
+            Size = new System.Drawing.Size(500, 200);
             loginPanel.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

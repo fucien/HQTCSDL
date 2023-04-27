@@ -62,7 +62,7 @@ namespace HQTCSDL_G6
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
             tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            tableLayoutPanel5.Size = new System.Drawing.Size(1015, 43);
+            tableLayoutPanel5.Size = new System.Drawing.Size(778, 35);
             tableLayoutPanel5.TabIndex = 1;
             // 
             // logoutButton
@@ -70,7 +70,7 @@ namespace HQTCSDL_G6
             logoutButton.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             logoutButton.AutoSize = true;
             logoutButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            logoutButton.Location = new System.Drawing.Point(925, 2);
+            logoutButton.Location = new System.Drawing.Point(688, 2);
             logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             logoutButton.Name = "logoutButton";
             logoutButton.Size = new System.Drawing.Size(87, 29);
@@ -87,7 +87,7 @@ namespace HQTCSDL_G6
             flowLayoutPanel2.Location = new System.Drawing.Point(3, 2);
             flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new System.Drawing.Size(400, 39);
+            flowLayoutPanel2.Size = new System.Drawing.Size(305, 31);
             flowLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -114,9 +114,9 @@ namespace HQTCSDL_G6
             currentFunctionLabel.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom;
             currentFunctionLabel.AutoSize = true;
             currentFunctionLabel.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            currentFunctionLabel.Location = new System.Drawing.Point(544, 0);
+            currentFunctionLabel.Location = new System.Drawing.Point(401, 0);
             currentFunctionLabel.Name = "currentFunctionLabel";
-            currentFunctionLabel.Size = new System.Drawing.Size(130, 43);
+            currentFunctionLabel.Size = new System.Drawing.Size(130, 35);
             currentFunctionLabel.TabIndex = 4;
             currentFunctionLabel.Text = "Khách hàng 1";
             // 
@@ -134,17 +134,17 @@ namespace HQTCSDL_G6
             functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             functionsPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            functionsPanel.Size = new System.Drawing.Size(1021, 487);
+            functionsPanel.Size = new System.Drawing.Size(784, 411);
             functionsPanel.TabIndex = 2;
             functionsPanel.Visible = false;
             // 
             // currentFunctionPanel
             // 
             currentFunctionPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            currentFunctionPanel.Location = new System.Drawing.Point(3, 49);
+            currentFunctionPanel.Location = new System.Drawing.Point(3, 41);
             currentFunctionPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             currentFunctionPanel.Name = "currentFunctionPanel";
-            currentFunctionPanel.Size = new System.Drawing.Size(1015, 420);
+            currentFunctionPanel.Size = new System.Drawing.Size(778, 352);
             currentFunctionPanel.TabIndex = 2;
             // 
             // loginControl
@@ -154,7 +154,7 @@ namespace HQTCSDL_G6
             loginControl.Location = new System.Drawing.Point(0, 0);
             loginControl.Margin = new System.Windows.Forms.Padding(2);
             loginControl.Name = "loginControl";
-            loginControl.Size = new System.Drawing.Size(1021, 487);
+            loginControl.Size = new System.Drawing.Size(784, 411);
             loginControl.TabIndex = 3;
             loginControl.TabStop = false;
             loginControl.Load += loginControl_Load;
@@ -164,7 +164,7 @@ namespace HQTCSDL_G6
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.FromArgb(254, 200, 28);
-            ClientSize = new System.Drawing.Size(1021, 487);
+            ClientSize = new System.Drawing.Size(784, 411);
             Controls.Add(loginControl);
             Controls.Add(functionsPanel);
             Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

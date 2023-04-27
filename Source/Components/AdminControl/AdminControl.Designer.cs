@@ -68,7 +68,7 @@
             tabControl1.Location = new System.Drawing.Point(3, 3);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new System.Drawing.Size(485, 344);
+            tabControl1.Size = new System.Drawing.Size(594, 294);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -79,8 +79,8 @@
             tabPage1.Controls.Add(Cbx);
             tabPage1.Location = new System.Drawing.Point(4, 24);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            tabPage1.Size = new System.Drawing.Size(477, 316);
+            tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            tabPage1.Size = new System.Drawing.Size(586, 266);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Cập nhật thông tin tài khoản";
             // 
@@ -89,7 +89,7 @@
             ShowBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             ShowBtn.ForeColor = System.Drawing.SystemColors.ControlText;
             ShowBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            ShowBtn.Location = new System.Drawing.Point(387, 6);
+            ShowBtn.Location = new System.Drawing.Point(505, 5);
             ShowBtn.Name = "ShowBtn";
             ShowBtn.Size = new System.Drawing.Size(75, 23);
             ShowBtn.TabIndex = 3;
@@ -104,7 +104,7 @@
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.RowTemplate.Height = 25;
-            dataGridView3.Size = new System.Drawing.Size(465, 275);
+            dataGridView3.Size = new System.Drawing.Size(574, 225);
             dataGridView3.TabIndex = 2;
             // 
             // Cbx
@@ -113,7 +113,7 @@
             Cbx.Items.AddRange(new object[] { "Admin", "Nhân Viên", "Đối Tác", "Khách Hàng", "Tài Xế" });
             Cbx.Location = new System.Drawing.Point(6, 6);
             Cbx.Name = "Cbx";
-            Cbx.Size = new System.Drawing.Size(360, 23);
+            Cbx.Size = new System.Drawing.Size(493, 23);
             Cbx.TabIndex = 1;
             // 
             // tabPage2
@@ -132,8 +132,8 @@
             tabPage2.Controls.Add(dataGridView1);
             tabPage2.Location = new System.Drawing.Point(4, 24);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            tabPage2.Size = new System.Drawing.Size(477, 316);
+            tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            tabPage2.Size = new System.Drawing.Size(586, 266);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Thêm - xóa - sửa tài khoản";
             // 
@@ -142,7 +142,7 @@
             ClrBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             ClrBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             ClrBtn.ForeColor = System.Drawing.Color.White;
-            ClrBtn.Location = new System.Drawing.Point(6, 36);
+            ClrBtn.Location = new System.Drawing.Point(54, 37);
             ClrBtn.Name = "ClrBtn";
             ClrBtn.Size = new System.Drawing.Size(50, 23);
             ClrBtn.TabIndex = 13;
@@ -154,7 +154,7 @@
             // 
             RoleCbx.FormattingEnabled = true;
             RoleCbx.Items.AddRange(new object[] { "AD", "NV", "KH", "DT", "TX" });
-            RoleCbx.Location = new System.Drawing.Point(125, 64);
+            RoleCbx.Location = new System.Drawing.Point(202, 67);
             RoleCbx.Name = "RoleCbx";
             RoleCbx.Size = new System.Drawing.Size(208, 23);
             RoleCbx.TabIndex = 11;
@@ -163,7 +163,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label5.Location = new System.Drawing.Point(62, 68);
+            label5.Location = new System.Drawing.Point(139, 71);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(43, 15);
             label5.TabIndex = 10;
@@ -173,7 +173,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label2.Location = new System.Drawing.Point(62, 39);
+            label2.Location = new System.Drawing.Point(139, 42);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(59, 15);
             label2.TabIndex = 7;
@@ -183,7 +183,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.Location = new System.Drawing.Point(62, 10);
+            label1.Location = new System.Drawing.Point(139, 13);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(59, 15);
             label1.TabIndex = 6;
@@ -191,14 +191,14 @@
             // 
             // PassTbx
             // 
-            PassTbx.Location = new System.Drawing.Point(125, 36);
+            PassTbx.Location = new System.Drawing.Point(202, 39);
             PassTbx.Name = "PassTbx";
             PassTbx.Size = new System.Drawing.Size(208, 23);
             PassTbx.TabIndex = 5;
             // 
             // AccTbx
             // 
-            AccTbx.Location = new System.Drawing.Point(125, 7);
+            AccTbx.Location = new System.Drawing.Point(202, 10);
             AccTbx.Name = "AccTbx";
             AccTbx.Size = new System.Drawing.Size(208, 23);
             AccTbx.TabIndex = 4;
@@ -208,7 +208,7 @@
             EditBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             EditBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             EditBtn.ForeColor = System.Drawing.Color.White;
-            EditBtn.Location = new System.Drawing.Point(361, 64);
+            EditBtn.Location = new System.Drawing.Point(462, 66);
             EditBtn.Name = "EditBtn";
             EditBtn.Size = new System.Drawing.Size(75, 23);
             EditBtn.TabIndex = 3;
@@ -221,7 +221,7 @@
             DelBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             DelBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             DelBtn.ForeColor = System.Drawing.Color.White;
-            DelBtn.Location = new System.Drawing.Point(361, 35);
+            DelBtn.Location = new System.Drawing.Point(462, 37);
             DelBtn.Name = "DelBtn";
             DelBtn.Size = new System.Drawing.Size(75, 23);
             DelBtn.TabIndex = 2;
@@ -234,7 +234,7 @@
             AddBtn.BackColor = System.Drawing.Color.FromArgb(241, 114, 40);
             AddBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             AddBtn.ForeColor = System.Drawing.Color.White;
-            AddBtn.Location = new System.Drawing.Point(361, 6);
+            AddBtn.Location = new System.Drawing.Point(462, 8);
             AddBtn.Name = "AddBtn";
             AddBtn.Size = new System.Drawing.Size(75, 23);
             AddBtn.TabIndex = 1;
@@ -249,7 +249,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new System.Drawing.Size(849, 266);
+            dataGridView1.Size = new System.Drawing.Size(574, 167);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellClick += dataGridView1_CellContentClick;
             // 
@@ -263,8 +263,8 @@
             tabPage3.Controls.Add(dataGridView2);
             tabPage3.Location = new System.Drawing.Point(4, 24);
             tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            tabPage3.Size = new System.Drawing.Size(477, 316);
+            tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            tabPage3.Size = new System.Drawing.Size(586, 266);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Khóa và kích hoạt tài khoản";
             // 
@@ -272,7 +272,7 @@
             // 
             AcBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             AcBtn.ForeColor = System.Drawing.Color.Black;
-            AcBtn.Location = new System.Drawing.Point(357, 24);
+            AcBtn.Location = new System.Drawing.Point(449, 35);
             AcBtn.Name = "AcBtn";
             AcBtn.Size = new System.Drawing.Size(75, 23);
             AcBtn.TabIndex = 13;
@@ -284,7 +284,7 @@
             // 
             DeBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             DeBtn.ForeColor = System.Drawing.Color.Black;
-            DeBtn.Location = new System.Drawing.Point(195, 24);
+            DeBtn.Location = new System.Drawing.Point(265, 35);
             DeBtn.Name = "DeBtn";
             DeBtn.Size = new System.Drawing.Size(75, 23);
             DeBtn.TabIndex = 12;
@@ -296,7 +296,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label4.Location = new System.Drawing.Point(49, 14);
+            label4.Location = new System.Drawing.Point(58, 17);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(81, 15);
             label4.TabIndex = 11;
@@ -317,7 +317,7 @@
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new System.Drawing.Size(878, 322);
+            dataGridView2.Size = new System.Drawing.Size(574, 186);
             dataGridView2.TabIndex = 0;
             dataGridView2.CellClick += dataGridView2_CellContentClick;
             // 
@@ -327,7 +327,7 @@
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(tabControl1);
             Name = "AdminControl";
-            Size = new System.Drawing.Size(488, 350);
+            Size = new System.Drawing.Size(600, 300);
             Load += AdminControl_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);

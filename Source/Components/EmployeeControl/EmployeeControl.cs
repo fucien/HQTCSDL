@@ -22,7 +22,7 @@ namespace HQTCSDL_G6.Components.EmployeeControl
 
         public TimeSpan CurrentDelay { get; set; }
 
- 
+
 
         public EmployeeControl(int id, bool error)
         {
@@ -46,7 +46,7 @@ namespace HQTCSDL_G6.Components.EmployeeControl
 
         void load1()
         {
-            
+
             dataGridView2.DataSource = DBManager.Init.Employee.GetInactiveHD();
         }
 
@@ -102,6 +102,15 @@ namespace HQTCSDL_G6.Components.EmployeeControl
         public void SetDelay(TimeSpan delay)
         {
             CurrentDelay = delay;
+        }
+
+        private void NumTbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
