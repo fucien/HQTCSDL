@@ -1,0 +1,3 @@
+use CHUYEN_HANG_ONLINE;
+
+EXEC NhanDH_ERROR 1, 1, '00:00:05';

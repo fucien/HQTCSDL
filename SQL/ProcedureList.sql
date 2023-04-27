@@ -508,7 +508,7 @@ BEGIN TRANSACTION
 
 	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 
-		WAITFOR DELAY @delay;
+	
 
 	SELECT 'total', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
 					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
@@ -523,7 +523,7 @@ BEGIN TRANSACTION
 	FROM DonHang dh
 		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
 	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Đang giao';
-
+	WAITFOR DELAY @delay;
 
 	SELECT 'done', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
 					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
@@ -558,7 +558,7 @@ AS
 BEGIN TRANSACTION
 	
 	SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
-
+	
 	SELECT 'total', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
 					SUM(dh.Gia) AS N'Tổng giá sản phẩm hóa đơn', 
 					SUM(dh.PhiVanChuyen) AS N'Tổng phí vận chuyển'
@@ -572,7 +572,6 @@ BEGIN TRANSACTION
 	FROM DonHang dh
 		JOIN ChiNhanh cn ON dh.MaCN = cn.MaCN
 	WHERE cn.MaDT = @ma_dt AND dh.Status = N'Đang giao';
-
 	WAITFOR DELAY @delay;
 
 	SELECT 'done', COUNT(dh.MaDH) AS N'Tổng hóa đơn', 
